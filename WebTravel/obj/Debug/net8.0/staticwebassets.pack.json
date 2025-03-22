@@ -1,0 +1,377 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebTravel.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebTravel.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Banner\\banner.jpg",
+      "PackagePath": "staticwebassets\\img\\Banner\\banner.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Banner\\banner1.jpg",
+      "PackagePath": "staticwebassets\\img\\Banner\\banner1.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\bao_tang_quan_su.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\bao_tang_quan_su.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\ho_guom.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\ho_guom.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\hoa_lo.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\hoa_lo.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\hoang_thanh_thang_long.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\hoang_thanh_thang_long.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\lang_bac.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\lang_bac.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\boutique_hotel.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\boutique_hotel.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\grand_mercure.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\grand_mercure.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\jade_hotel.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\jade_hotel.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\lotte.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\lotte.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\movenpick.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\movenpick.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\bun_cha.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\bun_cha.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\bun_dau.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\bun_dau.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\cafe_trung.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\cafe_trung.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\com.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\com.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\pho.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\pho.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\cuisine_restaurant.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\cuisine_restaurant.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\goc_que.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\goc_que.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\ngoc_mai_vang.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\ngoc_mai_vang.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\quan_xua.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\quan_xua.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\tam_vi.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\tam_vi.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\da_nang.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\da_nang.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\ha_noi.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\ha_noi.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\hai_phong.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\hai_phong.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\hue.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\hue.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\sai_gon.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\sai_gon.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\home_index.js",
+      "PackagePath": "staticwebassets\\js\\home_index.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebTravel.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebTravel.props",
+      "PackagePath": "build\\WebTravel.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebTravel.props",
+      "PackagePath": "buildMultiTargeting\\WebTravel.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebTravel.props",
+      "PackagePath": "buildTransitive\\WebTravel.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

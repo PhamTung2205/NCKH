@@ -1,0 +1,396 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    var userName = HttpContextAccessor.HttpContext.Session.GetString("UserName");
+    var userQuyen = HttpContextAccessor.HttpContext.Session.GetString("UserQuyen");
+    var userId = HttpContextAccessor.HttpContext.Session.GetString("UserId");
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebTravel</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebTravel.styles.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <style>
+        .chat-box {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 350px;
+            /* Giảm chiều rộng */
+            height: 450px;
+            /* Giảm chiều cao */
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-header {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-body {
+            padding: 10px;
+            height: 350px;
+            /* Giảm chiều cao phần chat */
+            overflow-y: auto;
+        }
+
+        .chat-footer {
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+            .chat-footer input {
+                width: 80%;
+                padding: 5px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+
+            .chat-footer button {
+                padding: 5px 10px;
+                border: none;
+                background-color: #007bff;
+                color: #fff;
+                border-radius: 5px;
+            }
+
+        .text {
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            font-size: 16px;
+        }
+
+        .user-display {
+            display: flex;
+            justify-content: end;
+        }
+
+        .user-chat {
+            background-color: rgb(54, 38, 227);
+            width: auto;
+            padding: 10px;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .bot-chat {
+            width: 95%;
+        }
+
+        .chat-toggle-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .new-chat-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand fw-bold" href="#">ViVuViet</a>
+
+                <!-- Nút mở menu trên mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu chính (căn giữa khi màn hình lớn) -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item"><a class="nav-link fw-bold" href="/">Trang Chủ</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="/Chatbot">ChatBot</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="#">Vui Chơi</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="#">Món Ăn</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="#">Khách Sạn</a></li>
+
+                        <!-- Hiển thị tài khoản trong menu khi màn hình nhỏ -->
+                        <li class="nav-item d-lg-none">
+                            @if (!string.IsNullOrEmpty(userName))
+                            {
+                                <div class="dropdown">
+                                    <a class="btn btn-outline-primary dropdown-toggle fw-bold" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        @userName
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                        @if (userQuyen == "Admin")
+                                        {
+                                            <li><a class="dropdown-item" href="/Admin">Admin</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                        }
+                                        <li><a class="dropdown-item" href="/" data-bs-toggle="modal" data-bs-target="#maintenanceModal">Profile</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="/Login/Logout">Đăng xuất</a></li>
+                                    </ul>
+                                </div>
+                            }
+                            else
+                            {
+                                <a class="nav-link btn btn-outline-primary" href="/Login/Index">Đăng nhập</a>
+                            }
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Hiển thị tài khoản ngoài menu khi màn hình lớn -->
+                <div class="d-none d-lg-block">
+                    @if (!string.IsNullOrEmpty(userName))
+                    {
+                        <div class="dropdown">
+                            <a class="btn btn-outline-primary dropdown-toggle fw-bold" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                @userName
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                @if (userQuyen == "Admin")
+                                {
+                                    <li><a class="dropdown-item" href="/Admin">Admin</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                }
+                                <li><a class="dropdown-item" href="/" data-bs-toggle="modal" data-bs-target="#maintenanceModal">Profile</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/Login/Logout">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+                        <a href="/Login/Index" class="btn btn-outline-primary">Đăng nhập</a>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Nút bấm để hiển thị/ẩn khung chat -->
+    <button class="chat-toggle-btn" onclick="toggleChat()">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <span class="text" style="color: #fff;">ChatBot luôn hỗ trợ bạn</span>
+            <button class="new-chat-btn" onclick="newChat()">
+                <i class="fas fa-plus"></i> <!-- Icon New Chat -->
+            </button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <!-- Nội dung chat sẽ được hiển thị ở đây -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chatInput" placeholder="Nhập tin nhắn...">
+            <button onclick="SubmitAPI()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - WebTravel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script>
+        function toggleChat() {
+            const chatBox = document.getElementById('chatBox');
+            if (chatBox.style.display === 'none' || chatBox.style.display === '') {
+                chatBox.style.display = 'block';
+            } else {
+                chatBox.style.display = 'none';
+            }
+            console.log("hello")
+        }
+        let JsonDataPost = [];
+        let i = 1;
+        let Acc = @userId;
+        let chatHistory = {};
+        let currentChatIndex = null;
+        function initializeChat() {
+            let storedHistory = localStorage.getItem("chatHistory");
+            if (storedHistory) {
+                chatHistory = JSON.parse(storedHistory);
+                if (chatHistory[Acc] && chatHistory[Acc].length > 0) {
+                    currentChatIndex = chatHistory[Acc].length - 1;
+                    JsonDataPost = [...chatHistory[Acc][currentChatIndex]];
+                    i = JsonDataPost.length + 1;
+
+                    renderChat();
+                }
+            }
+        }
+
+        async function SubmitAPI() {
+            if(!Acc){
+                Swal.fire({
+                    title: "Bạn có chắc muốn xóa " + name + " không?",
+                    text: "Hành động này không thể hoàn tác!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "Đăng Nhập!",
+                    cancelButtonText: "Hủy"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = Login;
+                    }
+                });
+            }
+            const inputText = document.getElementById("chatInput").value;
+            if (!inputText) return;
+
+            var content = document.getElementById("chatBody");
+
+            // Hiển thị tin nhắn của User
+            var userDisplay = document.createElement("div");
+            userDisplay.className = "user-display";
+            var p1 = document.createElement("p");
+            p1.className = "user-chat text";
+            p1.innerText = inputText;
+            userDisplay.appendChild(p1);
+            content.appendChild(userDisplay);
+
+            // Xóa nội dung ô nhập
+            document.getElementById("chatInput").value = "";
+
+            // Tạo dữ liệu API
+            var prompt = "Bạn là một chat bot chuyên gia du lịch Việt Nam" +
+                "Chỉ trả lời các câu hỏi liên quan đến du lịch, bao gồm địa điểm, cách di chuyển, hoạt động và gợi ý." +
+                "Nếu câu hỏi không liên quan đến du lịch : 'Xin lỗi, mình chỉ trả lời những câu hỏi về du lịch thôi nhé !!'" +
+                "Trả lời đa ngôn ngữ đúng với tiếng người dùng hỏi một cách chi tiết:";
+            const payload = {
+                contents: JsonDataPost.map(j => ([{
+                    role: "user", parts: [{ text: prompt + j.user }]
+                },
+                { role: "model", parts: [{ text: j.bot }] }])).flat().concat([{
+
+                    role: "user", parts: [{ text: prompt + inputText }]
+                }]),
+                generationConfig: { temperature: 1, topK: 40, topP: 0.95, maxOutputTokens: 1000, responseMimeType: "text/plain" }
+            };
+
+            try {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=AIzaSyAjT0xeG-D8h3HZZ7NSGqvfPtApAARBpKg`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) throw new Error(`Lỗi: ${response.status}`);
+                const data = await response.json();
+                const htmlContent = marked.parse(data.candidates[0].content.parts[0].text);
+
+                // Hiển thị phản hồi của bot
+                var botDisplay = document.createElement("div");
+                botDisplay.className = "bot-display";
+                var p2 = document.createElement("p");
+                p2.className = "bot-chat text";
+                p2.innerHTML = htmlContent;
+                botDisplay.appendChild(p2);
+                content.appendChild(botDisplay);
+
+                // Lưu tin nhắn
+                JsonDataPost.push({ id: i++, user: inputText, bot: htmlContent, date: new Date(), idUser: 1 });
+
+                // Lưu vào lịch sử
+                saveChatHistory();
+
+            } catch (error) {
+                var p3 = document.createElement("p");
+                p3.className = "bot-chat text";
+                p3.innerText = `Lỗi: ${error.message}`;
+                content.appendChild(p3);
+            }
+        }
+
+        // 🟢 HÀM LƯU LỊCH SỬ CHAT
+        function saveChatHistory() {
+            chatHistory[Acc] = chatHistory[Acc] || [];
+
+            if (currentChatIndex !== null) {
+                // Nếu đã có cuộc trò chuyện, cập nhật tin nhắn vào cuộc trò chuyện đó
+                chatHistory[Acc][currentChatIndex] = [...JsonDataPost];
+            } else {
+                // Nếu là cuộc trò chuyện mới, thêm vào danh sách
+                currentChatIndex = chatHistory[Acc].length;
+                chatHistory[Acc].push([...JsonDataPost]);
+            }
+
+            localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
+        }
+        //New chat
+        function newChat() {
+            if (JsonDataPost.length > 0) {
+                saveChatHistory();
+            }
+            // Reset dữ liệu cho cuộc trò chuyện mới
+            JsonDataPost = [];
+            i = 1;
+            currentChatIndex = chatHistory[Acc].length; // Đặt index mới
+            document.getElementById("chatBody").innerHTML = "";
+        }
+        // 🟢 HÀM TẢI CUỘC TRÒ CHUYỆN
+        function loadChat(index) {
+            if (!chatHistory[Acc] || !chatHistory[Acc][index]) return;
+
+            JsonDataPost = [...chatHistory[Acc][index]];
+            currentChatIndex = index;
+            i = JsonDataPost.length + 1;
+
+            renderChat();
+        }
+
+        // 🟢 HÀM HIỂN THỊ NỘI DUNG CHAT
+        function renderChat() {
+            document.getElementById("chatBody").innerHTML = JsonDataPost.map(chat => `
+                <div class="user-display"><p class="user-chat">${chat.user}</p></div>
+                <div class="bot-display"><p class="bot-chat">${chat.bot}</p></div>`).join("");
+        }
+        console.log(chatHistory);
+        // 🟢 SỰ KIỆN ENTER ĐỂ GỬI TIN NHẮN
+        document.getElementById("chatInput").addEventListener("keypress", function (event) {
+            if (event.key === "Enter") SubmitAPI();
+        });
+        // 🟢 KHỞI CHẠY KHI TẢI TRANG
+        initializeChat();
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

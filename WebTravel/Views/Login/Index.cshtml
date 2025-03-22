@@ -1,0 +1,26 @@
+﻿
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <h2 class="text-center">Đăng Nhập</h2>
+            @if (!string.IsNullOrEmpty(ViewBag.Error))
+            {
+                <div class="alert alert-danger">@ViewBag.Error</div>
+            }
+            <form asp-controller="Login" asp-action="Login" method="post">
+                <div class="mb-3">
+                    <label class="form-label">Số Điện Thoại</label>
+                    <input type="text" class="form-control" name="PhoneNumber" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Mật Khẩu</label>
+                    <input type="password" class="form-control" name="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Đăng Nhập</button>
+                <div class="text-center mt-3">
+                    <p>Bạn chưa có tài khoản? <a href="@Url.Action("Create", "Login")" class="text-primary">Đăng ký ngay</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
