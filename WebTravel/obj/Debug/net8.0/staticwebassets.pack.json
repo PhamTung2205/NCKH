@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\WebTravel.bundle.scp.css"
     },
     {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\chatbot.css",
+      "PackagePath": "staticwebassets\\css\\chatbot.css"
+    },
+    {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -119,6 +123,10 @@
     {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\sai_gon.jpg",
       "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\sai_gon.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\chatbot.js",
+      "PackagePath": "staticwebassets\\js\\chatbot.js"
     },
     {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\home_index.js",

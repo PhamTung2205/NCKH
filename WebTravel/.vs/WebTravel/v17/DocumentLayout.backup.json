@@ -7,6 +7,26 @@
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\wwwroot\\js\\chatbot.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:wwwroot\\js\\chatbot.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\wwwroot\\css\\chatbot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:wwwroot\\css\\chatbot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\tinhthanh\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\tinhthanh\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -25,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\giaitri\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\giaitri\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\test\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -134,24 +150,77 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAAAKQAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAO8AAAAAAAAAAAAAAKQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-20T01:59:18.533Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-23T02:43:43.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "chatbot.css",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\chatbot.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\chatbot.css",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\chatbot.css",
+              "RelativeToolTip": "wwwroot\\css\\chatbot.css",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-23T01:08:33.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "chatbot.js",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\chatbot.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\chatbot.js",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\chatbot.js",
+              "RelativeToolTip": "wwwroot\\js\\chatbot.js",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAiwJAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-23T00:56:15.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "site.js",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-23T00:55:50.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "NCKHContext.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Data\\NCKHContext.cs",
               "RelativeDocumentMoniker": "Data\\NCKHContext.cs",
@@ -163,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
@@ -175,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "TblGiaiTri.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblGiaiTri.cs",
               "RelativeDocumentMoniker": "Models\\TblGiaiTri.cs",
@@ -187,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "TblComment.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblComment.cs",
               "RelativeDocumentMoniker": "Models\\TblComment.cs",
@@ -199,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Test\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Test\\Index.cshtml",
@@ -211,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Details.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\NhaHang\\Details.cshtml",
@@ -223,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "GiaiTriController.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\GiaiTriController.cs",
               "RelativeDocumentMoniker": "Controllers\\GiaiTriController.cs",
@@ -235,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Details.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\TinhThanh\\Details.cshtml",
@@ -253,14 +322,14 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAADwvx0AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-20T01:53:08.97Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "LoginController.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
@@ -272,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Details.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\MonAn\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\MonAn\\Details.cshtml",
@@ -284,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Details.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\KhachSan\\Details.cshtml",
@@ -296,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "TblTinhThanh.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblTinhThanh.cs",
               "RelativeDocumentMoniker": "Models\\TblTinhThanh.cs",
@@ -308,7 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "TestController.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "Controllers\\TestController.cs",
@@ -320,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "MonAnController.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\MonAnController.cs",
               "RelativeDocumentMoniker": "Controllers\\MonAnController.cs",
@@ -332,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "NhaHangController.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\NhaHangController.cs",
               "RelativeDocumentMoniker": "Controllers\\NhaHangController.cs",
@@ -344,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "KhachSanController.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\KhachSanController.cs",
               "RelativeDocumentMoniker": "Controllers\\KhachSanController.cs",
@@ -356,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Details.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\GiaiTri\\Details.cshtml",
@@ -368,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "TinhThanhController.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\TinhThanhController.cs",
               "RelativeDocumentMoniker": "Controllers\\TinhThanhController.cs",
@@ -380,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "TblKhachSan.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblKhachSan.cs",
               "RelativeDocumentMoniker": "Models\\TblKhachSan.cs",
@@ -392,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\TinhThanh\\Index.cshtml",
@@ -404,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\KhachSan\\Index.cshtml",
@@ -416,7 +485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\NhaHang\\Index.cshtml",
@@ -428,7 +497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\MonAn\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\MonAn\\Index.cshtml",
@@ -440,7 +509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\GiaiTri\\Index.cshtml",
@@ -452,7 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "home_index.js",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\home_index.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\home_index.js",
@@ -464,7 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "Create.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Login\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Login\\Create.cshtml",
@@ -476,7 +545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Login\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Login\\Index.cshtml",
@@ -488,7 +557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -500,7 +569,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

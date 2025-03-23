@@ -1,0 +1,97 @@
+﻿.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 350px;
+    /* Giảm chiều rộng */
+    height: 450px;
+    z-index:1;
+    /* Giảm chiều cao */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 350px;
+    /* Giảm chiều cao phần chat */
+    overflow-y: auto;
+}
+
+.chat-footer {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+    .chat-footer input {
+        width: 80%;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .chat-footer button {
+        padding: 5px 10px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 16px;
+}
+
+.user-display {
+    display: flex;
+    justify-content: end;
+}
+
+.user-chat {
+    background-color: rgb(54, 38, 227);
+    width: auto;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+.bot-chat {
+    width: 95%;
+}
+
+.chat-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index:1;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.new-chat-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}

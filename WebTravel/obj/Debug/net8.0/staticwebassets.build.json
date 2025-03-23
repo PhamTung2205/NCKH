@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9qDd6Ks3/vQU6CE3YG1BCAwheOIV6oNaLj/ivc5Bdw8=",
+  "Hash": "uwmV1YmI3En5cay0tnDIUKOoTYtbCU/gSvQHV8SAAfM=",
   "Source": "WebTravel",
   "BasePath": "_content/WebTravel",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebTravel.bundle.scp.css"
+    },
+    {
+      "Identity": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\chatbot.css",
+      "SourceId": "WebTravel",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\",
+      "BasePath": "_content/WebTravel",
+      "RelativePath": "css/chatbot.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\chatbot.css"
     },
     {
       "Identity": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\site.css",
@@ -604,6 +623,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Tinh_Thanh\\sai_gon.jpg"
+    },
+    {
+      "Identity": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\chatbot.js",
+      "SourceId": "WebTravel",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\",
+      "BasePath": "_content/WebTravel",
+      "RelativePath": "js/chatbot.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\chatbot.js"
     },
     {
       "Identity": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\home_index.js",
