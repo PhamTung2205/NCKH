@@ -5,8 +5,6 @@
     var userName = HttpContextAccessor.HttpContext.Session.GetString("UserName");
     var userQuyen = HttpContextAccessor.HttpContext.Session.GetString("UserQuyen");
     var userId = HttpContextAccessor.HttpContext.Session.GetString("UserId");
-}
-@{
     ViewData["Tile"] = "Tỉnh Thành";
     @inject WebTravel.Data.NCKHContext _context;
     var TinhThanh = _context.TblTinhThanhs.ToList();
@@ -103,6 +101,8 @@
         right: -50px;
     }
 
+
+
     .carousel-container {
         display: flex;
         justify-content: center;
@@ -112,6 +112,8 @@
         margin-top: 50px;
     }
 
+    
+    /* CSS cho form khảo sát */
     .form-container {
         max-width: 600px;
         margin: 40px auto;
@@ -146,13 +148,59 @@
         transition: background-color 0.3s;
     }
 
-        .rating label.active {
+    
+
+    .rating-text {
+        margin-left: 15px;
+        font-size: 16px;
+        color: #333;
+    }
+
+    /* CSS cho hiển thị bình luận */
+    .comment-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .user-details {
+        font-size: 14px;
+        color: #6c757d;
+    }
+
+    .rating-display {
+        display: flex;
+        gap: 5px;
+        margin: 10px 0;
+    }
+
+    .bubble {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #00C4B4;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+        .active {
             background-color: #00C4B4;
         }
 
-    .rating-text {
-        margin-left: 15px; /* Giảm khoảng cách giữa bong bóng và nhãn */
-        font-size: 16px;
+    .star {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #00C4B4;
+        border-radius: 50%;
+        .comment-content {
         color: #333;
     }
 </style>
@@ -168,9 +216,10 @@
 </div>
 <!--Comment-->
 
-<button type="button" class="btn btn-outline-primary px-4 rounded-pill fw-semibold" data-bs-toggle="modal" onclick="checcAcc()" data-bs-target="#commentModal">
+<button type="button" id="btn_comment" class="btn btn-outline-primary px-4 rounded-pill fw-semibold" data-bs-toggle="modal"  data-bs-target="#commentModal">
     Bình Luận
 </button>
+
 <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -180,9 +229,17 @@
             </div>
             <div class="modal-body">
                 @if (TempData["Message"] != null)
-    {
-                    <div id="commentError" class="alert alert-danger d-none">@TempData["Message"]</div> <!-- Thông báo lỗi -->
-    }
+                {
+                    <div class="alert alert-success mt-3"><!--Thông báo lỗi-->
+                        @TempData["Message"] 
+                    </div>
+                }
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger mt-3">
+                        @TempData["Error"]
+                    </div>
+                }
                 <form id="surveyForm" asp-action="SubmitSurvey" asp-controller="TinhThanh" method="post">
                     <input type="hidden" name="entityId" value="@Model.PkIdTinhThanh" />
                         <h2 class="mb-4">Bạn xếp hạng trải nghiệm của mình như thế nào?</h2>
@@ -217,7 +274,27 @@
         </div>
     </div>
 </div>
+<div class="comment-container">
+    <div class="user-info">
+        <div>
+            <div>Hernan</div>
+        </div>
+    </div>
 
+    <div class="rating-display">
+        <span class="star active"></span>
+        <span class="star active"></span>
+        <span class="star active"></span>
+        <span class="star active"></span>
+        <span class="star"></span> <!-- Bong bóng thứ 5 không được tô sáng -->
+    </div>
+
+    <div class="comment-content">
+        Johnson was a great tour guide, he shared his knowledge of this amazing country and the whole tour experience was amazing.
+    </div>
+
+
+</div>
 <!--Tỉnh thành-->
 <h1>Các tỉnh thành nổi bật</h1>
 <div class="container mt-4">
@@ -327,8 +404,8 @@
         { id: "KhachSan", data: @Html.Raw(Json.Serialize(KhachSan)), folder: "Khach_San", imageKey: "simageKhachSan", nameKey: "snameKhachSan", idKey: "pkIdKhachSan", controller: "KhachSan" }
 
     ];
-  var item = @Html.Raw(Json.Serialize(KhachSan))
-  console.log(item)
+    var item = @Html.Raw(Json.Serialize(KhachSan))
+        console.log(item)
     const visibleCards = 3;
     let baseUrl = "@Url.Content("~/")";
 
@@ -345,14 +422,14 @@
                 let itemUrl = `/${category.controller}/Details/${category.data[imgIndex][category.idKey]}`;
 
                 let card = `
-                        <div class="card custom-carditem">
-                            <img src="${imageUrl}" alt="${category.data[imgIndex][category.imageUrl]}">
-                            <h5 class="textname mt-3">${category.data[imgIndex][category.nameKey]}</h5>
-                            <a href="${itemUrl}">
-                                <button class="custom-btn mt-2">Xem ngay</button>
-                            </a>
-                        </div>
-                    `;
+                            <div class="card custom-carditem">
+                                <img src="${imageUrl}" alt="${category.data[imgIndex][category.imageUrl]}">
+                                <h5 class="textname mt-3">${category.data[imgIndex][category.nameKey]}</h5>
+                                <a href="${itemUrl}">
+                                    <button class="custom-btn mt-2">Xem ngay</button>
+                                </a>
+                            </div>
+                        `;
                 container.innerHTML += card;
             }
         }
@@ -421,5 +498,4 @@
         });
     });
 
-   
 </script>

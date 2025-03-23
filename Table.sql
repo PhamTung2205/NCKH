@@ -110,18 +110,29 @@ Create table tblYeuThich
 	Constraint FkIdYeuThichTaiKhoan Foreign key(FkIdTaiKhoan) References tblTaiKhoan(PkIdTaiKhoan)
 )
 go
-
+Create table tblTinhThanh_Comment
+(	FkIdTinhThanh int,
+	FkIdDiaChi int,
+	FkIdComment int,
+	FkIdYeuThich int null,
+	Constraint PkTinhThanh_Comment Primary key(FkIdTinhThanh,FkIdDiaChi,FkIdComment),
+	Constraint FkTinhThanh_Comment Foreign key (FkIdTinhThanh) References tblTinhThanh(PkIdTinhThanh),
+	Constraint FkDiaChi_TinhThanh Foreign key (FkIdDiaChi) References tblDiaChi(PkIdDiaChi),
+	Constraint FkComment_TinhThanh Foreign key(FkIdComment) References tblComment(PkIdComment),
+	Constraint FkYeuThich_TinhThanh Foreign key(FkIdYeuThich) References tblYeuThich(PkIdYeuThich)
+)
+go
 --Tỉnh thành_Vui chơi
 Create table tblTinhThanh_GiaiTri
 (	FkIdTinhThanh int ,
 	FkIdGiaiTri int ,
 	FkIdDiaChi int,
 	FkIdComment int,
-	FkIdYeuThich int,
-	Constraint PkTinhThanh_GiaiTri Primary key(FkIdTinhThanh,FkIdGiaiTri,FkIdDiaChi,FkIdComment,FkIdYeuThich),
+	FkIdYeuThich int null,
+	Constraint PkTinhThanh_GiaiTri Primary key(FkIdTinhThanh,FkIdGiaiTri,FkIdDiaChi,FkIdComment),
 	Constraint FkTinhThanh_GiaiTri Foreign key (FkIdTinhThanh) References tblTinhThanh(PkIdTinhThanh),
-	Constraint FkVuiChoi Foreign key (FkIdGiaiTri) References tblGiaiTri(PkIdGiaiTri),
-	Constraint FkDiaChi_VuiChoi Foreign key (FkIdDiaChi) References tblDiaChi(PkIdDiaChi),
+	Constraint FkGiaiTri Foreign key (FkIdGiaiTri) References tblGiaiTri(PkIdGiaiTri),
+	Constraint FkDiaChi_GiaiTri Foreign key (FkIdDiaChi) References tblDiaChi(PkIdDiaChi),
 	Constraint FkComment_GiaiTri Foreign key(FkIdComment) References tblComment(PkIdComment),
 	Constraint FkYeuThich_GiaiTri Foreign key(FkIdYeuThich) References tblYeuThich(PkIdYeuThich)
 
@@ -134,8 +145,8 @@ Create table tblTinhThanh_MonAn
 	FkIdMonAn int ,
 	FkIdDiaChi int,
 	FkIdComment int,
-	FkIdYeuThich int,
-	Constraint PkTinhThanh_MonAn Primary key(FkIdTinhThanh,FkIdMonAn,FkIdDiaChi,FkIdComment,FkIdYeuThich),
+	FkIdYeuThich int null,
+	Constraint PkTinhThanh_MonAn Primary key(FkIdTinhThanh,FkIdMonAn,FkIdDiaChi,FkIdComment),
 	Constraint FkTinhThanh_MoAn Foreign key (FkIdTinhThanh) References tblTinhThanh(PkIdTinhThanh),
 	Constraint FkMonAn Foreign key (FkIdMonAn) References tblMonAn(PkIdMonAn),
 	Constraint FkDiaChi_MonAn Foreign key (FkIdDiaChi) References tblDiaChi(PkIdDiaChi),
@@ -151,8 +162,8 @@ Create table tblTinhThanh_KhachSan
 	FkIdKhachSan int ,
 	FkIdDiaChi int,
 	FkIdComment int,
-	FkIdYeuThich int,
-	Constraint PkTinhThanh_KhachSan Primary key(FkIdTinhThanh,FkIdKhachSan,FkIdDiaChi,FkIdComment,FkIdYeuThich),
+	FkIdYeuThich int null,
+	Constraint PkTinhThanh_KhachSan Primary key(FkIdTinhThanh,FkIdKhachSan,FkIdDiaChi,FkIdComment),
 	Constraint FkTinhThanh_KhachSan Foreign key (FkIdTinhThanh) References tblTinhThanh(PkIdTinhThanh),
 	Constraint FkKhachSan Foreign key (FkIdKhachSan) References tblKhachSan(PkIdKhachSan),
 	Constraint FkDiaChi_KhachSan Foreign key (FkIdDiaChi) References tblDiaChi(PkIdDiaChi),
@@ -168,8 +179,8 @@ Create table tblTinhThanh_NhaHang
 	FkIdNhaHang int ,
 	FkIdDiaChi int,
 	FkIdComment int,
-	FkIdYeuThich int,
-	Constraint PkTinhThanh_NhaHang Primary key(FkIdTinhThanh,FkIdNhaHang,FkIdDiaChi,FkIdComment,FkIdYeuThich),
+	FkIdYeuThich int null,
+	Constraint PkTinhThanh_NhaHang Primary key(FkIdTinhThanh,FkIdNhaHang,FkIdDiaChi,FkIdComment),
 	Constraint FkTinhThanh_NhaHang Foreign key (FkIdTinhThanh) References tblTinhThanh(PkIdTinhThanh),
 	Constraint FkNhaHang Foreign key (FkIdNhaHang) References tblNhaHang(PkIdNhaHang),
 	Constraint FkDiaChi_NhaHang Foreign key (FkIdDiaChi) References tblDiaChi(PkIdDiaChi),

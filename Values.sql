@@ -36,7 +36,7 @@ VALUES
 go
 
 --Thêm Vui Choi
-Insert Into tblVuiChoi
+Insert Into tblGiaiTri
 VALUES
 (N'Hồ Gươm',N'ho_guom.jpg',N'Hồ Gươm, hay còn gọi là Hồ Hoàn Kiếm, là một trong những biểu tượng nổi bật nhất của Hà Nội, gắn liền với lịch sử, văn hóa và đời sống của người dân thủ đô. Hồ nằm ngay trung tâm thành phố, là điểm đến lý tưởng để tham quan, dạo bộ và tìm hiểu về những câu chuyện lịch sử huyền thoại.',2),
 (N'Nhà Tù Hỏa Lò',N'hoa_lo.jpg',N'Nhà tù Hỏa Lò là một trong những di tích lịch sử quan trọng của Hà Nội, ghi dấu những năm tháng đấu tranh gian khổ của dân tộc Việt Nam. Nơi đây từng được mệnh danh là "Địa ngục trần gian", giam giữ nhiều chiến sĩ cách mạng kiên trung trong thời kỳ Pháp thuộc.Ngày nay, Nhà tù Hỏa Lò trở thành một điểm du lịch lịch sử thu hút du khách trong và ngoài nước, giúp họ hiểu rõ hơn về tinh thần bất khuất của những người yêu nước Việt Nam.',2),
@@ -82,11 +82,10 @@ Values
 go
 
 --Thêm Tỉnh Thành - Vui Chơi
-Insert Into tblTinhThanh_VuiChoi
-Values
+Insert Into tblTinhThanh_GiaiTri
+Values	
 (0,0,0),(0,1,0),(0,2,0),(0,3,0),(0,4,0)
 go
-
 --Thêm Tỉnh Thành - Món ăn
 Insert Into tblTinhThanh_MonAn
 Values
@@ -104,3 +103,4 @@ Insert Into tblTinhThanh_NhaHang
 Values
 (0,0,0),(0,1,0),(0,2,0),(0,3,0),(0,4,0)
 go
+select *from tblTinhThanh_KhachSan
