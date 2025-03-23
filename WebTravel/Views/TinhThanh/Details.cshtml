@@ -1,7 +1,14 @@
 ﻿@model WebTravel.Models.TblTinhThanh
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    var userName = HttpContextAccessor.HttpContext.Session.GetString("UserName");
+    var userQuyen = HttpContextAccessor.HttpContext.Session.GetString("UserQuyen");
+    var userId = HttpContextAccessor.HttpContext.Session.GetString("UserId");
+}
 @{
     ViewData["Tile"] = "Tỉnh Thành";
-@inject WebTravel.Data.NCKHContext _context;
+    @inject WebTravel.Data.NCKHContext _context;
     var TinhThanh = _context.TblTinhThanhs.ToList();
     var MonAn = _context.TblMonAns.ToList();
     var GiaiTri = _context.TblGiaiTris.ToList();
@@ -104,6 +111,50 @@
         position: relative;
         margin-top: 50px;
     }
+
+    .form-container {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .bubbles-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    .rating input[type="radio"] {
+        display: none;
+    }
+
+    .rating label {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #00C4B4;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .rating label.active {
+            background-color: #00C4B4;
+        }
+
+    .rating-text {
+        margin-left: 15px; /* Giảm khoảng cách giữa bong bóng và nhãn */
+        font-size: 16px;
+        color: #333;
+    }
 </style>
 
 <div class="container">
@@ -112,6 +163,57 @@
         <div class="content">
             <h2>@Model.SnameTinhThanh</h2>
             <p>@Model.ScontentTinhThanh</p>
+        </div>
+    </div>
+</div>
+<!--Comment-->
+
+<button type="button" class="btn btn-outline-primary px-4 rounded-pill fw-semibold" data-bs-toggle="modal" onclick="checcAcc()" data-bs-target="#commentModal">
+    Bình Luận
+</button>
+<div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="commentModalLabel">Bình Luận</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @if (TempData["Message"] != null)
+    {
+                    <div id="commentError" class="alert alert-danger d-none">@TempData["Message"]</div> <!-- Thông báo lỗi -->
+    }
+                <form id="surveyForm" asp-action="SubmitSurvey" asp-controller="TinhThanh" method="post">
+                    <input type="hidden" name="entityId" value="@Model.PkIdTinhThanh" />
+                        <h2 class="mb-4">Bạn xếp hạng trải nghiệm của mình như thế nào?</h2>
+                        <div class="rating">
+                            <div class="bubbles-container">
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1" class="bubble"></label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2" class="bubble"></label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3" class="bubble"></label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4" class="bubble"></label>
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5" class="bubble"></label>
+                            </div>
+                            <span class="rating-text"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <h3>Viết đánh giá</h3>
+                            <small class="text-muted d-block mb-2">Khung cần thiết ngôn mục. Chọn tói đa chụp rất nhiều ảnh!...</small>
+                            <textarea class="form-control" name="review" placeholder="Viết đánh giá của bạn..." rows="4"></textarea>
+
+                        </div>
+                      
+                            <button type="submit" class="btn btn-primary w-100">Gửi</button>
+                        
+                    </form>
+
+            </div>
         </div>
     </div>
 </div>
@@ -196,7 +298,6 @@
         <button class="btn-nav btn-nav-right" onclick="nextImagesNhaHang()">❯</button>
     </div>
 </div>
-
 <!--Khách Sạn-->
 <h1>Các khách sạn nổi bật</h1>
 <div class="container mt-4">
@@ -272,4 +373,53 @@
     });
 
 
+    function checcAcc() {
+        let Acc = "@(userId ?? "")";
+        if (!Acc || Acc === "") {
+            Swal.fire({
+                title: "Bạn chưa đăng nhập!",
+                text: "Vui lòng đăng nhập để Chatbot có thể quán lý thông tin cho bạn.",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Đăng nhập",
+                cancelButtonText: "Hủy",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "/Login"; // Thay đổi đường dẫn tới trang đăng nhập của bạn
+                }
+            });
+            document.getElementById("chatInput").value = "";
+            return;
+        }
+    }
+    const bubbles = document.querySelectorAll('.bubble');
+    const radioInputs = document.querySelectorAll('input[name="rating"]');
+    const ratingText = document.querySelector('.rating-text');
+
+    // Định nghĩa nhãn cho từng mức đánh giá
+    const ratingLabels = {
+        1: 'Thất vọng',
+        2: 'Tệ',
+        3: 'Bình thường',
+        4: 'Tốt',
+        5: 'Hoàn hảo'
+    };
+
+    radioInputs.forEach((input, index) => {
+        input.addEventListener('change', () => {
+            // Xóa trạng thái active của tất cả bong bóng
+            bubbles.forEach(bubble => bubble.classList.remove('active'));
+
+            // Thêm trạng thái active cho các bong bóng từ 1 đến bong bóng được chọn
+            for (let i = 0; i <= index; i++) {
+                bubbles[i].classList.add('active');
+            }
+
+            // Cập nhật nhãn đánh giá
+            const ratingValue = input.value;
+            ratingText.textContent = ratingLabels[ratingValue];
+        });
+    });
+
+   
 </script>

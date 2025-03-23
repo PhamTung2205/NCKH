@@ -6,11 +6,13 @@ Create table tblType
 (	PkIdType int identity(0,1) Constraint PkIdType_ primary key,
 	SNameType nvarchar(100) null
 )
+go
 --Quyền tài khoản
 Create table tblQuyen
 (	PkIdQuyen int identity(0,1) Constraint PkIdQuyen_ primary key,
-	SNameQuyen nvarchar(100)null,
+	SNameQuyen nvarchar(100)null
 )
+go
 --Tài khoản
 Create table tblTaiKhoan
 (	PkIdTaiKhoan int identity(0,1) Constraint PkIdTaiKhoan_ primary key,
@@ -108,6 +110,7 @@ Create table tblYeuThich
 	Constraint FkIdYeuThichTaiKhoan Foreign key(FkIdTaiKhoan) References tblTaiKhoan(PkIdTaiKhoan)
 )
 go
+
 --Tỉnh thành_Vui chơi
 Create table tblTinhThanh_GiaiTri
 (	FkIdTinhThanh int ,

@@ -15,6 +15,8 @@ public partial class TblComment
 
     public virtual TblTaiKhoan? FkIdTaiKhoanNavigation { get; set; }
 
+    public virtual ICollection<TblTinhThanhComment> TblTinhThanhComments { get; set; } = new List<TblTinhThanhComment>();
+
     public virtual ICollection<TblTinhThanhGiaiTri> TblTinhThanhGiaiTris { get; set; } = new List<TblTinhThanhGiaiTri>();
 
     public virtual ICollection<TblTinhThanhKhachSan> TblTinhThanhKhachSans { get; set; } = new List<TblTinhThanhKhachSan>();

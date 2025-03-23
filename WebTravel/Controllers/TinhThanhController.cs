@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebTravel.Data;
+using WebTravel.Models;
 
 namespace WebTravel.Controllers
 {
@@ -32,6 +33,37 @@ namespace WebTravel.Controllers
                 return NotFound();
             }
             return View(TinhThanh);
+        }
+
+        // Xử lý khi người dùng gửi form
+        [HttpPost]
+        public  IActionResult SubmitSurvey(int rating, string review )
+        {
+            var userId =  HttpContext.Session.GetInt32("UserId");
+
+            // Kiểm tra dữ liệu đầu vào
+            if (rating < 1 || rating > 5 || string.IsNullOrWhiteSpace(review))
+            {
+                TempData["Message"] = "Vui lòng chọn số lượng bong bóng và nhập nội dung đánh giá.";
+                return RedirectToAction("Details");
+            }
+
+            // Tạo một bản ghi mới trong bảng TblComment
+            var comment = new TblComment
+            {
+                ScontentComment = review, // Nội dung đánh giá
+                IstarComment = rating,    // Số lượng bong bóng
+                FkIdTaiKhoan = userId // Lấy ID người dùng hiện tại (giả định)
+            };
+
+
+            // Lưu vào cơ sở dữ liệu
+            _context.TblComments.Add(comment);
+            _context.SaveChanges();
+
+            // Hiển thị thông báo thành công
+            TempData["Message"] = "Cảm ơn bạn đã gửi đánh giá!";
+            return RedirectToAction("Details");
         }
     }
 }
