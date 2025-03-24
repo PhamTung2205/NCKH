@@ -11,7 +11,7 @@ public partial class TblTinhThanhComment
 
     public int FkIdComment { get; set; }
 
-    public int FkIdYeuThich { get; set; }
+    public int? FkIdYeuThich { get; set; }
 
     public virtual TblComment FkIdCommentNavigation { get; set; } = null!;
 
@@ -19,5 +19,5 @@ public partial class TblTinhThanhComment
 
     public virtual TblTinhThanh FkIdTinhThanhNavigation { get; set; } = null!;
 
-    public virtual TblYeuThich FkIdYeuThichNavigation { get; set; } = null!;
+    public virtual TblYeuThich? FkIdYeuThichNavigation { get; set; }
 }

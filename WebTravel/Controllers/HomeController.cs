@@ -19,5 +19,9 @@ namespace WebTravel.Controllers
         {
             return View();
         }
+        public IActionResult Privacy()
+        {
+            return View();
+        }
     }
 }

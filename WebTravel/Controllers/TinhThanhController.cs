@@ -34,6 +34,19 @@ namespace WebTravel.Controllers
             }
             return View(TinhThanh);
         }
+        public async Task<IActionResult> Comment(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var TinhThanh = await _context.TblTinhThanhs.FirstOrDefaultAsync(t => t.PkIdTinhThanh == id);
+            if (TinhThanh == null)
+            {
+                return NotFound();
+            }
+            return View(TinhThanh);
+        }
 
         // Xử lý khi người dùng gửi form
         [HttpPost]
@@ -45,14 +58,15 @@ namespace WebTravel.Controllers
             {
                 TempData["Error"] = "Vui lòng đăng nhập tài khoản để được đánh giá";
 
-                return RedirectToAction("Details", new { id = entityId });
+                return RedirectToAction("Comment", new { id = entityId });
             }
+
             // Kiểm tra dữ liệu đầu vào
             if (rating < 1 || rating > 5 || string.IsNullOrWhiteSpace(review))
             {
                 TempData["Error"] = "Vui lòng chọn số lượng bong bóng và nhập nội dung đánh giá.";
 
-                return RedirectToAction("Details", new { id = entityId });
+                return RedirectToAction("Comment", new { id = entityId });
             }
 
             
@@ -63,23 +77,24 @@ namespace WebTravel.Controllers
                 IstarComment = rating,    // Số lượng bong bóng
                 FkIdTaiKhoan = userId // Lấy ID người dùng hiện tại (giả định)
             };
+            _context.TblComments.Add(comment);
+            _context.SaveChanges();
             var tinhthanh_comment = new TblTinhThanhComment
             {
                 FkIdTinhThanh = entityId,
-                FkIdComment = _context.TblTinhThanhComments.ToList().Count,
-                FkIdDiaChi = 0,
+                FkIdComment = _context.TblComments.ToList().Count,
+                FkIdDiaChi = 1
                 
             };
 
             // Lưu vào cơ sở dữ liệu
             _context.TblTinhThanhComments.Add(tinhthanh_comment);
-            _context.TblComments.Add(comment);
             _context.SaveChanges();
 
             // Hiển thị thông báo thành công
             TempData["Message"] = "Cảm ơn bạn đã gửi đánh giá!";
 
-            return RedirectToAction("Details", new { id = entityId });
+            return RedirectToAction("Comment", new { id = entityId });
         }
     }
 }

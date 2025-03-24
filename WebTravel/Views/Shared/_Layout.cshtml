@@ -161,6 +161,7 @@
         let JsonDataPost = [];
         let i = 1;
         let Acc = "@(userId ?? "")";
+        
         let chatHistory = {};
         let currentChatIndex = null;
         function initializeChat() {
@@ -311,7 +312,10 @@
         });
         // 🟢 KHỞI CHẠY KHI TẢI TRANG
         initializeChat();
-       
+        if (!Acc || Acc === "") {
+            document.getElementById("chatBody").innerHTML = "";
+
+        }
     </script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
