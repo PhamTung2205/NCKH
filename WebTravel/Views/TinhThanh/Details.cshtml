@@ -12,6 +12,14 @@
     var GiaiTri = _context.TblGiaiTris.ToList();
     var KhachSan = _context.TblKhachSans.ToList();
     var NhaHang = _context.TblNhaHangs.ToList();
+
+    //Phân trang comment
+    var commentSize = 10;
+    int pageNumber = Context.Request.Query["page"].Count > 0 ? int.Parse(Context.Request.Query["page"]) : 1;
+    int commentCount = _context.TblTinhThanhComments.Where(c => c.FkIdTinhThanh==Model.PkIdTinhThanh).Count();
+    int pageCount = (int)Math.Ceiling((double)commentCount / commentSize);
+    var pagedComment = _context.TblTinhThanhComments.Skip((pageNumber - 1) * commentSize).Take(commentSize).ToList();
+
 }
 <style>
     .custom-card {
@@ -115,11 +123,21 @@
     
     
     /* CSS cho hiển thị bình luận */
+    .comment{
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        padding: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+       
+        max-width: 1200px; /* Mở rộng card */
+        margin: 20px auto;
+    }
+    
     .comment-container {
         max-width: 800px;
         margin: 20px auto;
         padding: 20px;
-        background-color: #fff;
+        background-color: #fff;     
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
@@ -164,11 +182,84 @@
         </div>
     </div>
 </div>
-
-
 <a asp-controller="TinhThanh" asp-action="Comment" asp-route-id="@Model.PkIdTinhThanh">
     <button class="custom-btn mt-2">Bình Luận</button>
 </a>
+
+<div class="comment">
+    
+    @if (pagedComment!=null&&pagedComment.Count>1)
+    {
+        @for(var i =0;i<=pagedComment.Count;i++)
+        {
+        <div class="comment-container">
+            <div class="user-info">
+                <div>
+                    <div>@pagedComment[i].FkIdCommentNavigation?.FkIdTaiKhoanNavigation?.SnameTaiKhoan??"Không rõ tài khoản"</div>
+                </div>
+            </div>
+            @for(var j = 0; j < 5; j++)
+            {
+                    if (i < @pagedComment[i].FkIdCommentNavigation.IstarComment)
+                {
+                    <span class="bubble active"></span>
+                }
+                <span class="bubble"></span>
+            }
+
+            <div class="comment-content">
+                    @pagedComment[i].FkIdCommentNavigation.ScontentComment
+            </div>
+        </div>
+        }
+    }
+    else
+    {
+        <p>Không có comment</p>
+    }
+</div>
+
+<!-- Thanh phân trang -->
+<nav aria-label="Page navigation" class="mt-4 d-flex justify-content-center">
+    <ul class="pagination pagination-lg">
+        <!-- Nút "Trước" -->
+        @if (pageNumber > 1)
+        {
+            <li class="page-item">
+                <a class="page-link rounded-pill shadow-sm" href="?page=@(pageNumber - 1)">« Trước</a>
+            </li>
+        }
+        else
+        {
+            <li class="page-item disabled">
+                <span class="page-link rounded-pill">« Trước</span>
+            </li>
+        }
+
+        <!-- Các số trang -->
+        @for (int i = 1; i <= pageCount; i++)
+        {
+            <li class="page-item @(i == pageNumber ? "active" : "")">
+                <a class="page-link rounded-pill shadow-sm @(i == pageNumber ? "bg-primary text-white" : "")" href="?page=@i">@i</a>
+            </li>
+        }
+
+        <!-- Nút "Sau" -->
+        @if (pageNumber < pageCount)
+        {
+            <li class="page-item">
+                <a class="page-link rounded-pill shadow-sm" href="?page=@(pageNumber + 1)">Tiếp »</a>
+            </li>
+        }
+        else
+        {
+            <li class="page-item disabled">
+                <span class="page-link rounded-pill">Tiếp »</span>
+            </li>
+        }
+    </ul>
+</nav>
+<div class="comment">
 <div class="comment-container">
     <div class="user-info">
         <div>
@@ -188,6 +279,8 @@
         Johnson was a great tour guide, he shared his knowledge of this amazing country and the whole tour experience was amazing.
     </div>
 </div>
+
+
 <div class="comment-container">
     <div class="user-info">
         <div>
@@ -206,6 +299,7 @@
     <div class="comment-content">
         Johnson was a great tour guide, he shared his knowledge of this amazing country and the whole tour experience was amazing.
     </div>
+</div>
 </div>
 <!--Tỉnh thành-->
 <h1>Các tỉnh thành nổi bật</h1>

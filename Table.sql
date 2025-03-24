@@ -3,16 +3,19 @@
 Use NCKH
 go
 Create table tblType
+(	PkIdType int identity(1,1) Constraint PkIdType_ primary key,
 	SNameType nvarchar(100) null
 )
 go
 --Quyền tài khoản
 Create table tblQuyen
+(	PkIdQuyen int identity(1,1) Constraint PkIdQuyen_ primary key,
 	SNameQuyen nvarchar(100)null
 )
 go
 --Tài khoản
 Create table tblTaiKhoan
+(	PkIdTaiKhoan int identity(1,1) Constraint PkIdTaiKhoan_ primary key,
 	SNameTaiKhoan nvarchar(100) null,
 	SPhoneTaiKhoan nvarchar(100) null,
 	SPassTaiKhoan nvarchar(100)null,
@@ -33,6 +36,7 @@ go
 
 --Hoạt động gải trí
 Create table tblGiaiTri
+(	PkIdGiaiTri int identity(1,1) Constraint PkIdVuiChoi_ primary key,
 	SNameGiaiTri nvarchar(100) null,
 	SImageGiaiTri nvarchar(100) null,
 	SContentGiaiTri nvarchar(Max)null,
@@ -44,6 +48,7 @@ go
 
 --Món ăn
 Create table tblMonAn
+(	PkIdMonAn int identity(1,1) Constraint PkIdMonAn_ primary key,
 	SNameMonAn nvarchar(100) null,
 	SImageMonAn nvarchar(100) null,
 	SContentMonAn nvarchar(Max)null,
@@ -54,6 +59,7 @@ go
 
 --Khách sạn
 Create table tblKhachSan
+(	PkIdKhachSan int identity(1,1) Constraint PkIdKhachSan_ primary key,
 	SNameKhachSan nvarchar(100) null,
 	SImageKhachSan nvarchar(100) null,
 	SContentKhachSan nvarchar(Max)null,
@@ -64,6 +70,7 @@ go
 
 --Nhà Hàng
 Create table tblNhaHang
+(	PkIdNhaHang int identity(1,1) Constraint PkIdNhaHang_ primary key,
 	SNameNhaHang nvarchar(100) null,
 	SImageNhaHang nvarchar(100) null,
 	SContentNhaHang nvarchar(Max)null,
@@ -74,6 +81,7 @@ go
 
 --Địa chỉ
 Create table tblDiaChi
+(	PkIdDiaChi int identity(1,1) Constraint PkIdDiaChi_ primary key,
 	SNameDiaChi nvarchar(100) null,
 	STypeDiaChi nvarchar(100) null,
 	STimeDiaChi nvarchar(100) null,
@@ -88,6 +96,7 @@ go
 
 --Comment
 Create table tblComment
+(	PkIdComment int identity(1,1) Constraint PkIdComment_ primary key,
 	SContentComment nvarchar(max) null,
 	IStarComment int null,
 	FkIdTaiKhoan int ,
@@ -96,6 +105,7 @@ Create table tblComment
 )
 go
 Create table tblYeuThich
+(	PkIdYeuThich int identity(1,1) Constraint PkIdYeuThich_ primary key,
 	FkIdTaiKhoan int ,
 	Constraint FkIdYeuThichTaiKhoan Foreign key(FkIdTaiKhoan) References tblTaiKhoan(PkIdTaiKhoan)
 )
