@@ -24,6 +24,8 @@ public partial class NCKHContext : DbContext
 
     public virtual DbSet<TblKhachSan> TblKhachSans { get; set; }
 
+    public virtual DbSet<TblLichTrinh> TblLichTrinhs { get; set; }
+
     public virtual DbSet<TblMonAn> TblMonAns { get; set; }
 
     public virtual DbSet<TblNhaHang> TblNhaHangs { get; set; }
@@ -65,7 +67,7 @@ public partial class NCKHContext : DbContext
 
             entity.HasOne(d => d.FkIdTaiKhoanNavigation).WithMany(p => p.TblComments)
                 .HasForeignKey(d => d.FkIdTaiKhoan)
-                .HasConstraintName("FkIdCommentTaiKhoan");
+                .HasConstraintName("FkIdComment_TaiKhoan");
         });
 
         modelBuilder.Entity<TblDiaChi>(entity =>
@@ -135,6 +137,26 @@ public partial class NCKHContext : DbContext
             entity.HasOne(d => d.FkIdTypeNavigation).WithMany(p => p.TblKhachSans)
                 .HasForeignKey(d => d.FkIdType)
                 .HasConstraintName("FkIdTypeKhachSan");
+        });
+
+        modelBuilder.Entity<TblLichTrinh>(entity =>
+        {
+            entity.HasKey(e => e.PkIdLichTrinh).HasName("PkIdLichTrinh_");
+
+            entity.ToTable("tblLichTrinh");
+
+            entity.Property(e => e.SlistIdGiaiTri).HasColumnName("SListIdGiaiTri");
+            entity.Property(e => e.SlistIdKhachSan).HasColumnName("SListIdKhachSan");
+            entity.Property(e => e.SlistIdMonAn).HasColumnName("SListIdMonAn");
+            entity.Property(e => e.SlistIdNhaHang).HasColumnName("SListIdNhaHang");
+            entity.Property(e => e.SlistIdTinh).HasColumnName("SListIdTinh");
+            entity.Property(e => e.SnameLichTrinh)
+                .HasMaxLength(100)
+                .HasColumnName("SNameLichTrinh");
+
+            entity.HasOne(d => d.FkIdTaiKhoanNavigation).WithMany(p => p.TblLichTrinhs)
+                .HasForeignKey(d => d.FkIdTaiKhoan)
+                .HasConstraintName("FkIdLichTrinh_TaiKhoan");
         });
 
         modelBuilder.Entity<TblMonAn>(entity =>
@@ -395,7 +417,7 @@ public partial class NCKHContext : DbContext
 
             entity.HasOne(d => d.FkIdTaiKhoanNavigation).WithMany(p => p.TblYeuThiches)
                 .HasForeignKey(d => d.FkIdTaiKhoan)
-                .HasConstraintName("FkIdYeuThichTaiKhoan");
+                .HasConstraintName("FkIdYeuThich_TaiKhoan");
         });
 
         OnModelCreatingPartial(modelBuilder);

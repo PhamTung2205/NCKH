@@ -19,5 +19,7 @@ public partial class TblTaiKhoan
 
     public virtual ICollection<TblComment> TblComments { get; set; } = new List<TblComment>();
 
+    public virtual ICollection<TblLichTrinh> TblLichTrinhs { get; set; } = new List<TblLichTrinh>();
+
     public virtual ICollection<TblYeuThich> TblYeuThiches { get; set; } = new List<TblYeuThich>();
 }

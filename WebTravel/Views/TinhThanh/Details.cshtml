@@ -1,5 +1,6 @@
 ﻿@model WebTravel.Models.TblTinhThanh
 @using Microsoft.AspNetCore.Http
+@using Microsoft.EntityFrameworkCore
 @inject IHttpContextAccessor HttpContextAccessor
 @{
     var userName = HttpContextAccessor.HttpContext.Session.GetString("UserName");
@@ -14,12 +15,39 @@
     var NhaHang = _context.TblNhaHangs.ToList();
 
     //Phân trang comment
-    var commentSize = 10;
-    int pageNumber = Context.Request.Query["page"].Count > 0 ? int.Parse(Context.Request.Query["page"]) : 1;
-    int commentCount = _context.TblTinhThanhComments.Where(c => c.FkIdTinhThanh==Model.PkIdTinhThanh).Count();
-    int pageCount = (int)Math.Ceiling((double)commentCount / commentSize);
-    var pagedComment = _context.TblTinhThanhComments.Skip((pageNumber - 1) * commentSize).Take(commentSize).ToList();
+    var commentSize = 5;
 
+    // Lấy pageNumber an toàn từ query string
+    int pageNumber = 1;
+    if (Context.Request.Query.ContainsKey("page") && int.TryParse(Context.Request.Query["page"], out int parsedPage))
+    {
+        pageNumber = Math.Max(parsedPage, 1); // Đảm bảo page >= 1
+    }
+
+    // Query lấy tổng số bình luận
+    var query = _context.TblTinhThanhComments
+        .Where(c => c.FkIdTinhThanh == Model.PkIdTinhThanh)
+        .Include(c => c.FkIdCommentNavigation)
+        .Include(c => c.FkIdCommentNavigation.FkIdTaiKhoanNavigation)
+        .AsQueryable();//Truy vấn động sẽ giúp ngắn code lại
+
+    int commentCount = query.Count(); // Chỉ thực hiện Count() 1 lần
+    int pageCount = (int)Math.Ceiling((double)commentCount / commentSize);
+
+    // Lấy danh sách bình luận phân trang
+    var pagedComment = query
+        .Skip((pageNumber - 1) * commentSize)
+        .Take(commentSize)
+        .Select(c => new
+        {
+            c.FkIdTinhThanh,
+            c.FkIdDiaChi,
+            c.FkIdComment,
+            StarComment = c.FkIdCommentNavigation.IstarComment,
+            CommentText = c.FkIdCommentNavigation.ScontentComment,
+            UserName = c.FkIdCommentNavigation.FkIdTaiKhoanNavigation.SnameTaiKhoan // Chỉ lấy dữ liệu cần thiết
+        })
+        .ToList();
 }
 <style>
     .custom-card {
@@ -188,119 +216,83 @@
 
 <div class="comment">
     
-    @if (pagedComment!=null&&pagedComment.Count>1)
+    @if (pagedComment!=null&&pagedComment.Count>0)
     {
-        @for(var i =0;i<=pagedComment.Count;i++)
+        @for(var i =0;i<pagedComment.Count;i++)
         {
         <div class="comment-container">
             <div class="user-info">
                 <div>
-                    <div>@pagedComment[i].FkIdCommentNavigation?.FkIdTaiKhoanNavigation?.SnameTaiKhoan??"Không rõ tài khoản"</div>
+                    <div>@pagedComment[i].UserName</div>
                 </div>
             </div>
             @for(var j = 0; j < 5; j++)
             {
-                    if (i < @pagedComment[i].FkIdCommentNavigation.IstarComment)
+                if (j < @pagedComment[i].StarComment)
                 {
                     <span class="bubble active"></span>
                 }
+                else{
                 <span class="bubble"></span>
+                }
             }
 
             <div class="comment-content">
-                    @pagedComment[i].FkIdCommentNavigation.ScontentComment
+                    @pagedComment[i].CommentText
             </div>
         </div>
+
         }
+        <!-- Thanh phân trang -->
+        <nav aria-label="Page navigation" class="mt-4 d-flex justify-content-center">
+            <ul class="pagination pagination-lg">
+                <!-- Nút "Trước" -->
+                @if (pageNumber > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link rounded-pill shadow-sm" href="?page=@(pageNumber - 1)">« Trước</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item disabled">
+                        <span class="page-link rounded-pill">« Trước</span>
+                    </li>
+                }
+
+                <!-- Các số trang -->
+                @for (int i = 1; i <= pageCount; i++)
+                {
+                    <li class="page-item @(i == pageNumber ? "" : "")">
+                        <a class="page-link rounded-pill shadow-sm @(i == pageNumber ? "bg-primary text-white" : "")" href="?page=@i">@i</a>
+                    </li>
+                }
+
+                <!-- Nút "Sau" -->
+                @if (pageNumber < pageCount)
+                {
+                    <li class="page-item">
+                        <a class="page-link rounded-pill shadow-sm" href="?page=@(pageNumber + 1)">Tiếp »</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item disabled">
+                        <span class="page-link rounded-pill">Tiếp »</span>
+                    </li>
+                }
+            </ul>
+        </nav>
     }
     else
     {
-        <p>Không có comment</p>
+        <div class="comment-container">
+            <h2>Không có comment</h2>
+        </div>
     }
+
 </div>
 
-<!-- Thanh phân trang -->
-<nav aria-label="Page navigation" class="mt-4 d-flex justify-content-center">
-    <ul class="pagination pagination-lg">
-        <!-- Nút "Trước" -->
-        @if (pageNumber > 1)
-        {
-            <li class="page-item">
-                <a class="page-link rounded-pill shadow-sm" href="?page=@(pageNumber - 1)">« Trước</a>
-            </li>
-        }
-        else
-        {
-            <li class="page-item disabled">
-                <span class="page-link rounded-pill">« Trước</span>
-            </li>
-        }
-
-        <!-- Các số trang -->
-        @for (int i = 1; i <= pageCount; i++)
-        {
-            <li class="page-item @(i == pageNumber ? "active" : "")">
-                <a class="page-link rounded-pill shadow-sm @(i == pageNumber ? "bg-primary text-white" : "")" href="?page=@i">@i</a>
-            </li>
-        }
-
-        <!-- Nút "Sau" -->
-        @if (pageNumber < pageCount)
-        {
-            <li class="page-item">
-                <a class="page-link rounded-pill shadow-sm" href="?page=@(pageNumber + 1)">Tiếp »</a>
-            </li>
-        }
-        else
-        {
-            <li class="page-item disabled">
-                <span class="page-link rounded-pill">Tiếp »</span>
-            </li>
-        }
-    </ul>
-</nav>
-<div class="comment">
-<div class="comment-container">
-    <div class="user-info">
-        <div>
-            <div>Hernan</div>
-        </div>
-    </div>
-
-    <div class="rating-display">
-        <span class="bubble active"></span>
-        <span class="bubble active"></span>
-        <span class="bubble active"></span>
-        <span class="bubble active"></span>
-        <span class="bubble"></span> <!-- Bong bóng thứ 5 không được tô sáng -->
-    </div>
-
-    <div class="comment-content">
-        Johnson was a great tour guide, he shared his knowledge of this amazing country and the whole tour experience was amazing.
-    </div>
-</div>
-
-
-<div class="comment-container">
-    <div class="user-info">
-        <div>
-            <div>Hernan</div>
-        </div>
-    </div>
-
-    <div class="rating-display">
-        <span class="bubble active"></span>
-        <span class="bubble active"></span>
-        <span class="bubble active"></span>
-        <span class="bubble active"></span>
-        <span class="bubble"></span> <!-- Bong bóng thứ 5 không được tô sáng -->
-    </div>
-
-    <div class="comment-content">
-        Johnson was a great tour guide, he shared his knowledge of this amazing country and the whole tour experience was amazing.
-    </div>
-</div>
-</div>
 <!--Tỉnh thành-->
 <h1>Các tỉnh thành nổi bật</h1>
 <div class="container mt-4">
