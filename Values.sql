@@ -81,9 +81,7 @@ Values
 (N'Số 23, Ngõ 168, Phố Tràng Thi, Quận Hoàn Kiếm, Hà Nội')
 go
 
-select * from tblTinhThanh_Comment
-select * from tblComment
-select * from tblTaiKhoan
+
 --Thêm Tỉnh Thành - Vui Chơi
 Insert Into tblTinhThanh_GiaiTri
 Values	
@@ -106,4 +104,3 @@ Insert Into tblTinhThanh_NhaHang
 Values
 (0,0,0),(0,1,0),(0,2,0),(0,3,0),(0,4,0)
 go
-select *from tblTinhThanh_KhachSan

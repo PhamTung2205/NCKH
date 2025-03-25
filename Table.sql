@@ -94,20 +94,32 @@ Create table tblDiaChi
 )
 go
 
+--Thêm mới
+--Lịch Trình
+Create table tblLichTrinh
+(	PkIdLichTrinh int identity(1,1) Constraint PkIdLichTrinh_ primary key,
+	SNameLichTrinh nvarchar(100) null,
+	SListIdTinh nvarchar(Max),
+	SListIdGiaiTri nvarchar(Max),
+	SListIdMonAn nvarchar(Max),
+	SListIdKhachSan nvarchar(Max),
+	SListIdNhaHang nvarchar(Max),
+	FkIdTaiKhoan int null,
+	Constraint FkIdLichTrinh_TaiKhoan Foreign key (FkIdTaiKhoan) References tblTaiKhoan(PkIdTaiKhoan)
+)
+go
 --Comment
 Create table tblComment
 (	PkIdComment int identity(1,1) Constraint PkIdComment_ primary key,
 	SContentComment nvarchar(max) null,
 	IStarComment int null,
 	FkIdTaiKhoan int ,
-	Constraint FkIdCommentTaiKhoan Foreign key(FkIdTaiKhoan) References tblTaiKhoan(PkIdTaiKhoan)
 
 )
 go
 Create table tblYeuThich
 (	PkIdYeuThich int identity(1,1) Constraint PkIdYeuThich_ primary key,
 	FkIdTaiKhoan int ,
-	Constraint FkIdYeuThichTaiKhoan Foreign key(FkIdTaiKhoan) References tblTaiKhoan(PkIdTaiKhoan)
 )
 go
 Create table tblTinhThanh_Comment
