@@ -293,34 +293,36 @@
 
         <!-- Danh sách bài viết -->
         <div id="card-containerMonAn" class=" row g-4">
-
-            <!-- Bài viết 1 -->
-            @for (int i = 0; i < Math.Min(3, MonAn.Count); i++)
+            @if (MonAn != null && MonAn.Any())
             {
-                <div class="col-md-4">
-                    <a asp-controller="MonAn" style="text-decoration: none" asp-action="Details" asp-route-id="@MonAn[i].PkIdMonAn">
+                <!-- Bài viết 1 -->
+                @for (int i = 0; i < Math.Min(3, MonAn.Count); i++)
+                {
+                    <div class="col-md-4">
+                        <a asp-controller="MonAn" style="text-decoration: none" asp-action="Details" asp-route-id="@MonAn[i].PkIdMonAn">
 
-                        <div class="post-card">
-                            <img src="~/img/Mon_An/@MonAn[i].SimageMonAn" alt="Đà Nẵng" class="post-image">
-                            <div class="p-3">
-                                <h3 class="post-title">@MonAn[i].SnameMonAn</h3>
-                                <p class="post-meta">
-                                    @MonAn[i].ScontentMonAn
-                                </p>
+                            <div class="post-card">
+                                <img src="~/img/Mon_An/@MonAn[i].SimageMonAn" alt="Đà Nẵng" class="post-image">
+                                <div class="p-3">
+                                    <h3 class="post-title">@MonAn[i].SnameMonAn</h3>
+                                    <p class="post-meta">
+                                        @MonAn[i].ScontentMonAn
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                }
             }
-
         </div>
         <button class="btn-nav btn-nav-right" onclick="nextImagesMonAn()">❯</button>
     </div>
 </div>
 <div class="comment">
     <h2 class="section-title">Trải nghiệm của du khách</h2>
-
+    
     <div id="comments" class="comment-container">
+        @if (Comment.Count != 0){
         <div class="user-info">
             <div>
                 <div>@Comment[0].UserName</div>
@@ -343,7 +345,12 @@
 
         <div class="comment-content">
             @Comment[0].Content
-        </div>
+            </div>
+        }
+        else
+        {
+            <label>Không có bình luận nào</label>
+        }
     </div>
 </div>
 

@@ -1,3 +1,18 @@
+﻿@using Microsoft.EntityFrameworkCore
+@{
+    @inject WebTravel.Data.NCKHContext _context
+    var TinhThanh = _context.TblTinhThanhs.ToList();
+    var MonAn = _context.TblMonAns.ToList();
+    var GiaiTri = _context.TblGiaiTris.ToList();
+    var KhachSan = _context.TblKhachSans.ToList();
+    var NhaHang = _context.TblNhaHangs.ToList();
+    var Comment = _context.TblComments.Include(c => c.FkIdTaiKhoanNavigation).Select(c => new
+    {
+        UserName = c.FkIdTaiKhoanNavigation.SnameTaiKhoan,
+        Star = c.IstarComment,
+        Content = c.ScontentComment
+    }).ToList();
+}
 ﻿<style>
     .display {
         display: flex;
@@ -5,7 +20,7 @@
         align-items: center;
     }
 
-    .container {
+    .container-trip {
         max-width: 800px;
         margin: 20px auto;
         padding: 20px;
@@ -58,9 +73,118 @@
         .button:hover {
             background: #457b9d;
         }
+
+        /*Tỉnh thành*/
+     .section-title {
+         font-size: 2rem;
+         font-weight: bold;
+         text-align: center;
+         margin-bottom: 2rem;
+         color: #333;
+     }
+
+     .post-card {
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         border: none;
+         border-radius: 10px;
+         overflow: hidden;
+     }
+
+         .post-card:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+         }
+
+     .post-image {
+         width: 100%;
+         height: 200px;
+         object-fit: cover;
+     }
+
+     .post-title {
+         font-size: 1.1rem;
+         font-weight: bold;
+         margin-top: 10px;
+         color: #333;
+         line-height: 1.4;
+     }
+
+     .post-meta {
+         font-size: 0.85rem;
+         color: #777;
+         display: -webkit-box;
+         /* Sử dụng -webkit-box để hỗ trợ line-clamp */
+         -webkit-box-orient: vertical;
+         /* Định hướng theo chiều dọc */
+         -webkit-line-clamp: 3;
+         /* Giới hạn tối đa 3 dòng */
+         overflow: hidden;
+         /* Ẩn phần bị tràn */
+         text-overflow: ellipsis;
+         /* Hiện dấu "..." khi quá dài */
+         width: 100%;
+         /* Đảm bảo phần tử có giới hạn */
+     }
+
+     .btn-nav {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         background-color: rgba(0, 0, 0, 0.2);
+         color: white;
+         border: none;
+         padding: 10px;
+         border-radius: 20%;
+         cursor: pointer;
+     }
+
+     .btn-nav-left {
+         left: -50px;
+     }
+
+     .btn-nav-right {
+         right: -50px;
+     }
+
+     .carousel-container {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 20px;
+         position: relative;
+         margin-top: 50px;
+     }
+
+     .textcontent {
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         background-color: #eae9e9;
+         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+         padding: 20px;
+     }
+
+         .textcontent p {
+             width: 650px;
+             text-align: center;
+             font-size: 20px;
+         }
+
+         .textcontent button {
+             background-color: #f1f1f1;
+             border: #b7b5b5 solid 1px;
+             border-radius: 10px;
+             font-size: 14px;
+             padding: 10px;
+         }
+
+             .textcontent button:hover {
+                 background-color: #a5a4a4;
+             }
+
 </style>
-<div class="container display">
-    <h2 class="text-center text mb-4">Bạn muốn lên lịch cho chuyến đi của mình</h2>
+<div class="container-trip display">
+    <h2 class="text">Bạn muốn lên lịch cho chuyến đi của mình</h2>
     @if (TempData["Message"] != null)
     {
         <div class="alert alert-success mt-3">
@@ -74,17 +198,17 @@
             @TempData["Error"]
         </div>
     }
-    <form>
-        <div class="title">
+    <form class ="display">
+        <div class="title ">
             <label for="tripTitle" class="form-label text">Tên chuyến đi của bạn</label>
             <input class="search" name="name" type="text" placeholder="Tiêu đề lộ trình">
         </div>
         <div class="date-time">
-            <div class="display">
+            <div class="display" style="margin:5px">
                 <label for="start" class="text">Ngày bắt đầu</label>
                 <input class="date" type="date" name="start" id="start" class="search">
             </div>
-            <div class="display">
+            <div class="display" style="margin:5px">
                 <label for="start" class="text">Ngày kết thúc</label>
                 <input class="date" type="date" name="end" id="end" class="search">
             </div>
@@ -93,6 +217,99 @@
             <input class="search" type="text" name="tinhthanh" placeholder="Bạn muốn đi đâu?">
             <button class="button">Search</button>
         </div>
+
+        <div class="container my-5">
+            <!-- Tiêu đề chính -->
+            <h2 class="section-title">Tỉnh thành nổi bật</h2>
+            <div class="carousel-container">
+                <input type="button" class="btn-nav btn-nav-left" onclick="prevImagesTinh()" value="❮"/>
+
+                <!-- Danh sách bài viết -->
+                <div id="card-containerTinh" class=" row g-4">
+
+                    <!-- Bài viết 1 -->
+                    @for (int i = 0; i < Math.Min(3, TinhThanh.Count); i++)
+                    {
+                        <div class="col-md-4">
+                           
+
+                                <div class="post-card">
+                                    <img src="~/img/Tinh_Thanh/@TinhThanh[i].SimageTinhThanh" alt="Đà Nẵng" class="post-image">
+                                    <div class="p-3">
+                                        <h3 class="post-title">@TinhThanh[i].SnameTinhThanh</h3>
+                                        <p class="post-meta">
+                                            @TinhThanh[i].ScontentTinhThanh
+                                        </p>
+                                    </div>
+                                </div>
+                           
+                        </div>
+                    }
+
+                </div>
+                <input type="button" class="btn-nav btn-nav-right" onclick="nextImagesTinh()" value="❯"/>
+            </div>
+        </div>
         <input style="width: 100%;" type="submit" value="Tạo lịch trình" class="button">
     </form>
 </div>
+<script>
+    const categories = [
+        { id: "Tinh", data: @Html.Raw(Json.Serialize(TinhThanh)), folder: "Tinh_Thanh", contentKey: "scontentTinhThanh", imageKey: "simageTinhThanh", nameKey: "snameTinhThanh", idKey: "pkIdTinhThanh", controller: "TinhThanh" },
+        { id: "MonAn", data: @Html.Raw(Json.Serialize(MonAn)), folder: "Mon_An", contentKey: "scontentMonAn", imageKey: "simageMonAn", nameKey: "snameMonAn", idKey: "pkIdMonAn", controller: "MonAn" },
+        { id: "GiaiTri", data: @Html.Raw(Json.Serialize(GiaiTri)), folder: "Giai_Tri", contentKey: "scontentGiaiTri", imageKey: "simageGiaiTri", nameKey: "snameGiaiTri", idKey: "pkIdGiaiTri", controller: "GiaiTri" },
+        { id: "NhaHang", data: @Html.Raw(Json.Serialize(NhaHang)), folder: "Nha_Hang", contentKey: "scontentNhaHang", imageKey: "simageNhaHang", nameKey: "snameNhaHang", idKey: "pkIdNhaHang", controller: "NhaHang" },
+        { id: "KhachSan", data: @Html.Raw(Json.Serialize(KhachSan)), folder: "Khach_San", contentKey: "scontentKhachSan", imageKey: "simageKhachSan", nameKey: "snameKhachSan", idKey: "pkIdKhachSan", controller: "KhachSan" }
+
+    ];
+    var ite = @Html.Raw(Json.Serialize(GiaiTri));
+    console.log(categories);
+    const visibleCards = 3;
+    let baseUrl = "@Url.Content("~/")";
+
+    // Duyệt qua tất cả danh mục để khởi tạo slider
+    categories.forEach(category => {
+        let currentIndex = 0;
+
+        function renderCards() {
+            let container = document.getElementById(`card-container${category.id}`);
+            container.innerHTML = "";
+            for (let i = 0; i < visibleCards; i++) {
+                let imgIndex = (currentIndex + i) % category.data.length;
+                let imageUrl = `${baseUrl}img/${category.folder}/${category.data[imgIndex][category.imageKey]}`;
+                let itemUrl = `/${category.controller}/Details/${category.data[imgIndex][category.idKey]}`;
+                let card = `
+                        <div class="col-md-4">
+                   
+                        <div class="post-card">
+                            <img src="${imageUrl}" alt="${category.data[imgIndex][category.nameKey]}" class="post-image">
+                            <div class="p-3">
+                                <h3 class="post-title">${category.data[imgIndex][category.nameKey]}</h3>
+                                <p class="post-meta">
+                                    ${category.data[imgIndex][category.contentKey]}
+                                </p>
+                            </div>
+                        </div>
+                        
+                        </div>
+                    `;
+                container.innerHTML += card;
+            }
+        }
+
+        // Khởi tạo hiển thị ban đầu
+        renderCards();
+
+        // Gán sự kiện cho nút điều hướng
+        window[`nextImages${category.id}`] = function () {
+            currentIndex = (currentIndex + 1) % category.data.length;
+            renderCards();
+        };
+
+        window[`prevImages${category.id}`] = function () {
+            currentIndex = (currentIndex - 1 + category.data.length) % category.data.length;
+            renderCards();
+        };
+    });
+
+</script>
