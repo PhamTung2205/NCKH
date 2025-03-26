@@ -145,6 +145,8 @@ public partial class NCKHContext : DbContext
 
             entity.ToTable("tblLichTrinh");
 
+            entity.Property(e => e.DdateEndLichTrinh).HasColumnName("DDateEndLichTrinh");
+            entity.Property(e => e.DdateStartLichTrinh).HasColumnName("DDateStartLichTrinh");
             entity.Property(e => e.SlistIdGiaiTri).HasColumnName("SListIdGiaiTri");
             entity.Property(e => e.SlistIdKhachSan).HasColumnName("SListIdKhachSan");
             entity.Property(e => e.SlistIdMonAn).HasColumnName("SListIdMonAn");

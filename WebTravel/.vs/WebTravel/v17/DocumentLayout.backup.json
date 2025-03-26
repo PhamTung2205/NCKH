@@ -214,7 +214,7 @@
               "RelativeDocumentMoniker": "Models\\TblTaiKhoan.cs",
               "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblTaiKhoan.cs",
               "RelativeToolTip": "Models\\TblTaiKhoan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T15:17:38.202Z",
               "EditorCaption": ""
@@ -225,12 +225,11 @@
               "Title": "Details.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\TinhThanh\\Details.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Details.cshtml*",
-              "RelativeToolTip": "Views\\TinhThanh\\Details.cshtml*",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Details.cshtml",
+              "RelativeToolTip": "Views\\TinhThanh\\Details.cshtml",
               "ViewState": "AgIAABoBAAAAAAAAAAAAACYBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-21T11:11:03.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T11:11:03.545Z"
             },
             {
               "$type": "Document",
@@ -242,8 +241,7 @@
               "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-24T01:54:19.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T01:54:19.658Z"
             },
             {
               "$type": "Document",
@@ -279,8 +277,7 @@
               "RelativeToolTip": "Models\\TblTinhThanhComment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T01:30:26.518Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T01:30:26.518Z"
             },
             {
               "$type": "Document",

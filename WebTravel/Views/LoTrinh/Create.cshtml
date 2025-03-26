@@ -1,0 +1,98 @@
+﻿<style>
+    .display {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .text {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .date-time {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .date {
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px black solid;
+        margin-bottom: 10px;
+    }
+
+    .search {
+        width: 500px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px black solid;
+    }
+
+    .button {
+        background: #1d3557;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+        .button:hover {
+            background: #457b9d;
+        }
+</style>
+<div class="container display">
+    <h2 class="text-center text mb-4">Bạn muốn lên lịch cho chuyến đi của mình</h2>
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success mt-3">
+            <!--Thông báo lỗi-->
+            @TempData["Message"]
+        </div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger mt-3">
+            @TempData["Error"]
+        </div>
+    }
+    <form>
+        <div class="title">
+            <label for="tripTitle" class="form-label text">Tên chuyến đi của bạn</label>
+            <input class="search" name="name" type="text" placeholder="Tiêu đề lộ trình">
+        </div>
+        <div class="date-time">
+            <div class="display">
+                <label for="start" class="text">Ngày bắt đầu</label>
+                <input class="date" type="date" name="start" id="start" class="search">
+            </div>
+            <div class="display">
+                <label for="start" class="text">Ngày kết thúc</label>
+                <input class="date" type="date" name="end" id="end" class="search">
+            </div>
+        </div>
+        <div class="search-box">
+            <input class="search" type="text" name="tinhthanh" placeholder="Bạn muốn đi đâu?">
+            <button class="button">Search</button>
+        </div>
+        <input style="width: 100%;" type="submit" value="Tạo lịch trình" class="button">
+    </form>
+</div>

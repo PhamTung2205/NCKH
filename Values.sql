@@ -1,6 +1,6 @@
 ﻿Use NCKH
 go
-
+--Mới
 --Thêm Quyền
 Insert into tblQuyen
 values
@@ -81,6 +81,11 @@ Values
 (N'Số 23, Ngõ 168, Phố Tràng Thi, Quận Hoàn Kiếm, Hà Nội')
 go
 
+
+Insert Into tblComment
+Values
+(N'Tôi đã có muột chuyến đi rất thú vị bạn lên đi và trỉa nghiệm nơi này , nó đã để lại cho tôi một ký ức khó quên',5,1),
+(N'Nơi đây quả thật là tuyệt đẹp , bạn phải đến tận nơi nhìn thấy nó và thưởng thức ngay lúc này . Nó đang thời gian tôi bỏ ra để đến đây . Tôi sẽ giới thiệu thêm người đến đây để trải nghiệm nó',4,1)
 
 --Thêm Tỉnh Thành - Vui Chơi
 Insert Into tblTinhThanh_GiaiTri

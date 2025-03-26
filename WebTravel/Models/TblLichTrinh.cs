@@ -9,6 +9,10 @@ public partial class TblLichTrinh
 
     public string? SnameLichTrinh { get; set; }
 
+    public DateOnly? DdateStartLichTrinh { get; set; }
+
+    public DateOnly? DdateEndLichTrinh { get; set; }
+
     public string? SlistIdTinh { get; set; }
 
     public string? SlistIdGiaiTri { get; set; }

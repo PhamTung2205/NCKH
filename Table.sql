@@ -99,6 +99,8 @@ go
 Create table tblLichTrinh
 (	PkIdLichTrinh int identity(1,1) Constraint PkIdLichTrinh_ primary key,
 	SNameLichTrinh nvarchar(100) null,
+	DDateStartLichTrinh date null,
+	DDateEndLichTrinh date null,
 	SListIdTinh nvarchar(Max),
 	SListIdGiaiTri nvarchar(Max),
 	SListIdMonAn nvarchar(Max),
@@ -114,12 +116,14 @@ Create table tblComment
 	SContentComment nvarchar(max) null,
 	IStarComment int null,
 	FkIdTaiKhoan int ,
+	Constraint FkIdComment_TaiKhoan Foreign key(FkIdTaiKhoan) References tblTaiKhoan(PkIdTaiKhoan)
 
 )
 go
 Create table tblYeuThich
 (	PkIdYeuThich int identity(1,1) Constraint PkIdYeuThich_ primary key,
 	FkIdTaiKhoan int ,
+	Constraint FkIdYeuThich_TaiKhoan Foreign key(FkIdTaiKhoan) References tblTaiKhoan(PkIdTaiKhoan)
 )
 go
 Create table tblTinhThanh_Comment
