@@ -1,6 +1,8 @@
 ﻿@using Microsoft.EntityFrameworkCore
+@model WebTravel.Models.TblTinhThanh
 @{
     @inject WebTravel.Data.NCKHContext _context
+
     var TinhThanh = _context.TblTinhThanhs.ToList();
     var MonAn = _context.TblMonAns.ToList();
     var GiaiTri = _context.TblGiaiTris.ToList();
@@ -199,6 +201,8 @@
         </div>
     }
     <form class ="display">
+        <input type="hidden" name="idTinh" value="" id="idTinh"/>
+
         <div class="title ">
             <label for="tripTitle" class="form-label text">Tên chuyến đi của bạn</label>
             <input class="search" name="name" type="text" placeholder="Tiêu đề lộ trình">
@@ -233,7 +237,7 @@
                         <div class="col-md-4">
                            
 
-                                <div class="post-card">
+                                <div class="post-card" onclick="setidTinh(@TinhThanh[i].PkIdTinhThanh)">
                                     <img src="~/img/Tinh_Thanh/@TinhThanh[i].SimageTinhThanh" alt="Đà Nẵng" class="post-image">
                                     <div class="p-3">
                                         <h3 class="post-title">@TinhThanh[i].SnameTinhThanh</h3>
@@ -280,8 +284,8 @@
                 let itemUrl = `/${category.controller}/Details/${category.data[imgIndex][category.idKey]}`;
                 let card = `
                         <div class="col-md-4">
-                   
-                        <div class="post-card">
+
+                                <div class="post-card" onclick="setidTinh(${category.data[imgIndex][category.idKey]})">
                             <img src="${imageUrl}" alt="${category.data[imgIndex][category.nameKey]}" class="post-image">
                             <div class="p-3">
                                 <h3 class="post-title">${category.data[imgIndex][category.nameKey]}</h3>
@@ -311,5 +315,8 @@
             renderCards();
         };
     });
-
+    function setidTinh(id) {
+        document.getElementById("idTinh").value = id;
+        console.log("Id đã chọn :",id)
+    }
 </script>

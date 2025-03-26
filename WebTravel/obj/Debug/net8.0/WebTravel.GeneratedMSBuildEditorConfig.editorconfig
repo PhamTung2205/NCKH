@@ -30,6 +30,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/hoc_web/NCKH/Code/NCKH/WebTravel/Views/GiaiTri/Comment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lhaVRyaVxDb21tZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/hoc_web/NCKH/Code/NCKH/WebTravel/Views/GiaiTri/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lhaVRyaVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/hoc_web/NCKH/Code/NCKH/WebTravel/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/hoc_web/NCKH/Code/NCKH/WebTravel/Views/KhachSan/Comment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hTYW5cQ29tbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/hoc_web/NCKH/Code/NCKH/WebTravel/Views/KhachSan/Details.cshtml]
@@ -70,12 +78,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9UcmluaFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/hoc_web/NCKH/Code/NCKH/WebTravel/Views/MonAn/Comment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uQW5cQ29tbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/hoc_web/NCKH/Code/NCKH/WebTravel/Views/MonAn/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uQW5cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/hoc_web/NCKH/Code/NCKH/WebTravel/Views/MonAn/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uQW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/hoc_web/NCKH/Code/NCKH/WebTravel/Views/NhaHang/Comment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhSGFuZ1xDb21tZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/hoc_web/NCKH/Code/NCKH/WebTravel/Views/NhaHang/Details.cshtml]

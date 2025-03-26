@@ -13,7 +13,7 @@ namespace WebTravel.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> CreateLoTrinh( string name,DateOnly dateStart,DateOnly dateEnd, int entityId)
+        public async Task<IActionResult> CreateLoTrinh( string name,DateOnly start,DateOnly end, int idTinh)
         {
             var userId = HttpContext.Session.GetInt32("UserId");
 
@@ -21,7 +21,7 @@ namespace WebTravel.Controllers
             {
                 TempData["Error"] = "Vui lòng đăng nhập tài khoản để được đánh giá";
 
-                return RedirectToAction("Comment", new { id = entityId });
+                return RedirectToAction("LoTrinh/Create");
             }
             return RedirectToAction();
         }
