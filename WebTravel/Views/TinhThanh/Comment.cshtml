@@ -1,0 +1,147 @@
+﻿@model WebTravel.Models.TblTinhThanh
+<style>
+     /* CSS cho form khảo sát */
+     .form-container {
+         max-width: 600px;
+         margin: 40px auto;
+         padding: 20px;
+         background-color: #fff;
+         border-radius: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     }
+
+     .rating {
+         display: flex;
+         align-items: center;
+         margin: 20px 0;
+     }
+
+     .bubbles-container {
+         display: flex;
+         gap: 10px;
+     }
+
+     .rating input[type="radio"] {
+         display: none;
+     }
+
+     .rating label {
+         width: 40px;
+         height: 40px;
+         border: 2px solid #00C4B4;
+         border-radius: 50%;
+         display: inline-block;
+         cursor: pointer;
+         transition: background-color 0.3s;
+     }
+
+         .rating label.active {
+             background-color: #00C4B4;
+         }
+
+     .rating-text {
+         margin-left: 15px;
+         font-size: 16px;
+         color: #333;
+     }
+
+    .button-comment {
+        background-color: #1d3557;
+        color: white;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        border: 1px solid #1d3557;
+        padding: 10px;
+    }
+
+        .button-comment:hover {
+            background: #457b9d;
+        }
+</style>
+
+<!--Comment-->
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="commentModalLabel">Bình Luận</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-success mt-3">
+                    <!--Thông báo lỗi-->
+                    @TempData["Message"]
+                </div>
+            }
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger mt-3">
+                    @TempData["Error"]
+                </div>
+            }
+            <form id="surveyForm" asp-action="SubmitSurvey" asp-controller="TinhThanh" method="post">
+                <input type="hidden" name="entityId" value="@Model.PkIdTinhThanh" />
+                <h2 class="mb-4">Bạn xếp hạng trải nghiệm của mình như thế nào?</h2>
+                <div class="rating">
+                    <div class="bubbles-container">
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1" class="bubble"></label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2" class="bubble"></label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3" class="bubble"></label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4" class="bubble"></label>
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5" class="bubble"></label>
+                    </div>
+                    <span class="rating-text"></span>
+                </div>
+
+                <div class="mb-4">
+                    <h3>Viết đánh giá</h3>
+                    <small class="text-muted d-block mb-2">Khung cần thiết ngôn mục. Chọn tói đa chụp rất nhiều ảnh!...</small>
+                    <textarea class="form-control" name="review" placeholder="Viết đánh giá của bạn..." rows="4"></textarea>
+
+                </div>
+
+                <button type="submit" class="button-comment w-100">Gửi</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+<script>
+    const bubbles = document.querySelectorAll('.bubble');
+    const radioInputs = document.querySelectorAll('input[name="rating"]');
+    const ratingText = document.querySelector('.rating-text');
+
+    // Định nghĩa nhãn cho từng mức đánh giá
+    const ratingLabels = {
+        1: 'Thất vọng',
+        2: 'Tệ',
+        3: 'Bình thường',
+        4: 'Tốt',
+        5: 'Hoàn hảo'
+    };
+
+    radioInputs.forEach((input, index) => {
+        input.addEventListener('change', () => {
+            // Xóa trạng thái active của tất cả bong bóng
+            bubbles.forEach(bubble => bubble.classList.remove('active'));
+
+            // Thêm trạng thái active cho các bong bóng từ 1 đến bong bóng được chọn
+            for (let i = 0; i <= index; i++) {
+                bubbles[i].classList.add('active');
+            }
+
+            // Cập nhật nhãn đánh giá
+            const ratingValue = input.value;
+            ratingText.textContent = ratingLabels[ratingValue];
+        });
+    });
+</script>

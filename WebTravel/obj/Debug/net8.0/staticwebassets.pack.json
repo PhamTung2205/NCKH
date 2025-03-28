@@ -25,8 +25,56 @@
       "PackagePath": "staticwebassets\\img\\Banner\\banner1.jpg"
     },
     {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\bai_sao.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\bai_sao.jpg"
+    },
+    {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\bao_tang_quan_su.jpg",
       "PackagePath": "staticwebassets\\img\\Giai_Tri\\bao_tang_quan_su.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\cai_rang.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\cai_rang.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\christ_vt.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\christ_vt.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\co_le_pagoda.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\co_le_pagoda.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\dai_nam.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\dai_nam.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\dam_trau.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\dam_trau.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\dien_bien_museum.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\dien_bien_museum.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\dong_kinh.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\dong_kinh.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\dray_nur.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\dray_nur.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\eo_gio.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\eo_gio.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\giang_dien.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\giang_dien.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\ha_long_cruise.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\ha_long_cruise.jpg"
     },
     {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\ho_guom.jpg",
@@ -41,28 +89,224 @@
       "PackagePath": "staticwebassets\\img\\Giai_Tri\\hoang_thanh_thang_long.jpg"
     },
     {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\hoi_an_old.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\hoi_an_old.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\huong_river.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\huong_river.jpg"
+    },
+    {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\lang_bac.jpg",
       "PackagePath": "staticwebassets\\img\\Giai_Tri\\lang_bac.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\luc_ngan.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\luc_ngan.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\ma_pi_leng.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\ma_pi_leng.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\mui_ne_sand.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\mui_ne_sand.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\nga_bay.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\nga_bay.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\pongour.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\pongour.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\sapa_terrace.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\sapa_terrace.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\tam_thanh.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\tam_thanh.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\thoi_loi.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\thoi_loi.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\thoi_son.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\thoi_son.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\tra_su.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\tra_su.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Giai_Tri\\vinpearl.jpg",
+      "PackagePath": "staticwebassets\\img\\Giai_Tri\\vinpearl.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\bac_giang_grand.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\bac_giang_grand.jpg"
     },
     {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\boutique_hotel.jpg",
       "PackagePath": "staticwebassets\\img\\Khach_San\\boutique_hotel.jpg"
     },
     {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\chau_doc_victoria.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\chau_doc_victoria.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\coconut_bentre.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\coconut_bentre.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\dong_nai_palace.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\dong_nai_palace.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\fusion_quynhon.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\fusion_quynhon.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\grand_bd.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\grand_bd.jpg"
+    },
+    {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\grand_mercure.jpg",
       "PackagePath": "staticwebassets\\img\\Khach_San\\grand_mercure.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\imperial_vt.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\imperial_vt.jpg"
     },
     {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\jade_hotel.jpg",
       "PackagePath": "staticwebassets\\img\\Khach_San\\jade_hotel.jpg"
     },
     {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\la_residence_hue.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\la_residence_hue.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\lang_son_star.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\lang_son_star.jpg"
+    },
+    {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\lotte.jpg",
       "PackagePath": "staticwebassets\\img\\Khach_San\\lotte.jpg"
     },
     {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\ly_son_central.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\ly_son_central.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\mekong_tg.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\mekong_tg.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\melia_muine.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\melia_muine.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\mgallery_hoian.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\mgallery_hoian.jpg"
+    },
+    {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\movenpick.jpg",
       "PackagePath": "staticwebassets\\img\\Khach_San\\movenpick.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\muong_thanh_bmt.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\muong_thanh_bmt.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\muong_thanh_db.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\muong_thanh_db.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\nam_dinh_hotel.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\nam_dinh_hotel.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\paradise.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\paradise.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\salinda.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\salinda.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\silk_path_hg.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\silk_path_hg.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\six_senses_condao.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\six_senses_condao.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\swiss_bel.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\swiss_bel.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\topas_sapa.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\topas_sapa.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\victoria.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\victoria.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\vinh_nghiem_resort.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\vinh_nghiem_resort.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Khach_San\\vinpearl_resort.jpg",
+      "PackagePath": "staticwebassets\\img\\Khach_San\\vinpearl_resort.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\banh_beo.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\banh_beo.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\banh_can.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\banh_can.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\banh_canh_ghe.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\banh_canh_ghe.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\banh_cuon.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\banh_cuon.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\banh_khoai.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\banh_khoai.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\banh_mi_pate.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\banh_mi_pate.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\banh_trang_nuong.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\banh_trang_nuong.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\banh_uot.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\banh_uot.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\banh_xeo.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\banh_xeo.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\banh_xeo_qb.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\banh_xeo_qb.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\bun_bo_hue.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\bun_bo_hue.jpg"
     },
     {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\bun_cha.jpg",
@@ -73,24 +317,152 @@
       "PackagePath": "staticwebassets\\img\\Mon_An\\bun_dau.jpg"
     },
     {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\bun_rieu.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\bun_rieu.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\bun_sua.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\bun_sua.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\ca_kho_to.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\ca_kho_to.jpg"
+    },
+    {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\cafe_trung.jpg",
       "PackagePath": "staticwebassets\\img\\Mon_An\\cafe_trung.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\cao_lau.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\cao_lau.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\cha_ca.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\cha_ca.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\chao_long.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\chao_long.jpg"
     },
     {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\com.jpg",
       "PackagePath": "staticwebassets\\img\\Mon_An\\com.jpg"
     },
     {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\com_tam.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\com_tam.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\goi_ca_mai.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\goi_ca_mai.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\goi_la.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\goi_la.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\goi_sau_dau.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\goi_sau_dau.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\hu_tieu.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\hu_tieu.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\lau_mam.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\lau_mam.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\mi_quang.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\mi_quang.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\nem_chua.jpg",
+      "PackagePath": "staticwebassets\\img\\Mon_An\\nem_chua.jpg"
+    },
+    {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Mon_An\\pho.jpg",
       "PackagePath": "staticwebassets\\img\\Mon_An\\pho.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\1946.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\1946.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\bai_sau_vt.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\bai_sau_vt.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\bien_rang.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\bien_rang.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\cau_go.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\cau_go.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\chau_doc_riverside.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\chau_doc_riverside.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\con_dao_seafood.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\con_dao_seafood.jpg"
     },
     {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\cuisine_restaurant.jpg",
       "PackagePath": "staticwebassets\\img\\Nha_Hang\\cuisine_restaurant.jpg"
     },
     {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\dai_nam_quan.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\dai_nam_quan.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\dien_bien_quan.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\dien_bien_quan.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\dua_xanh.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\dua_xanh.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\giang_dien_quan.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\giang_dien_quan.jpg"
+    },
+    {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\goc_que.jpg",
       "PackagePath": "staticwebassets\\img\\Nha_Hang\\goc_que.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\ha_giang_quan.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\ha_giang_quan.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\ha_long_rest.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\ha_long_rest.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\leguda.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\leguda.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\luc_ngan_quan.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\luc_ngan_quan.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\ly_son_seafood.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\ly_son_seafood.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\mien_tay_quan.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\mien_tay_quan.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\mui_ne_deli.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\mui_ne_deli.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\nam_dinh_36.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\nam_dinh_36.jpg"
     },
     {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\ngoc_mai_vang.jpg",
@@ -101,12 +473,88 @@
       "PackagePath": "staticwebassets\\img\\Nha_Hang\\quan_xua.jpg"
     },
     {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\sapa_sky.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\sapa_sky.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\song_hau.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\song_hau.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\tam_gia.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\tam_gia.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\tam_thanh_quan.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\tam_thanh_quan.jpg"
+    },
+    {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\tam_vi.jpg",
       "PackagePath": "staticwebassets\\img\\Nha_Hang\\tam_vi.jpg"
     },
     {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\tay_nguyen.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\tay_nguyen.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\thanh_suong.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\thanh_suong.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Nha_Hang\\vinh_nghiem_am_thuc.jpg",
+      "PackagePath": "staticwebassets\\img\\Nha_Hang\\vinh_nghiem_am_thuc.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\an_giang.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\an_giang.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\bac_giang.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\bac_giang.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\ben_tre.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\ben_tre.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\binh_duong.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\binh_duong.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\buon_ma_thuot.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\buon_ma_thuot.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\can_tho.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\can_tho.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\con_dao.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\con_dao.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\da_lat.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\da_lat.jpg"
+    },
+    {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\da_nang.jpg",
       "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\da_nang.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\dien_bien.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\dien_bien.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\dong_nai.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\dong_nai.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\ha_giang.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\ha_giang.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\ha_long.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\ha_long.jpg"
     },
     {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\ha_noi.jpg",
@@ -117,12 +565,60 @@
       "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\hai_phong.jpg"
     },
     {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\hoi_an.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\hoi_an.jpg"
+    },
+    {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\hue.jpg",
       "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\hue.jpg"
     },
     {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\lang_son.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\lang_son.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\ly_son.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\ly_son.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\nam_dinh.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\nam_dinh.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\nha_trang.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\nha_trang.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\phan_thiet.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\phan_thiet.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\phu_quoc.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\phu_quoc.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\quy_nhon.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\quy_nhon.jpg"
+    },
+    {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\sai_gon.jpg",
       "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\sai_gon.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\sapa.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\sapa.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\tien_giang.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\tien_giang.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\vinh_nghiem.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\vinh_nghiem.jpg"
+    },
+    {
+      "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\img\\Tinh_Thanh\\vung_tau.jpg",
+      "PackagePath": "staticwebassets\\img\\Tinh_Thanh\\vung_tau.jpg"
     },
     {
       "Id": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\chatbot.js",

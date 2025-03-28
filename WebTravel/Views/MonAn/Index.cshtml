@@ -1,5 +1,204 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    @inject WebTravel.Data.NCKHContext _context;
+    var MonAn = _context.TblMonAns.ToList();
+    int pageSize = 18; // Số xe mỗi trang
+    int pageNumber = Context.Request.Query["page"].Count > 0 ? int.Parse(Context.Request.Query["page"]) : 1;
+    int totalMonAns = _context.TblMonAns.Count();
+    int totalPages = (int)Math.Ceiling((double)totalMonAns / pageSize);
+
+    var pagedMonAns = _context.TblMonAns.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+
 }
+<style>
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+    }
+
+        .banner img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            animation: fade 12s infinite;
+        }
+
+    object-fit: cover;
+    }
+
+    .search-box {
+        background: white;
+        padding: 20px;
+        width: 600px;
+        height: 80px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .search {
+        width: 500px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px black solid;
+    }
+
+    .search-box button {
+        background: #1d3557;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .search-box button:hover {
+            background: #457b9d;
+        }
+
+
+
+    /*Css mới*/
+    /*css mới*/
+    .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #333;
+    }
+
+    .post-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+    .post-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .post-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #333;
+        line-height: 1.4;
+    }
+
+    .post-meta {
+        font-size: 0.85rem;
+        color: #777;
+        display: -webkit-box;
+        /* Sử dụng -webkit-box để hỗ trợ line-clamp */
+        -webkit-box-orient: vertical;
+        /* Định hướng theo chiều dọc */
+        -webkit-line-clamp: 3;
+        /* Giới hạn tối đa 3 dòng */
+        overflow: hidden;
+        /* Ẩn phần bị tràn */
+        text-overflow: ellipsis;
+        /* Hiện dấu "..." khi quá dài */
+        width: 100%;
+        /* Đảm bảo phần tử có giới hạn */
+    }
+</style>
+<section class="banner">
+    <img src="~/img/Banner/banner1.jpg" alt="Travel Image">
+    <div>
+        <h1 class="typing-text" id="typing-text">Bạn muốn tìm món ăn ở đâu?</h1>
+        <div class="search-box">
+
+            <input class="search" type="text" placeholder="Bạn muốn tìm ở  đâu?">
+            <button type="button" class="btn btn-primary px-4 rounded-pill fw-semibold" data-bs-toggle="modal" data-bs-target="#maintenanceModal">
+                Search
+            </button>
+        </div>
+    </div>
+</section>
+<div class="container my-5">
+    <!-- Tiêu đề chính -->
+    <h2 class="section-title">Món ăn đa miền</h2>
+
+    <!-- Danh sách bài viết -->
+    <div id="card-containerTinh" class=" row g-4">
+
+        <!-- Bài viết 1 -->
+        @foreach (var monan in pagedMonAns)
+        {
+            <div class="col-md-4">
+                <a asp-controller="MonAn" style="text-decoration: none" asp-action="Details" asp-route-id="@monan.PkIdMonAn">
+
+                    <div class="post-card">
+                        <img src="~/img/Mon_An/@monan.SimageMonAn" alt="@monan.SimageMonAn" class="post-image">
+                        <div class="p-3">
+                            <h3 class="post-title">@monan.SnameMonAn</h3>
+                            <p class="post-meta">
+                                @monan.ScontentMonAn
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+    </div>
+</div>
+<!-- Thanh phân trang -->
+<nav aria-label="Page navigation" class="mt-4 d-flex justify-content-center">
+    <ul class="pagination pagination-lg">
+        <!-- Nút "Trước" -->
+        @if (pageNumber > 1)
+        {
+            <li class="page-item">
+                <a class="page-link rounded-pill shadow-sm" href="?page=@(pageNumber - 1)">« Trước</a>
+            </li>
+        }
+        else
+        {
+            <li class="page-item disabled">
+                <span class="page-link rounded-pill">« Trước</span>
+            </li>
+        }
+
+        <!-- Các số trang -->
+        @for (int i = 1; i <= totalPages; i++)
+        {
+            <li class="page-item @(i == pageNumber ? "active" : "")">
+                <a class="page-link rounded-pill shadow-sm @(i == pageNumber ? "bg-primary text-white" : "")" href="?page=@i">@i</a>
+            </li>
+        }
+
+        <!-- Nút "Sau" -->
+        @if (pageNumber < totalPages)
+        {
+            <li class="page-item">
+                <a class="page-link rounded-pill shadow-sm" href="?page=@(pageNumber + 1)">Tiếp »</a>
+            </li>
+        }
+        else
+        {
+            <li class="page-item disabled">
+                <span class="page-link rounded-pill">Tiếp »</span>
+            </li>
+        }
+    </ul>
+</nav>

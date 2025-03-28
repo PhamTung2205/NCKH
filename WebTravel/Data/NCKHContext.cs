@@ -24,6 +24,8 @@ public partial class NCKHContext : DbContext
 
     public virtual DbSet<TblKhachSan> TblKhachSans { get; set; }
 
+    public virtual DbSet<TblLichTrinh> TblLichTrinhs { get; set; }
+
     public virtual DbSet<TblMonAn> TblMonAns { get; set; }
 
     public virtual DbSet<TblNhaHang> TblNhaHangs { get; set; }
@@ -33,6 +35,8 @@ public partial class NCKHContext : DbContext
     public virtual DbSet<TblTaiKhoan> TblTaiKhoans { get; set; }
 
     public virtual DbSet<TblTinhThanh> TblTinhThanhs { get; set; }
+
+    public virtual DbSet<TblTinhThanhComment> TblTinhThanhComments { get; set; }
 
     public virtual DbSet<TblTinhThanhGiaiTri> TblTinhThanhGiaiTris { get; set; }
 
@@ -63,7 +67,7 @@ public partial class NCKHContext : DbContext
 
             entity.HasOne(d => d.FkIdTaiKhoanNavigation).WithMany(p => p.TblComments)
                 .HasForeignKey(d => d.FkIdTaiKhoan)
-                .HasConstraintName("FkIdCommentTaiKhoan");
+                .HasConstraintName("FkIdComment_TaiKhoan");
         });
 
         modelBuilder.Entity<TblDiaChi>(entity =>
@@ -99,7 +103,7 @@ public partial class NCKHContext : DbContext
 
         modelBuilder.Entity<TblGiaiTri>(entity =>
         {
-            entity.HasKey(e => e.PkIdGiaiTri).HasName("PkIdGiaiTri_");
+            entity.HasKey(e => e.PkIdGiaiTri).HasName("PkIdVuiChoi_");
 
             entity.ToTable("tblGiaiTri");
 
@@ -113,7 +117,7 @@ public partial class NCKHContext : DbContext
 
             entity.HasOne(d => d.FkIdTypeNavigation).WithMany(p => p.TblGiaiTris)
                 .HasForeignKey(d => d.FkIdType)
-                .HasConstraintName("FkIdTypeGiaiTri");
+                .HasConstraintName("FkIdTypeVuiChoi");
         });
 
         modelBuilder.Entity<TblKhachSan>(entity =>
@@ -133,6 +137,28 @@ public partial class NCKHContext : DbContext
             entity.HasOne(d => d.FkIdTypeNavigation).WithMany(p => p.TblKhachSans)
                 .HasForeignKey(d => d.FkIdType)
                 .HasConstraintName("FkIdTypeKhachSan");
+        });
+
+        modelBuilder.Entity<TblLichTrinh>(entity =>
+        {
+            entity.HasKey(e => e.PkIdLichTrinh).HasName("PkIdLichTrinh_");
+
+            entity.ToTable("tblLichTrinh");
+
+            entity.Property(e => e.DdateEndLichTrinh).HasColumnName("DDateEndLichTrinh");
+            entity.Property(e => e.DdateStartLichTrinh).HasColumnName("DDateStartLichTrinh");
+            entity.Property(e => e.SlistIdGiaiTri).HasColumnName("SListIdGiaiTri");
+            entity.Property(e => e.SlistIdKhachSan).HasColumnName("SListIdKhachSan");
+            entity.Property(e => e.SlistIdMonAn).HasColumnName("SListIdMonAn");
+            entity.Property(e => e.SlistIdNhaHang).HasColumnName("SListIdNhaHang");
+            entity.Property(e => e.SlistIdTinh).HasColumnName("SListIdTinh");
+            entity.Property(e => e.SnameLichTrinh)
+                .HasMaxLength(100)
+                .HasColumnName("SNameLichTrinh");
+
+            entity.HasOne(d => d.FkIdTaiKhoanNavigation).WithMany(p => p.TblLichTrinhs)
+                .HasForeignKey(d => d.FkIdTaiKhoan)
+                .HasConstraintName("FkIdLichTrinh_TaiKhoan");
         });
 
         modelBuilder.Entity<TblMonAn>(entity =>
@@ -224,9 +250,35 @@ public partial class NCKHContext : DbContext
                 .HasConstraintName("FkIdTypeTinhThanh");
         });
 
+        modelBuilder.Entity<TblTinhThanhComment>(entity =>
+        {
+            entity.HasKey(e => new { e.FkIdTinhThanh, e.FkIdDiaChi, e.FkIdComment }).HasName("PkTinhThanh_Comment");
+
+            entity.ToTable("tblTinhThanh_Comment");
+
+            entity.HasOne(d => d.FkIdCommentNavigation).WithMany(p => p.TblTinhThanhComments)
+                .HasForeignKey(d => d.FkIdComment)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FkComment_TinhThanh");
+
+            entity.HasOne(d => d.FkIdDiaChiNavigation).WithMany(p => p.TblTinhThanhComments)
+                .HasForeignKey(d => d.FkIdDiaChi)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FkDiaChi_TinhThanh");
+
+            entity.HasOne(d => d.FkIdTinhThanhNavigation).WithMany(p => p.TblTinhThanhComments)
+                .HasForeignKey(d => d.FkIdTinhThanh)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FkTinhThanh_Comment");
+
+            entity.HasOne(d => d.FkIdYeuThichNavigation).WithMany(p => p.TblTinhThanhComments)
+                .HasForeignKey(d => d.FkIdYeuThich)
+                .HasConstraintName("FkYeuThich_TinhThanh");
+        });
+
         modelBuilder.Entity<TblTinhThanhGiaiTri>(entity =>
         {
-            entity.HasKey(e => new { e.FkIdTinhThanh, e.FkIdGiaiTri, e.FkIdDiaChi, e.FkIdComment, e.FkIdYeuThich }).HasName("PkTinhThanh_GiaiTri");
+            entity.HasKey(e => new { e.FkIdTinhThanh, e.FkIdGiaiTri, e.FkIdDiaChi, e.FkIdComment }).HasName("PkTinhThanh_GiaiTri");
 
             entity.ToTable("tblTinhThanh_GiaiTri");
 
@@ -252,13 +304,12 @@ public partial class NCKHContext : DbContext
 
             entity.HasOne(d => d.FkIdYeuThichNavigation).WithMany(p => p.TblTinhThanhGiaiTris)
                 .HasForeignKey(d => d.FkIdYeuThich)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FkYeuThich_GiaiTri");
         });
 
         modelBuilder.Entity<TblTinhThanhKhachSan>(entity =>
         {
-            entity.HasKey(e => new { e.FkIdTinhThanh, e.FkIdKhachSan, e.FkIdDiaChi, e.FkIdComment, e.FkIdYeuThich }).HasName("PkTinhThanh_KhachSan");
+            entity.HasKey(e => new { e.FkIdTinhThanh, e.FkIdKhachSan, e.FkIdDiaChi, e.FkIdComment }).HasName("PkTinhThanh_KhachSan");
 
             entity.ToTable("tblTinhThanh_KhachSan");
 
@@ -284,13 +335,12 @@ public partial class NCKHContext : DbContext
 
             entity.HasOne(d => d.FkIdYeuThichNavigation).WithMany(p => p.TblTinhThanhKhachSans)
                 .HasForeignKey(d => d.FkIdYeuThich)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FkYeuThich_KhachSan");
         });
 
         modelBuilder.Entity<TblTinhThanhMonAn>(entity =>
         {
-            entity.HasKey(e => new { e.FkIdTinhThanh, e.FkIdMonAn, e.FkIdDiaChi, e.FkIdComment, e.FkIdYeuThich }).HasName("PkTinhThanh_MonAn");
+            entity.HasKey(e => new { e.FkIdTinhThanh, e.FkIdMonAn, e.FkIdDiaChi, e.FkIdComment }).HasName("PkTinhThanh_MonAn");
 
             entity.ToTable("tblTinhThanh_MonAn");
 
@@ -316,13 +366,12 @@ public partial class NCKHContext : DbContext
 
             entity.HasOne(d => d.FkIdYeuThichNavigation).WithMany(p => p.TblTinhThanhMonAns)
                 .HasForeignKey(d => d.FkIdYeuThich)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FkYeuThich_MonAn");
         });
 
         modelBuilder.Entity<TblTinhThanhNhaHang>(entity =>
         {
-            entity.HasKey(e => new { e.FkIdTinhThanh, e.FkIdNhaHang, e.FkIdDiaChi, e.FkIdComment, e.FkIdYeuThich }).HasName("PkTinhThanh_NhaHang");
+            entity.HasKey(e => new { e.FkIdTinhThanh, e.FkIdNhaHang, e.FkIdDiaChi, e.FkIdComment }).HasName("PkTinhThanh_NhaHang");
 
             entity.ToTable("tblTinhThanh_NhaHang");
 
@@ -348,7 +397,6 @@ public partial class NCKHContext : DbContext
 
             entity.HasOne(d => d.FkIdYeuThichNavigation).WithMany(p => p.TblTinhThanhNhaHangs)
                 .HasForeignKey(d => d.FkIdYeuThich)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FkYeuThich_NhaHang");
         });
 
@@ -371,7 +419,7 @@ public partial class NCKHContext : DbContext
 
             entity.HasOne(d => d.FkIdTaiKhoanNavigation).WithMany(p => p.TblYeuThiches)
                 .HasForeignKey(d => d.FkIdTaiKhoan)
-                .HasConstraintName("FkIdYeuThichTaiKhoan");
+                .HasConstraintName("FkIdYeuThich_TaiKhoan");
         });
 
         OnModelCreatingPartial(modelBuilder);

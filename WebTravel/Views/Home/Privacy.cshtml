@@ -1,6 +1,501 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
+﻿@using Microsoft.EntityFrameworkCore
+@{
+    @inject WebTravel.Data.NCKHContext _context
+    var TinhThanh = _context.TblTinhThanhs.ToList();
+    var MonAn = _context.TblMonAns.ToList();
+    var GiaiTri = _context.TblGiaiTris.ToList();
+    var KhachSan = _context.TblKhachSans.ToList();
+    var NhaHang = _context.TblNhaHangs.ToList();
+    var Comment = _context.TblComments.Include(c => c.FkIdTaiKhoanNavigation).Select(c => new 
+    {
+        UserName = c.FkIdTaiKhoanNavigation.SnameTaiKhoan,
+        Star = c.IstarComment,
+        Content = c.ScontentComment
+    }).ToList();
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<style>
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+    }
+
+        .banner img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            animation: fade 12s infinite;
+        }
+
+    object-fit: cover;
+        }
+
+    .search-box {
+        background: white;
+        padding: 20px;
+        width: 600px;
+        height: 80px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .search {
+        width: 500px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px black solid;
+    }
+
+    .search-box button {
+        background: #1d3557;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .search-box button:hover {
+            background: #457b9d;
+        }
+    /*css mới*/
+    .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #333;
+    }
+
+    .post-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+    .post-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .post-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #333;
+        line-height: 1.4;
+    }
+
+    .post-meta {
+        font-size: 0.85rem;
+        color: #777;
+        display: -webkit-box;
+        /* Sử dụng -webkit-box để hỗ trợ line-clamp */
+        -webkit-box-orient: vertical;
+        /* Định hướng theo chiều dọc */
+        -webkit-line-clamp: 3;
+        /* Giới hạn tối đa 3 dòng */
+        overflow: hidden;
+        /* Ẩn phần bị tràn */
+        text-overflow: ellipsis;
+        /* Hiện dấu "..." khi quá dài */
+        width: 100%;
+        /* Đảm bảo phần tử có giới hạn */
+    }
+
+    .btn-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.2);
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 20%;
+        cursor: pointer;
+    }
+
+    .btn-nav-left {
+        left: -50px;
+    }
+
+    .btn-nav-right {
+        right: -50px;
+    }
+
+    .carousel-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .textcontent {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: #eae9e9;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+        .textcontent p {
+            width: 650px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .textcontent button {
+            background-color: #f1f1f1;
+            border: #b7b5b5 solid 1px;
+            border-radius: 10px;
+            font-size: 14px;
+            padding: 10px;
+        }
+
+            .textcontent button:hover {
+                background-color: #a5a4a4;
+            }
+
+
+            /*Comment*/
+    .comment {
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        padding: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 1200px; /* Mở rộng card */
+        margin: 20px auto;
+    }
+
+    .comment-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .user-details {
+        font-size: 14px;
+        color: #6c757d;
+    }
+
+    .rating-display {
+        display: flex;
+        gap: 5px;
+        margin: 10px 0;
+    }
+
+    .bubble {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #00C4B4;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .active {
+        background-color: #00C4B4;
+    }
+</style>
+<section class="banner">
+    <img src="~/img/Banner/banner1.jpg" alt="Travel Image">
+    <div>
+        <h1 class="typing-text" id="typing-text">Tận hưởng du lịch Việt Nam</h1>
+        <div class="search-box">
+
+            <input class="search" type="text" placeholder="Bạn muốn đi đâu?">
+            <button type="button" class="btn btn-primary px-4 rounded-pill fw-semibold" data-bs-toggle="modal" data-bs-target="#maintenanceModal">
+                Search
+            </button>
+        </div>
+    </div>
+</section>
+<div class="container my-5">
+    <!-- Tiêu đề chính -->
+    <h2 class="section-title">Tỉnh thành nổi bật</h2>
+    <div class="carousel-container">
+        <button class="btn-nav btn-nav-left" onclick="prevImagesTinh()">❮</button>
+
+    <!-- Danh sách bài viết -->
+        <div id="card-containerTinh" class=" row g-4">
+
+        <!-- Bài viết 1 -->
+          @for (int i = 0; i < Math.Min(3, TinhThanh.Count); i++)
+            {
+                <div class="col-md-4">
+                   <a asp-controller="TinhThanh" style="text-decoration: none" asp-action="Details" asp-route-id="@TinhThanh[i].PkIdTinhThanh">
+
+                    <div class="post-card">
+                    <img src="~/img/Tinh_Thanh/@TinhThanh[i].SimageTinhThanh" alt="Đà Nẵng" class="post-image">
+                        <div class="p-3">
+                            <h3 class="post-title">@TinhThanh[i].SnameTinhThanh</h3>
+                            <p class="post-meta">
+                               @TinhThanh[i].ScontentTinhThanh
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            }
+
+        </div>
+        <button class="btn-nav btn-nav-right" onclick="nextImagesTinh()">❯</button>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="textcontent">
+        <p>
+            Bạn chưa biết đi đâu ? Bạn chưa biết gì cho chuyến đi của mình đi những đâu ? Bạn có thể hỏi thử chatbot
+            của chúng tôi . ChatBot sẽ giúp bạn đưa ra
+            được một chuyến đi có lịch trình cụ thể và những địa điểm thú vị
+        </p>
+        <button onclick="toggleChat()">Thử Ngay</button>
+    </div>
+</div>
+
+<div class="container my-5">
+    <!-- Tiêu đề chính -->
+    <h2 class="section-title">Món ăn lên thử</h2>
+    <div class="carousel-container">
+        <button class="btn-nav btn-nav-left" onclick="prevImagesMonAn()">❮</button>
+
+        <!-- Danh sách bài viết -->
+        <div id="card-containerMonAn" class=" row g-4">
+            @if (MonAn != null && MonAn.Any())
+            {
+                <!-- Bài viết 1 -->
+                @for (int i = 0; i < Math.Min(3, MonAn.Count); i++)
+                {
+                    <div class="col-md-4">
+                        <a asp-controller="MonAn" style="text-decoration: none" asp-action="Details" asp-route-id="@MonAn[i].PkIdMonAn">
+
+                            <div class="post-card">
+                                <img src="~/img/Mon_An/@MonAn[i].SimageMonAn" alt="Đà Nẵng" class="post-image">
+                                <div class="p-3">
+                                    <h3 class="post-title">@MonAn[i].SnameMonAn</h3>
+                                    <p class="post-meta">
+                                        @MonAn[i].ScontentMonAn
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            }
+        </div>
+        <button class="btn-nav btn-nav-right" onclick="nextImagesMonAn()">❯</button>
+    </div>
+</div>
+<div class="comment">
+    <h2 class="section-title">Trải nghiệm của du khách</h2>
+    
+    <div id="comments" class="comment-container">
+        @if (Comment.Count != 0){
+        <div class="user-info">
+            <div>
+                <div>@Comment[0].UserName</div>
+            </div>
+        </div>
+
+        <div class="rating-display">
+            @for (var j = 0; j < 5; j++)
+            {
+                if (j < @Comment[0].Star)
+                {
+                    <span class="bubble active"></span>
+                }
+                else
+                {
+                    <span class="bubble"></span>
+                }
+            }
+        </div>
+
+        <div class="comment-content">
+            @Comment[0].Content
+            </div>
+        }
+        else
+        {
+            <label>Không có bình luận nào</label>
+        }
+    </div>
+</div>
+
+
+<div class="container my-5">
+    <!-- Tiêu đề chính -->
+    <h2 class="section-title">Những khu vui chơi giải trí thú vị</h2>
+    <div class="carousel-container">
+        <button class="btn-nav btn-nav-left" onclick="prevImagesGiaiTri()">❮</button>
+
+        <!-- Danh sách bài viết -->
+        <div id="card-containerGiaiTri" class=" row g-4">
+
+            <!-- Bài viết 1 -->
+            @for (int i = 0; i < Math.Min(3, GiaiTri.Count); i++)
+            {
+                <div class="col-md-4">
+                    <a asp-controller="GiaiTri" style="text-decoration: none" asp-action="Details" asp-route-id="@GiaiTri[i].PkIdGiaiTri">
+
+                        <div class="post-card">
+                            <img src="~/img/Giai_Tri/@GiaiTri[i].SimageGiaiTri" alt="Đà Nẵng" class="post-image">
+                            <div class="p-3">
+                                <h3 class="post-title">@GiaiTri[i].SnameGiaiTri</h3>
+                                <p class="post-meta">
+                                    @GiaiTri[i].ScontentGiaiTri
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+
+        </div>
+        <button class="btn-nav btn-nav-right" onclick="nextImagesGiaiTri()">❯</button>
+    </div>
+</div>
+<script src="~/js/home_index.js"></script>
+
+<script>
+    const categories = [
+        { id: "Tinh", data: @Html.Raw(Json.Serialize(TinhThanh)), folder: "Tinh_Thanh",contentKey:"scontentTinhThanh", imageKey: "simageTinhThanh", nameKey: "snameTinhThanh", idKey: "pkIdTinhThanh", controller: "TinhThanh" },
+        { id: "MonAn", data: @Html.Raw(Json.Serialize(MonAn)), folder: "Mon_An", contentKey: "scontentMonAn", imageKey: "simageMonAn", nameKey: "snameMonAn", idKey: "pkIdMonAn", controller: "MonAn" },
+        { id: "GiaiTri", data: @Html.Raw(Json.Serialize(GiaiTri)), folder: "Giai_Tri", contentKey: "scontentGiaiTri", imageKey: "simageGiaiTri", nameKey: "snameGiaiTri", idKey: "pkIdGiaiTri", controller: "GiaiTri" },
+        { id: "NhaHang", data: @Html.Raw(Json.Serialize(NhaHang)), folder: "Nha_Hang", contentKey: "scontentNhaHang", imageKey: "simageNhaHang", nameKey: "snameNhaHang", idKey: "pkIdNhaHang", controller: "NhaHang" },
+        { id: "KhachSan", data: @Html.Raw(Json.Serialize(KhachSan)), folder: "Khach_San", contentKey: "scontentKhachSan", imageKey: "simageKhachSan", nameKey: "snameKhachSan", idKey: "pkIdKhachSan", controller: "KhachSan" }
+
+    ];
+    var ite = @Html.Raw(Json.Serialize(GiaiTri));
+    console.log(categories);
+    const visibleCards = 3;
+    let baseUrl = "@Url.Content("~/")";
+
+    // Duyệt qua tất cả danh mục để khởi tạo slider
+    categories.forEach(category => {
+        let currentIndex = 0;
+
+        function renderCards() {
+            let container = document.getElementById(`card-container${category.id}`);
+            container.innerHTML = "";
+            for (let i = 0; i < visibleCards; i++) {
+                let imgIndex = (currentIndex + i) % category.data.length;
+                let imageUrl = `${baseUrl}img/${category.folder}/${category.data[imgIndex][category.imageKey]}`;
+                let itemUrl = `/${category.controller}/Details/${category.data[imgIndex][category.idKey]}`;
+                let card = `
+                    <div class="col-md-4">
+                    <a href="${itemUrl}" style="text-decoration: none">
+                    <div class="post-card">
+                        <img src="${imageUrl}" alt="${category.data[imgIndex][category.nameKey]}" class="post-image">
+                        <div class="p-3">
+                            <h3 class="post-title">${category.data[imgIndex][category.nameKey]}</h3>
+                            <p class="post-meta">
+                                ${category.data[imgIndex][category.contentKey]}
+                            </p>
+                        </div>
+                    </div>
+                    </a>
+                    </div>
+                `;
+                container.innerHTML += card;
+            }
+        }
+
+        // Khởi tạo hiển thị ban đầu
+        renderCards();
+
+        // Gán sự kiện cho nút điều hướng
+        window[`nextImages${category.id}`] = function () {
+            currentIndex = (currentIndex + 1) % category.data.length;
+            renderCards();
+        };
+
+        window[`prevImages${category.id}`] = function () {
+            currentIndex = (currentIndex - 1 + category.data.length) % category.data.length;
+            renderCards();
+        };
+    });
+
+</script>
+<script>
+    var commentList = @Html.Raw(Json.Serialize(Comment)); // Lấy danh sách comment từ C#
+    var id = 0;
+
+    function renderComment() {
+        var commentsContainer = document.getElementById("comments");
+        commentsContainer.innerHTML = "";
+
+        let cardcomment = `
+                <div class="user-info">
+                    <div>
+                        <div>${commentList[id].userName}</div>
+                    </div>
+                </div>
+
+                <div class="rating-display">
+                    ${generateStars(commentList[id].star)}
+                </div>
+
+                <div class="comment-content">
+                    ${commentList[id].content}
+                </div>
+            `;
+
+        commentsContainer.innerHTML = cardcomment;
+    }
+
+    function generateStars(star) {
+        let starsHtml = "";
+        for (var j = 0; j < 5; j++) {
+            if (j < star) {
+                starsHtml += `<span class="bubble active"></span>`;
+            } else {
+                starsHtml += `<span class="bubble"></span>`;
+            }
+        }
+        return starsHtml;
+    }
+
+    function nextComment() {
+        id = (id + 1) % commentList.length; // Chuyển sang comment tiếp theo
+        renderComment();
+    }
+
+    renderComment(); // Hiển thị comment đầu tiên
+    setInterval(nextComment, 5000); // Đổi comment sau mỗi 5 giây
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+

@@ -1,12 +1,53 @@
 ﻿@model WebTravel.Models.TblKhachSan
+@using Microsoft.AspNetCore.Http
+@using Microsoft.EntityFrameworkCore
+@inject IHttpContextAccessor HttpContextAccessor
 @{
-    ViewData["Tile"] = "Tỉnh Thành";
+    var userName = HttpContextAccessor.HttpContext.Session.GetString("UserName");
+    var userQuyen = HttpContextAccessor.HttpContext.Session.GetString("UserQuyen");
+    var userId = HttpContextAccessor.HttpContext.Session.GetString("UserId");
+    ViewData["Tile"] = "Món Ăn";
     @inject WebTravel.Data.NCKHContext _context;
     var TinhThanh = _context.TblTinhThanhs.ToList();
     var MonAn = _context.TblMonAns.ToList();
     var GiaiTri = _context.TblGiaiTris.ToList();
     var KhachSan = _context.TblKhachSans.ToList();
     var NhaHang = _context.TblNhaHangs.ToList();
+
+    //Phân trang comment
+    var commentSize = 5;
+
+    // Lấy pageNumber an toàn từ query string
+    int pageNumber = 1;
+    if (Context.Request.Query.ContainsKey("page") && int.TryParse(Context.Request.Query["page"], out int parsedPage))
+    {
+        pageNumber = Math.Max(parsedPage, 1); // Đảm bảo page >= 1
+    }
+
+    // Query lấy tổng số bình luận
+    var query = _context.TblTinhThanhKhachSans
+        .Where(c => c.FkIdKhachSan == Model.PkIdKhachSan)
+        .Include(c => c.FkIdCommentNavigation)
+        .Include(c => c.FkIdCommentNavigation.FkIdTaiKhoanNavigation)
+        .AsQueryable();//Truy vấn động sẽ giúp ngắn code lại
+
+    int commentCount = query.Count(); // Chỉ thực hiện Count() 1 lần
+    int pageCount = (int)Math.Ceiling((double)commentCount / commentSize);
+
+    // Lấy danh sách bình luận phân trang
+    var pagedComment = query
+        .Skip((pageNumber - 1) * commentSize)
+        .Take(commentSize)
+        .Select(c => new
+        {
+            c.FkIdKhachSan,
+            c.FkIdDiaChi,
+            c.FkIdComment,
+            StarComment = c.FkIdCommentNavigation.IstarComment,
+            CommentText = c.FkIdCommentNavigation.ScontentComment,
+            UserName = c.FkIdCommentNavigation.FkIdTaiKhoanNavigation.SnameTaiKhoan // Chỉ lấy dữ liệu cần thiết
+        })
+        .ToList();
 }
 <style>
     .custom-card {
@@ -19,61 +60,90 @@
         max-width: 1200px; /* Mở rộng card */
         margin: 20px auto;
     }
-    .custom-card img {
-        width: 500px; /* Ảnh lớn hơn */
-        height: 300px;
-        border-radius: 10px;
-        object-fit: cover;
-    }
-    .custom-card .content {
-        padding-left: 20px;
-        flex: 1; /* Nội dung mở rộng tự nhiên */
-    }
-    .custom-card h3 {
-        margin-bottom: 10px;
-        font-size: 28px; /* Chữ to hơn */
-    }
-    .custom-card p {
-        font-size: 18px; /* Chữ lớn hơn để dễ đọc */
-    }
 
-    .custom-carditem {
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        padding: 15px;
-        width: 300px;
-        background: white;
-    }
-
-        .custom-carditem img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+        .custom-card img {
+            width: 500px; /* Ảnh lớn hơn */
+            height: 300px;
             border-radius: 10px;
+            object-fit: cover;
         }
 
-    .custom-btn {
-        background-color: #17d4fc;
+        .custom-card .content {
+            padding-left: 20px;
+            flex: 1; /* Nội dung mở rộng tự nhiên */
+        }
+
+        .custom-card h3 {
+            margin-bottom: 10px;
+            font-size: 28px; /* Chữ to hơn */
+        }
+
+        .custom-card p {
+            font-size: 18px; /* Chữ lớn hơn để dễ đọc */
+        }
+
+    .button-comment {
+        background-color: #1d3557;
         color: white;
         border-radius: 10px;
         font-weight: bold;
-        border: none;
+        border: 1px solid #1d3557;
         padding: 10px;
-        width: 100%;
     }
 
-        .custom-btn:hover {
-            background-color: #0bb5df;
+        .button-comment:hover {
+            background: #457b9d;
         }
 
-    .textname {
-        white-space: nowrap; /* Không xuống dòng */
-        overflow: hidden; /* Ẩn phần bị tràn */
-        text-overflow: ellipsis; /* Hiện dấu "..." khi quá dài */
-        width: 100%; /* Đảm bảo phần tử có giới hạn */
-        display: block; /* Giữ dạng block để hoạt động đúng */
+    .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #333;
+    }
+
+    .post-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+    .post-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .post-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #333;
+        line-height: 1.4;
+    }
+
+    .post-meta {
+        font-size: 0.85rem;
+        color: #777;
+        display: -webkit-box;
+        /* Sử dụng -webkit-box để hỗ trợ line-clamp */
+        -webkit-box-orient: vertical;
+        /* Định hướng theo chiều dọc */
+        -webkit-line-clamp: 3;
+        /* Giới hạn tối đa 3 dòng */
+        overflow: hidden;
+        /* Ẩn phần bị tràn */
+        text-overflow: ellipsis;
+        /* Hiện dấu "..." khi quá dài */
+        width: 100%;
+        /* Đảm bảo phần tử có giới hạn */
     }
 
     .btn-nav {
@@ -104,6 +174,85 @@
         position: relative;
         margin-top: 50px;
     }
+
+    .textcontent {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: #eae9e9;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+        .textcontent p {
+            width: 650px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .textcontent button {
+            background-color: #f1f1f1;
+            border: #b7b5b5 solid 1px;
+            border-radius: 10px;
+            font-size: 14px;
+            padding: 10px;
+        }
+
+            .textcontent button:hover {
+                background-color: #a5a4a4;
+            }
+
+
+
+
+    /* CSS cho hiển thị bình luận */
+    .comment {
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        padding: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 1200px; /* Mở rộng card */
+        margin: 20px auto;
+    }
+
+    .comment-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .user-details {
+        font-size: 14px;
+        color: #6c757d;
+    }
+
+    .rating-display {
+        display: flex;
+        gap: 5px;
+        margin: 10px 0;
+    }
+
+    .bubble {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #00C4B4;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .active {
+        background-color: #00C4B4;
+    }
+
 </style>
 
 <div class="container">
@@ -115,161 +264,205 @@
         </div>
     </div>
 </div>
+<a asp-controller="KhachSan" asp-action="Comment" asp-route-id="@Model.PkIdKhachSan">
+    <button class="button-comment mt-2">Viết trải nghiệm</button>
+</a>
 
-<!--Tỉnh thành-->
-<h1>Các tỉnh thành nổi bật</h1>
-<div class="container mt-4">
-    <div class="carousel-container">
-        <button class="btn-nav btn-nav-left" onclick="prevImagesTinh()">❮</button>
-        <div id="card-containerTinh" class="d-flex gap-3">
-            @for (int i = 0; i < Math.Min(3, TinhThanh.Count); i++)
-            {
-                <div class="card custom-card">
-                    <img src="~/img/Tinh_Thanh/@TinhThanh[i].SimageTinhThanh" alt="@TinhThanh[i].SimageTinhThanh">
-                    <h5 class="textname mt-3">@TinhThanh[i].SnameTinhThanh</h5>
-                    <a asp-controller="TinhThanh" asp-action="Details" asp-route-id="@TinhThanh[i].PkIdTinhThanh">
-                        <button class="custom-btn mt-2">Xem ngay</button>
-                    </a>
+<div class="comment">
+
+    @if (pagedComment != null && pagedComment.Count > 0)
+    {
+        @for (var i = 0; i < pagedComment.Count; i++)
+        {
+            <div class="comment-container">
+                <div class="user-info">
+                    <div>
+                        <div>@pagedComment[i].UserName</div>
+                    </div>
                 </div>
-            }
+                @for (var j = 0; j < 5; j++)
+                {
+                    if (j < @pagedComment[i].StarComment)
+                    {
+                        <span class="bubble active"></span>
+                    }
+                    else
+                    {
+                        <span class="bubble"></span>
+                    }
+                }
+
+                <div class="comment-content">
+                    @pagedComment[i].CommentText
+                </div>
+            </div>
+
+        }
+        @if (pageNumber > 1)
+        {
+            <!-- Thanh phân trang -->
+            <nav aria-label="Page navigation" class="mt-4 d-flex justify-content-center">
+                <ul class="pagination pagination-lg">
+                    <!-- Nút "Trước" -->
+                    @if (pageNumber > 1)
+                    {
+                        <li class="page-item">
+                            <a class="page-link rounded-pill shadow-sm" href="?page=@(pageNumber - 1)">« Trước</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item disabled">
+                            <span class="page-link rounded-pill">« Trước</span>
+                        </li>
+                    }
+
+                    <!-- Các số trang -->
+                    @for (int i = 1; i <= pageCount; i++)
+                    {
+                        <li class="page-item @(i == pageNumber ? "" : "")">
+                            <a class="page-link rounded-pill shadow-sm @(i == pageNumber ? "bg-primary text-white" : "")" href="?page=@i">@i</a>
+                        </li>
+                    }
+
+                    <!-- Nút "Sau" -->
+                    @if (pageNumber < pageCount)
+                    {
+                        <li class="page-item">
+                            <a class="page-link rounded-pill shadow-sm" href="?page=@(pageNumber + 1)">Tiếp »</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item disabled">
+                            <span class="page-link rounded-pill">Tiếp »</span>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
+    }
+    else
+    {
+        <div class="comment-container">
+            <h2>Không có comment</h2>
         </div>
-        <button class="btn-nav btn-nav-right" onclick="nextImagesTinh()">❯</button>
-    </div>
+    }
 </div>
-<!--Khu vui chơi-->
-<h1>Các hoạt động giải trí nổi bật</h1>
-<div class="container mt-4">
+<div class="container my-5">
+    <!-- Tiêu đề chính -->
+    <h2 class="section-title">Món ăn lên thử</h2>
     <div class="carousel-container">
         <button class="btn-nav btn-nav-left" onclick="prevImagesGiaiTri()">❮</button>
-        <div id="card-containerGiaiTri" class="d-flex gap-3">
-            @for (int i = 0; i < Math.Min(3, GiaiTri.Count); i++)
+
+        <!-- Danh sách bài viết -->
+        <div id="card-containerGiaiTri" class=" row g-4">
+            @if (GiaiTri != null && GiaiTri.Any())
             {
-                <div class="card custom-carditem">
-                    <img src="~/img/Giai_Tri/@GiaiTri[i].SimageGiaiTri" alt="@GiaiTri[i].SimageGiaiTri">
-                    <h5 class="textname mt-3">@GiaiTri[i].SnameGiaiTri</h5>
-                    <a asp-controller="GiaiTri" asp-action="Details" asp-route-id="@GiaiTri[i].PkIdGiaiTri">
-                        <button class="custom-btn mt-2">Xem ngay</button>
-                    </a>
-                </div>
+                <!-- Bài viết 1 -->
+                @for (int i = 0; i < Math.Min(3, MonAn.Count); i++)
+                {
+                    <div class="col-md-4">
+                        <a asp-controller="GiaiTri" style="text-decoration: none" asp-action="Details" asp-route-id="@GiaiTri[i].PkIdGiaiTri">
+
+                            <div class="post-card">
+                                <img src="~/img/Giai_Tri/@GiaiTri[i].SimageGiaiTri" alt="Đà Nẵng" class="post-image">
+                                <div class="p-3">
+                                    <h3 class="post-title">@GiaiTri[i].SnameGiaiTri</h3>
+                                    <p class="post-meta">
+                                        @GiaiTri[i].ScontentGiaiTri
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
             }
         </div>
         <button class="btn-nav btn-nav-right" onclick="nextImagesGiaiTri()">❯</button>
     </div>
 </div>
-<!--Món Ăn-->
-<h1>Các món ăn nổi bật</h1>
-<div class="container mt-4">
-    <div class="carousel-container">
-        <button class="btn-nav btn-nav-left" onclick="prevImagesMoAn()">❮</button>
-        <div id="card-containerMonAn" class="d-flex gap-3">
-            @for (int i = 0; i < Math.Min(3, MonAn.Count); i++)
-            {
-                <div class="card custom-carditem">
-                    <img src="~/img/Mon_An/@MonAn[i].SimageMonAn" alt="@MonAn[i].SimageMonAn">
-                    <h5 class="textname mt-3">@MonAn[i].SnameMonAn</h5>
-                    <a asp-controller="MonAn" asp-action="Details" asp-route-id="@MonAn[i].PkIdMonAn">
-                        <button class="custom-btn mt-2">Xem ngay</button>
-                    </a>
-                </div>
-            }
-        </div>
-        <button class="btn-nav btn-nav-right" onclick="nextImagesMonAn()">❯</button>
-    </div>
-</div>
-<!--Nhà Hàng-->
-<h1>Các nhà hàng nổi bật</h1>
-<div class="container mt-4">
-    <div class="carousel-container">
-        <button class="btn-nav btn-nav-left" onclick="prevImagesNhaHang()">❮</button>
-        <div id="card-containerNhaHang" class="d-flex gap-3">
-            @for (int i = 0; i < Math.Min(3, NhaHang.Count); i++)
-            {
-                <div class="card custom-carditem">
-                    <img src="~/img/Nha_Hang/@NhaHang[i].SimageNhaHang" alt="@NhaHang[i].SimageNhaHang">
-                    <h5 class="textname mt-3">@NhaHang[i].SnameNhaHang</h5>
-                    <a asp-controller="NhaHang" asp-action="Details" asp-route-id="@NhaHang[i].PkIdNhaHang">
-                        <button class="custom-btn mt-2">Xem ngay</button>
-                    </a>
-                </div>
-            }
-        </div>
-        <button class="btn-nav btn-nav-right" onclick="nextImagesNhaHang()">❯</button>
-    </div>
-</div>
 
-<!--Khách Sạn-->
-<h1>Các khách sạn nổi bật</h1>
-<div class="container mt-4">
-    <div class="carousel-container">
-        <button class="btn-nav btn-nav-left" onclick="prevImagesKhachSan()">❮</button>
-        <div id="card-containerKhachSan" class="d-flex gap-3">
-            @for (int i = 0; i < Math.Min(3, KhachSan.Count); i++)
-            {
-                <div class="card custom-carditem">
-                    <img src="~/img/Khach_San/@KhachSan[i].SimageKhachSan" alt="@KhachSan[i].SimageKhachSan">
-                    <h5 class="textname mt-3">@KhachSan[i].SnameKhachSan</h5>
-                    <a asp-controller="KhachSan" asp-action="Details" asp-route-id="@KhachSan[i].PkIdKhachSan">
-                        <button class="custom-btn mt-2">Xem ngay</button>
-                    </a>
-                </div>
-            }
-        </div>
-        <button class="btn-nav btn-nav-right" onclick="nextImagesKhachSan()">❯</button>
-    </div>
-</div>
 <script>
-      const categories = [
-        { id: "Tinh", data: @Html.Raw(Json.Serialize(TinhThanh)), folder: "Tinh_Thanh", imageKey: "simageTinhThanh", nameKey: "snameTinhThanh", idKey: "pkIdTinhThanh", controller: "TinhThanh" },
-        { id: "GiaiTri", data: @Html.Raw(Json.Serialize(GiaiTri)), folder: "Giai_Tri", imageKey: "simageGiaiTri", nameKey: "snameGiaiTri", idKey: "pkIdGiaiTri", controller: "GiaiTri" },
-        { id: "MonAn", data: @Html.Raw(Json.Serialize(MonAn)), folder: "Mon_An", imageKey: "simageMonAn", nameKey: "snameMonAn", idKey: "pkIdMonAn", controller: "MonAn" },
-        { id: "NhaHang", data: @Html.Raw(Json.Serialize(NhaHang)), folder: "Nha_Hang", imageKey: "simageNhaHang", nameKey: "snameNhaHang", idKey: "pkIdNhaHang", controller: "NhaHang" },
-        { id: "KhachSan", data: @Html.Raw(Json.Serialize(KhachSan)), folder: "Khach_San", imageKey: "simageKhachSan", nameKey: "snameKhachSan", idKey: "pkIdKhachSan", controller: "KhachSan" }
+    const categories = [
+        { id: "GiaiTri", data: @Html.Raw(Json.Serialize(GiaiTri)), folder: "Giai_Tri", contentKey: "scontentGiaiTri", imageKey: "simageGiaiTri", nameKey: "snameGiaiTri", idKey: "pkIdGiaiTri", controller: "GiaiTri" },
+        { id: "Tinh", data: @Html.Raw(Json.Serialize(TinhThanh)), folder: "Tinh_Thanh", contentKey: "scontentTinhThanh", imageKey: "simageTinhThanh", nameKey: "snameTinhThanh", idKey: "pkIdTinhThanh", controller: "TinhThanh" },
+        { id: "MonAn", data: @Html.Raw(Json.Serialize(MonAn)), folder: "Mon_An", contentKey: "scontentMonAn", imageKey: "simageMonAn", nameKey: "snameMonAn", idKey: "pkIdMonAn", controller: "MonAn" },
+        { id: "NhaHang", data: @Html.Raw(Json.Serialize(NhaHang)), folder: "Nha_Hang", contentKey: "scontentNhaHang", imageKey: "simageNhaHang", nameKey: "snameNhaHang", idKey: "pkIdNhaHang", controller: "NhaHang" },
+        { id: "KhachSan", data: @Html.Raw(Json.Serialize(KhachSan)), folder: "Khach_San", contentKey: "scontentKhachSan", imageKey: "simageKhachSan", nameKey: "snameKhachSan", idKey: "pkIdKhachSan", controller: "KhachSan" }
 
-      ];
-    var item = @Html.Raw(Json.Serialize(KhachSan))
-    console.log(item)
-      const visibleCards = 3;
-      let baseUrl = "@Url.Content("~/")";
+    ];
+    var ite = @Html.Raw(Json.Serialize(GiaiTri));
+    console.log(categories);
+    const visibleCards = 3;
+    let baseUrl = "@Url.Content("~/")";
 
-      // Duyệt qua tất cả danh mục để khởi tạo slider
-      categories.forEach(category => {
-          let currentIndex = 0;
+    // Duyệt qua tất cả danh mục để khởi tạo slider
+    categories.forEach(category => {
+        let currentIndex = 0;
 
-          function renderCards() {
-              let container = document.getElementById(`card-container${category.id}`);
-              container.innerHTML = "";
-              for (let i = 0; i < visibleCards; i++) {
-                  let imgIndex = (currentIndex + i) % category.data.length;
-                  let imageUrl = `${baseUrl}img/${category.folder}/${category.data[imgIndex][category.imageKey]}`;
-                  let itemUrl = `/${category.controller}/Details/${category.data[imgIndex][category.idKey]}`;
+        function renderCards() {
+            let container = document.getElementById(`card-container${category.id}`);
+            container.innerHTML = "";
+            for (let i = 0; i < visibleCards; i++) {
+                let imgIndex = (currentIndex + i) % category.data.length;
+                let imageUrl = `${baseUrl}img/${category.folder}/${category.data[imgIndex][category.imageKey]}`;
+                let itemUrl = `/${category.controller}/Details/${category.data[imgIndex][category.idKey]}`;
+                let card = `
+                                        <div class="col-md-4">
+                                        <a href="${itemUrl}" style="text-decoration: none">
+                                        <div class="post-card">
+                                            <img src="${imageUrl}" alt="${category.data[imgIndex][category.nameKey]}" class="post-image">
+                                            <div class="p-3">
+                                                <h3 class="post-title">${category.data[imgIndex][category.nameKey]}</h3>
+                                                <p class="post-meta">
+                                                    ${category.data[imgIndex][category.contentKey]}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        </a>
+                                        </div>
+                                    `;
+                container.innerHTML += card;
+            }
+        }
 
-                  let card = `
-                          <div class="card custom-carditem">
-                              <img src="${imageUrl}" alt="${category.data[imgIndex][category.imageUrl]}">
-                              <h5 class="textname mt-3">${category.data[imgIndex][category.nameKey]}</h5>
-                              <a href="${itemUrl}">
-                                  <button class="custom-btn mt-2">Xem ngay</button>
-                              </a>
-                          </div>
-                      `;
-                  container.innerHTML += card;
-              }
-          }
+        // Khởi tạo hiển thị ban đầu
+        renderCards();
 
-          // Khởi tạo hiển thị ban đầu
-          renderCards();
+        // Gán sự kiện cho nút điều hướng
+        window[`nextImages${category.id}`] = function () {
+            currentIndex = (currentIndex + 1) % category.data.length;
+            renderCards();
+        };
 
-          // Gán sự kiện cho nút điều hướng
-          window[`nextImages${category.id}`] = function () {
-              currentIndex = (currentIndex + 1) % category.data.length;
-              renderCards();
-          };
+        window[`prevImages${category.id}`] = function () {
+            currentIndex = (currentIndex - 1 + category.data.length) % category.data.length;
+            renderCards();
+        };
+    });
 
-          window[`prevImages${category.id}`] = function () {
-              currentIndex = (currentIndex - 1 + category.data.length) % category.data.length;
-              renderCards();
-          };
-      });
+
+
+    function checcAcc() {
+        let Acc = "@(userId ?? "")";
+        if (!Acc || Acc === "") {
+            Swal.fire({
+                title: "Bạn chưa đăng nhập!",
+                text: "Vui lòng đăng nhập để Chatbot có thể quán lý thông tin cho bạn.",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Đăng nhập",
+                cancelButtonText: "Hủy",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "/Login"; // Thay đổi đường dẫn tới trang đăng nhập của bạn
+                }
+            });
+            document.getElementById("chatInput").value = "";
+            return;
+        }
+    }
 
 
 </script>

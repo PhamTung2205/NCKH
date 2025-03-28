@@ -27,7 +27,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
             <div class="container">
                 <!-- Logo -->
-                <a class="navbar-brand fw-bold" href="#">ViVuViet</a>
+                <a class="navbar-brand fw-bold" href="/">ViVuViet</a>
 
                 <!-- Nút mở menu trên mobile -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -38,10 +38,11 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav text-center">
                         <li class="nav-item"><a class="nav-link fw-bold" href="/">Trang Chủ</a></li>
-                        <li class="nav-item"><a class="nav-link fw-bold" href="/Chatbot">ChatBot</a></li>
-                        <li class="nav-item"><a class="nav-link fw-bold" href="#">Vui Chơi</a></li>
-                        <li class="nav-item"><a class="nav-link fw-bold" href="#">Món Ăn</a></li>
-                        <li class="nav-item"><a class="nav-link fw-bold" href="#">Khách Sạn</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="/GiaiTri">Vui Chơi</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="/MonAn">Món Ăn</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="/KhachSan">Khách Sạn</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="/NhaHang">Nhà Hàng</a></li>
+
 
                         <!-- Hiển thị tài khoản trong menu khi màn hình nhỏ -->
                         <li class="nav-item d-lg-none">
@@ -57,7 +58,7 @@
                                             <li><a class="dropdown-item" href="/Admin">Admin</a></li>
                                             <li><hr class="dropdown-divider"></li>
                                         }
-                                        <li><a class="dropdown-item" href="/" data-bs-toggle="modal" data-bs-target="#maintenanceModal">Profile</a></li>
+                                        <li><a class="dropdown-item" href="/LoTrinh" >Lộ Trình</a></li>
                                         <li><hr class="dropdown-divider"></li>
                                         <li><a class="dropdown-item" href="/Login/Logout">Đăng xuất</a></li>
                                     </ul>
@@ -119,6 +120,24 @@
             <button onclick="SubmitAPI()"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
+    <div class="modal fade" id="maintenanceModal" tabindex="-1" aria-labelledby="maintenanceModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="maintenanceModalLabel">Thông báo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1513/1513674.png" alt="Under Development" width="80">
+                    <p class="mt-3 fw-bold">Chức năng đang phát triển!</p>
+                    <p>Vui lòng quay lại sau.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -142,6 +161,7 @@
         let JsonDataPost = [];
         let i = 1;
         let Acc = "@(userId ?? "")";
+        
         let chatHistory = {};
         let currentChatIndex = null;
         function initializeChat() {
@@ -292,7 +312,10 @@
         });
         // 🟢 KHỞI CHẠY KHI TẢI TRANG
         initializeChat();
-       
+        if (!Acc || Acc === "") {
+            document.getElementById("chatBody").innerHTML = "";
+
+        }
     </script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
