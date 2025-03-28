@@ -27,7 +27,7 @@ go
 Create table tblTinhThanh
 (	PkIdTinhThanh int identity(1,1) Constraint PkIdTinhThanh_ primary key,
 	SNameTinhThanh nvarchar(100) null,
-	SImageTinhThanh nvarchar(100) null,
+	SImageTinhThanh nvarchar(Max) null,
 	SContentTinhThanh nvarchar(Max)null,
 	FkIdType int,
 	Constraint FkIdTypeTinhThanh Foreign key(FkIdType) References tblType(PkIdType)
@@ -38,7 +38,7 @@ go
 Create table tblGiaiTri
 (	PkIdGiaiTri int identity(1,1) Constraint PkIdVuiChoi_ primary key,
 	SNameGiaiTri nvarchar(100) null,
-	SImageGiaiTri nvarchar(100) null,
+	SImageGiaiTri nvarchar(Max) null,
 	SContentGiaiTri nvarchar(Max)null,
 	FkIdType int,
 	Constraint FkIdTypeVuiChoi Foreign key(FkIdType) References tblType(PkIdType)
@@ -50,7 +50,7 @@ go
 Create table tblMonAn
 (	PkIdMonAn int identity(1,1) Constraint PkIdMonAn_ primary key,
 	SNameMonAn nvarchar(100) null,
-	SImageMonAn nvarchar(100) null,
+	SImageMonAn nvarchar(Max) null,
 	SContentMonAn nvarchar(Max)null,
 	FkIdType int,
 	Constraint FkIdTypeMonAn Foreign key(FkIdType) References tblType(PkIdType)
@@ -61,7 +61,7 @@ go
 Create table tblKhachSan
 (	PkIdKhachSan int identity(1,1) Constraint PkIdKhachSan_ primary key,
 	SNameKhachSan nvarchar(100) null,
-	SImageKhachSan nvarchar(100) null,
+	SImageKhachSan nvarchar(Max) null,
 	SContentKhachSan nvarchar(Max)null,
 	FkIdType int,
 	Constraint FkIdTypeKhachSan Foreign key(FkIdType) References tblType(PkIdType)
@@ -72,7 +72,7 @@ go
 Create table tblNhaHang
 (	PkIdNhaHang int identity(1,1) Constraint PkIdNhaHang_ primary key,
 	SNameNhaHang nvarchar(100) null,
-	SImageNhaHang nvarchar(100) null,
+	SImageNhaHang nvarchar(Max) null,
 	SContentNhaHang nvarchar(Max)null,
 	FkIdType int,
 	Constraint FkIdTypeNhaHang Foreign key(FkIdType) References tblType(PkIdType)
@@ -85,7 +85,7 @@ Create table tblDiaChi
 	SNameDiaChi nvarchar(100) null,
 	STypeDiaChi nvarchar(100) null,
 	STimeDiaChi nvarchar(100) null,
-	SPrice nvarchar(100) null,
+	SPrice nvarchar(Max) null,
 	SContactDiaChi nvarchar(100) null,
 	SPhoneDiaChi nvarchar(100) null,
 	SContentDiaChi nvarchar(Max)null,

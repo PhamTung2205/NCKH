@@ -179,22 +179,7 @@
         }
 
         async function SubmitAPI() {
-            if (!Acc || Acc === "") {
-                Swal.fire({
-                    title: "Bạn chưa đăng nhập!",
-                    text: "Vui lòng đăng nhập để Chatbot có thể quán lý thông tin cho bạn.",
-                    icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonText: "Đăng nhập",
-                    cancelButtonText: "Hủy",
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        window.location.href = "/Login"; // Thay đổi đường dẫn tới trang đăng nhập của bạn
-                    }
-                }); 
-                document.getElementById("chatInput").value = "";
-                return;
-            }
+            
             const inputText = document.getElementById("chatInput").value;
             if (!inputText) return;
 
