@@ -223,8 +223,7 @@
               "ViewState": "AgIAAC0AAAAAAAAAAAAAAD0AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-20T01:59:18.533Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -249,8 +248,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T01:54:05.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T01:54:05.646Z"
             },
             {
               "$type": "Document",
@@ -262,8 +260,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAALUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-20T01:53:08.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T01:53:08.97Z"
             },
             {
               "$type": "Document",
@@ -297,7 +294,7 @@
               "RelativeDocumentMoniker": "wwwroot\\css\\chatbot.css",
               "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\chatbot.css",
               "RelativeToolTip": "wwwroot\\css\\chatbot.css",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAEIAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAD0AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-03-23T01:08:33.463Z",
               "EditorCaption": ""
