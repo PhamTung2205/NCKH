@@ -114,6 +114,7 @@ go
 Create table tblComment
 (	PkIdComment int identity(1,1) Constraint PkIdComment_ primary key,
 	SContentComment nvarchar(max) null,
+	SImageComment nvarchar(max) null,
 	IStarComment int null,
 	FkIdTaiKhoan int ,
 	Constraint FkIdComment_TaiKhoan Foreign key(FkIdTaiKhoan) References tblTaiKhoan(PkIdTaiKhoan)

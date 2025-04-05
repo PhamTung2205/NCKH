@@ -148,7 +148,17 @@
                 <a asp-controller="KhachSan" style="text-decoration: none" asp-action="Details" asp-route-id="@khachsan.PkIdKhachSan">
 
                     <div class="post-card">
-                        <img src="~/img/Khach_San/@khachsan.SimageKhachSan" alt="@khachsan.SimageKhachSan" class="post-image">
+                        @if (khachsan.SimageKhachSan.Contains(","))
+                        {
+                            var image = khachsan.SimageKhachSan.Split(",");
+                            <img src="~/img/Khach_San/@image[0]" alt="@khachsan.SimageKhachSan" class="post-image">
+
+                        }
+                        else
+                        {
+                            <img src="~/img/Khach_San/@khachsan.SimageKhachSan" alt="@khachsan.SimageKhachSan" class="post-image">
+
+                        }
                         <div class="p-3">
                             <h3 class="post-title">@khachsan.SnameKhachSan</h3>
                             <p class="post-meta">

@@ -12,6 +12,7 @@
         Star = c.IstarComment,
         Content = c.ScontentComment
     }).ToList();
+
 }
 
 <style>
@@ -416,6 +417,10 @@
                 let imgIndex = (currentIndex + i) % category.data.length;
                 let imageUrl = `${baseUrl}img/${category.folder}/${category.data[imgIndex][category.imageKey]}`;
                 let itemUrl = `/${category.controller}/Details/${category.data[imgIndex][category.idKey]}`;
+                if (category.data[imgIndex][category.imageKey].includes(",")){
+                    var image = category.data[imgIndex][category.imageKey].split(",")
+                    imageUrl = `${baseUrl}img/${category.folder}/${image[0]}`;
+                }
                 let card = `
                         <div class="col-md-4">
                         <a href="${itemUrl}" style="text-decoration: none">

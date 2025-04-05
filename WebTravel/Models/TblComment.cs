@@ -9,6 +9,8 @@ public partial class TblComment
 
     public string? ScontentComment { get; set; }
 
+    public string? SimageComment { get; set; }
+
     public int? IstarComment { get; set; }
 
     public int? FkIdTaiKhoan { get; set; }

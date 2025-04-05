@@ -144,19 +144,28 @@
             <!-- Bài viết 1 -->
             @foreach(var nhahang in pagedNhaHangs)
             {
-                <div class="col-md-4">
-                    <a asp-controller="NhaHang" style="text-decoration: none" asp-action="Details" asp-route-id="@nhahang.PkIdNhaHang">
+            <div class="col-md-4">
+                <a asp-controller="NhaHang" style="text-decoration: none" asp-action="Details" asp-route-id="@nhahang.PkIdNhaHang">
 
-                        <div class="post-card">
-                        <img src="~/img/Nha_Hang/@nhahang.SimageNhaHang" alt="@nhahang.SimageNhaHang" class="post-image">
-                            <div class="p-3">
-                                <h3 class="post-title">@nhahang.SnameNhaHang</h3>
-                                <p class="post-meta">
-                                    @nhahang.ScontentNhaHang
-                                </p>
-                            </div>
+                    <div class="post-card">
+                        @if (nhahang.SimageNhaHang.Contains(","))
+                        {
+                            var image = nhahang.SimageNhaHang.Split(",");
+                            <img src="~/img/Nha_Hang/@image[0]" alt="@nhahang.SimageNhaHang" class="post-image">
+                        }
+                        else
+                        {
+                            <img src="~/img/Nha_Hang/@nhahang.SimageNhaHang" alt="@nhahang.SimageNhaHang" class="post-image">
+
+                        }
+                        <div class="p-3">
+                            <h3 class="post-title">@nhahang.SnameNhaHang</h3>
+                            <p class="post-meta">
+                                @nhahang.ScontentNhaHang
+                            </p>
                         </div>
-                    </a>
+                    </div>
+                </a>
                 </div>
             }
 

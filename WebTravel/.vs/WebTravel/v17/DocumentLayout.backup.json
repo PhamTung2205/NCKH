@@ -3,60 +3,92 @@
   "WorkspaceRootPath": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\wwwroot\\css\\chatbot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:wwwroot\\css\\chatbot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\khachsan\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\khachsan\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\giaitri\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\giaitri\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\comment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\comment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\monan\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\monan\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\nhahang\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\nhahang\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\nhahang\\comment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\nhahang\\comment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\controllers\\giaitricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:controllers\\giaitricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\tinhthanh\\comment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\tinhthanh\\comment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\tinhthanh\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\tinhthanh\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\models\\tblkhachsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:models\\tblkhachsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\models\\tbltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:models\\tbltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\khachsan\\comment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\khachsan\\comment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\controllers\\khachsancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:controllers\\khachsancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\controllers\\tinhthanhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:controllers\\tinhthanhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\controllers\\nhahangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:controllers\\nhahangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\giaitri\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\giaitri\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\nhahang\\comment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\nhahang\\comment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\nhahang\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\nhahang\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\controllers\\giaitricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:controllers\\giaitricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\giaitri\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\giaitri\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\khachsan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\khachsan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\nhahang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\nhahang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\giaitri\\comment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\giaitri\\comment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\monan\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\monan\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\wwwroot\\css\\chatbot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:wwwroot\\css\\chatbot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\monan\\comment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -71,28 +103,12 @@
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:controllers\\lotrinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\controllers\\nhahangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:controllers\\nhahangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\controllers\\tinhthanhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:controllers\\tinhthanhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\models\\tbltinhthanhcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:models\\tbltinhthanhcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\models\\tbltinhthanhnhahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:models\\tbltinhthanhnhahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\tinhthanh\\comment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\tinhthanh\\comment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\comment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\comment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -127,20 +143,8 @@
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:models\\tbltaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\giaitri\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\giaitri\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\khachsan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\khachsan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\monan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\monan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\nhahang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\nhahang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -187,10 +191,6 @@
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\models\\tblkhachsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:models\\tblkhachsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|e:\\hoc_web\\nckh\\code\\nckh\\webtravel\\views\\login\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CEE37BF6-58DC-42B6-B1E3-D772334EAB7C}|WebTravel.csproj|solutionrelative:views\\login\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -209,38 +209,285 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "DockedWidth": 229,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 15,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAD0AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAPYAAAAAAAAAAAAAAAQBAAB3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-20T01:59:18.533Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Comment\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Comment\\Index.cshtml",
               "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Comment\\Index.cshtml",
               "RelativeToolTip": "Views\\Comment\\Index.cshtml",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAmwHAAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAmwHAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-23T07:07:35.38Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\KhachSan\\Details.cshtml",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Details.cshtml",
+              "RelativeToolTip": "Views\\KhachSan\\Details.cshtml",
+              "ViewState": "AgIAADECAAAAAAAAAAAAAEcCAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T06:13:40.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAAAMUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T01:53:08.97Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Comment.cshtml",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Comment.cshtml",
+              "RelativeDocumentMoniker": "Views\\TinhThanh\\Comment.cshtml",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Comment.cshtml",
+              "RelativeToolTip": "Views\\TinhThanh\\Comment.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAHIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T07:41:07.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TblKhachSan.cs",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblKhachSan.cs",
+              "RelativeDocumentMoniker": "Models\\TblKhachSan.cs",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblKhachSan.cs",
+              "RelativeToolTip": "Models\\TblKhachSan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T04:12:48.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\TinhThanh\\Details.cshtml",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Details.cshtml",
+              "RelativeToolTip": "Views\\TinhThanh\\Details.cshtml",
+              "ViewState": "AgIAAIMBAAAAAAAAAAAUwKYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-21T11:11:03.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TblType.cs",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblType.cs",
+              "RelativeDocumentMoniker": "Models\\TblType.cs",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblType.cs",
+              "RelativeToolTip": "Models\\TblType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T00:46:53.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TinhThanhController.cs",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\TinhThanhController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TinhThanhController.cs",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\TinhThanhController.cs",
+              "RelativeToolTip": "Controllers\\TinhThanhController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAmwD8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T03:04:51.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Comment.cshtml",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Comment.cshtml",
+              "RelativeDocumentMoniker": "Views\\KhachSan\\Comment.cshtml",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Comment.cshtml",
+              "RelativeToolTip": "Views\\KhachSan\\Comment.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAHMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-26T13:00:36.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NhaHangController.cs",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\NhaHangController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NhaHangController.cs",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\NhaHangController.cs",
+              "RelativeToolTip": "Controllers\\NhaHangController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwDMAAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T05:00:31.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\GiaiTri\\Details.cshtml",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Details.cshtml",
+              "RelativeToolTip": "Views\\GiaiTri\\Details.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T06:21:53.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Comment.cshtml",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Comment.cshtml",
+              "RelativeDocumentMoniker": "Views\\NhaHang\\Comment.cshtml",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Comment.cshtml",
+              "RelativeToolTip": "Views\\NhaHang\\Comment.cshtml",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-26T12:19:08.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\NhaHang\\Details.cshtml",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Details.cshtml",
+              "RelativeToolTip": "Views\\NhaHang\\Details.cshtml",
+              "ViewState": "AgIAADIBAAAAAAAAAAAAACIBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T06:11:30.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GiaiTriController.cs",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\GiaiTriController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GiaiTriController.cs",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\GiaiTriController.cs",
+              "RelativeToolTip": "Controllers\\GiaiTriController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAkwGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T05:09:10.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\NhaHang\\Index.cshtml",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Index.cshtml",
+              "RelativeToolTip": "Views\\NhaHang\\Index.cshtml",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAJkAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-21T03:40:07.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\KhachSan\\Index.cshtml",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Index.cshtml",
+              "RelativeToolTip": "Views\\KhachSan\\Index.cshtml",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-21T03:39:58.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\GiaiTri\\Index.cshtml",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Index.cshtml",
+              "RelativeToolTip": "Views\\GiaiTri\\Index.cshtml",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAuwJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-21T03:39:48.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Comment.cshtml",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Comment.cshtml",
+              "RelativeDocumentMoniker": "Views\\GiaiTri\\Comment.cshtml",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Comment.cshtml",
+              "RelativeToolTip": "Views\\GiaiTri\\Comment.cshtml",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAALEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-26T13:05:44.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\MonAn\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\MonAn\\Details.cshtml",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\MonAn\\Details.cshtml",
+              "RelativeToolTip": "Views\\MonAn\\Details.cshtml",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAAAIABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T06:12:52.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "chatbot.css",
+              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\chatbot.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\chatbot.css",
+              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\chatbot.css",
+              "RelativeToolTip": "wwwroot\\css\\chatbot.css",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAD0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-23T01:08:33.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -252,128 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-20T01:53:08.97Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\MonAn\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\MonAn\\Details.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\MonAn\\Details.cshtml",
-              "RelativeToolTip": "Views\\MonAn\\Details.cshtml",
-              "ViewState": "AgIAAG0BAAAAAAAAAAAIwIABAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T06:12:52.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\GiaiTri\\Details.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Details.cshtml",
-              "RelativeToolTip": "Views\\GiaiTri\\Details.cshtml",
-              "ViewState": "AgIAAIYBAAAAAAAAAAAmwH4BAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T06:21:53.312Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "chatbot.css",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\chatbot.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\chatbot.css",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\chatbot.css",
-              "RelativeToolTip": "wwwroot\\css\\chatbot.css",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAD0AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-23T01:08:33.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Comment.cshtml",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Comment.cshtml",
-              "RelativeDocumentMoniker": "Views\\NhaHang\\Comment.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Comment.cshtml",
-              "RelativeToolTip": "Views\\NhaHang\\Comment.cshtml",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAABUAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-26T12:19:08.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\TinhThanh\\Details.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Details.cshtml",
-              "RelativeToolTip": "Views\\TinhThanh\\Details.cshtml",
-              "ViewState": "AgIAAHEBAAAAAAAAAAAmwIQBAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-21T11:11:03.545Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\NhaHang\\Details.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Details.cshtml",
-              "RelativeToolTip": "Views\\NhaHang\\Details.cshtml",
-              "ViewState": "AgIAAGMBAAAAAAAAAAAAAIIBAADIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T06:11:30.061Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\KhachSan\\Details.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Details.cshtml",
-              "RelativeToolTip": "Views\\KhachSan\\Details.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAmwDAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T06:13:40.918Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GiaiTriController.cs",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\GiaiTriController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GiaiTriController.cs",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\GiaiTriController.cs",
-              "RelativeToolTip": "Controllers\\GiaiTriController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T05:09:10.986Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Comment.cshtml",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Comment.cshtml",
-              "RelativeDocumentMoniker": "Views\\KhachSan\\Comment.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Comment.cshtml",
-              "RelativeToolTip": "Views\\KhachSan\\Comment.cshtml",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAIwFUAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-26T13:00:36.717Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "Comment.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\MonAn\\Comment.cshtml",
               "RelativeDocumentMoniker": "Views\\MonAn\\Comment.cshtml",
@@ -385,31 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "KhachSanController.cs",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\KhachSanController.cs",
-              "RelativeDocumentMoniker": "Controllers\\KhachSanController.cs",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\KhachSanController.cs",
-              "RelativeToolTip": "Controllers\\KhachSanController.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAADwv2IAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T04:12:38.573Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Comment.cshtml",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Comment.cshtml",
-              "RelativeDocumentMoniker": "Views\\GiaiTri\\Comment.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Comment.cshtml",
-              "RelativeToolTip": "Views\\GiaiTri\\Comment.cshtml",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFQAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-26T13:05:44.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "MonAnController.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\MonAnController.cs",
               "RelativeDocumentMoniker": "Controllers\\MonAnController.cs",
@@ -421,7 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 24,
               "Title": "LoTrinhController.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\LoTrinhController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoTrinhController.cs",
@@ -433,19 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "NhaHangController.cs",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\NhaHangController.cs",
-              "RelativeDocumentMoniker": "Controllers\\NhaHangController.cs",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\NhaHangController.cs",
-              "RelativeToolTip": "Controllers\\NhaHangController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAowGIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T05:00:31.185Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "TblTinhThanhComment.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblTinhThanhComment.cs",
               "RelativeDocumentMoniker": "Models\\TblTinhThanhComment.cs",
@@ -457,19 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "TinhThanhController.cs",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\TinhThanhController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TinhThanhController.cs",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\TinhThanhController.cs",
-              "RelativeToolTip": "Controllers\\TinhThanhController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAqwCQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T03:04:51.604Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "TblTinhThanhNhaHang.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblTinhThanhNhaHang.cs",
               "RelativeDocumentMoniker": "Models\\TblTinhThanhNhaHang.cs",
@@ -481,19 +559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Comment.cshtml",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Comment.cshtml",
-              "RelativeDocumentMoniker": "Views\\TinhThanh\\Comment.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Comment.cshtml",
-              "RelativeToolTip": "Views\\TinhThanh\\Comment.cshtml",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAIwFQAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-24T07:41:07.704Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
@@ -505,7 +571,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "Create.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\LoTrinh\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\LoTrinh\\Create.cshtml",
@@ -517,7 +583,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\Test\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Test\\Index.cshtml",
@@ -529,7 +595,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "NCKHContext.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Data\\NCKHContext.cs",
               "RelativeDocumentMoniker": "Data\\NCKHContext.cs",
@@ -541,7 +607,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
@@ -553,7 +619,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "TblLichTrinh.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblLichTrinh.cs",
               "RelativeDocumentMoniker": "Models\\TblLichTrinh.cs",
@@ -565,7 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\TinhThanh\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\TinhThanh\\Index.cshtml",
@@ -577,7 +643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "TblTaiKhoan.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblTaiKhoan.cs",
               "RelativeDocumentMoniker": "Models\\TblTaiKhoan.cs",
@@ -589,19 +655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\GiaiTri\\Index.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\GiaiTri\\Index.cshtml",
-              "RelativeToolTip": "Views\\GiaiTri\\Index.cshtml",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAuwH4AAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-21T03:39:48.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\MonAn\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\MonAn\\Index.cshtml",
@@ -613,31 +667,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\KhachSan\\Index.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\KhachSan\\Index.cshtml",
-              "RelativeToolTip": "Views\\KhachSan\\Index.cshtml",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAAAJAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-21T03:39:58.157Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\NhaHang\\Index.cshtml",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Views\\NhaHang\\Index.cshtml",
-              "RelativeToolTip": "Views\\NhaHang\\Index.cshtml",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJMAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-21T03:40:07.982Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "HomeController.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -649,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "CommentController.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\CommentController.cs",
               "RelativeDocumentMoniker": "Controllers\\CommentController.cs",
@@ -661,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "site.js",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
@@ -673,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "TblComment.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblComment.cs",
               "RelativeDocumentMoniker": "Models\\TblComment.cs",
@@ -685,7 +715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "chatbot.js",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\chatbot.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\chatbot.js",
@@ -697,7 +727,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "site.css",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -709,7 +739,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "TblGiaiTri.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblGiaiTri.cs",
               "RelativeDocumentMoniker": "Models\\TblGiaiTri.cs",
@@ -721,7 +751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "LoginController.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
@@ -733,7 +763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "TblTinhThanh.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblTinhThanh.cs",
               "RelativeDocumentMoniker": "Models\\TblTinhThanh.cs",
@@ -745,7 +775,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "TestController.cs",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "Controllers\\TestController.cs",
@@ -757,19 +787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "TblKhachSan.cs",
-              "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblKhachSan.cs",
-              "RelativeDocumentMoniker": "Models\\TblKhachSan.cs",
-              "ToolTip": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\Models\\TblKhachSan.cs",
-              "RelativeToolTip": "Models\\TblKhachSan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T04:12:48.133Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "home_index.js",
               "DocumentMoniker": "E:\\hoc_web\\NCKH\\Code\\NCKH\\WebTravel\\wwwroot\\js\\home_index.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\home_index.js",

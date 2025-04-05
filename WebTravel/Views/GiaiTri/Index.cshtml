@@ -148,7 +148,17 @@
                 <a asp-controller="GiaiTri" style="text-decoration: none" asp-action="Details" asp-route-id="@giaitri.PkIdGiaiTri">
 
                     <div class="post-card">
-                        <img src="~/img/Giai_Tri/@giaitri.SimageGiaiTri" alt="@giaitri.SimageGiaiTri" class="post-image">
+                        @if (giaitri.SimageGiaiTri.Contains(","))
+                        {
+                            var image = giaitri.SimageGiaiTri.Split(",");
+                            <img src="~/img/Giai_Tri/@image[0]" alt="@giaitri.SimageGiaiTri" class="post-image">
+
+                        }
+                        else
+                        {
+                            <img src="~/img/Giai_Tri/@giaitri.SimageGiaiTri" alt="@giaitri.SimageGiaiTri" class="post-image">
+
+                        }
                         <div class="p-3">
                             <h3 class="post-title">@giaitri.SnameGiaiTri</h3>
                             <p class="post-meta">

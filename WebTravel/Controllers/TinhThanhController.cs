@@ -50,7 +50,7 @@ namespace WebTravel.Controllers
 
         // Xử lý khi người dùng gửi form
         [HttpPost]
-        public async Task<IActionResult> SubmitSurvey(int rating, string review, int entityId)
+        public async Task<IActionResult> SubmitSurvey(int rating, string review, int entityId, List<IFormFile> images)
         {
             var userId =  HttpContext.Session.GetInt32("UserId");
 
@@ -59,6 +59,33 @@ namespace WebTravel.Controllers
                 TempData["Error"] = "Vui lòng đăng nhập tài khoản để được đánh giá";
 
                 return RedirectToAction("Comment", new { id = entityId });
+            }
+            
+            if (images != null && images.Count > 0)
+            {
+                // Đặt đường dẫn thư mục lưu ảnh
+                var uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Comment");
+
+                // Kiểm tra và tạo thư mục nếu chưa tồn tại
+                if (!Directory.Exists(uploadPath))
+                {
+                    Directory.CreateDirectory(uploadPath);
+                }
+
+                foreach (var image in images)
+                {
+                    if (image.Length > 0)
+                    {
+                        // Lấy tên file từ ảnh
+                        var fileName = Path.GetFileName(image.FileName);
+                        var filePath = Path.Combine(uploadPath, fileName);
+
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await image.CopyToAsync(stream);
+                        }
+                    }
+                }
             }
 
             // Kiểm tra dữ liệu đầu vào
@@ -75,7 +102,9 @@ namespace WebTravel.Controllers
             {
                 ScontentComment = review, // Nội dung đánh giá
                 IstarComment = rating,    // Số lượng bong bóng
-                FkIdTaiKhoan = userId // Lấy ID người dùng hiện tại (giả định)
+                FkIdTaiKhoan = userId, // Lấy ID người dùng hiện tại (giả định)
+                SimageComment = images.Count > 0 ? images[0].FileName : null
+
             };
             _context.TblComments.Add(comment);
             _context.SaveChanges();

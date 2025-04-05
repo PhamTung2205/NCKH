@@ -45,106 +45,122 @@
             c.FkIdComment,
             StarComment = c.FkIdCommentNavigation.IstarComment,
             CommentText = c.FkIdCommentNavigation.ScontentComment,
-            UserName = c.FkIdCommentNavigation.FkIdTaiKhoanNavigation.SnameTaiKhoan // Chỉ lấy dữ liệu cần thiết
+            UserName = c.FkIdCommentNavigation.FkIdTaiKhoanNavigation.SnameTaiKhoan, // Chỉ lấy dữ liệu cần thiết
+            Imgae = c.FkIdCommentNavigation.SimageComment,
         })
         .ToList();
+    var images = Model.SimageTinhThanh.Contains(",") ? Model.SimageTinhThanh.Split(",") : new[] { Model.SimageTinhThanh };
+
+
+
 }
 <style>
     .custom-card {
-        border-radius: 15px;
-        border: 1px solid #ddd;
-        padding: 20px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        max-width: 1200px; /* Mở rộng card */
-        margin: 20px auto;
+        position: relative; /* Đặt vị trí tương đối cho thẻ cha */
+
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    max-width: 1200px; /* Mở rộng card */
+    margin: 20px auto;
     }
     .custom-card img {
-        width: 500px; /* Ảnh lớn hơn */
-        height: 300px;
-        border-radius: 10px;
-        object-fit: cover;
+    width: 500px; /* Ảnh lớn hơn */
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
     }
     .custom-card .content {
-        padding-left: 20px;
-        flex: 1; /* Nội dung mở rộng tự nhiên */
+    padding-left: 20px;
+    flex: 1; /* Nội dung mở rộng tự nhiên */
     }
     .custom-card h3 {
-        margin-bottom: 10px;
-        font-size: 28px; /* Chữ to hơn */
+    margin-bottom: 10px;
+    font-size: 28px; /* Chữ to hơn */
     }
     .custom-card p {
-        font-size: 18px; /* Chữ lớn hơn để dễ đọc */
+    font-size: 18px; /* Chữ lớn hơn để dễ đọc */
     }
     .button-comment{
-        background-color: #1d3557;
-        color:white;
-        border-radius: 10px;
-        font-weight: bold;
-        border: 1px solid #1d3557;
-        padding: 10px;
-        
+    background-color: #1d3557;
+    color:white;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 1px solid #1d3557;
+    padding: 10px;
+
     }
     .button-comment:hover{
-            background: #457b9d;
+    background: #457b9d;
     }
 
     .section-title {
-        font-size: 2rem;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 2rem;
-        color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
     }
 
     .post-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: none;
-        border-radius: 10px;
-        overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
     }
 
-        .post-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+    .post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
 
     .post-image {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     }
 
     .post-title {
-        font-size: 1.1rem;
-        font-weight: bold;
-        margin-top: 10px;
-        color: #333;
-        line-height: 1.4;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+    line-height: 1.4;
     }
 
     .post-meta {
-        font-size: 0.85rem;
-        color: #777;
-        display: -webkit-box;
-        /* Sử dụng -webkit-box để hỗ trợ line-clamp */
-        -webkit-box-orient: vertical;
-        /* Định hướng theo chiều dọc */
-        -webkit-line-clamp: 3;
-        /* Giới hạn tối đa 3 dòng */
-        overflow: hidden;
-        /* Ẩn phần bị tràn */
-        text-overflow: ellipsis;
-        /* Hiện dấu "..." khi quá dài */
-        width: 100%;
-        /* Đảm bảo phần tử có giới hạn */
+    font-size: 0.85rem;
+    color: #777;
+    display: -webkit-box;
+    /* Sử dụng -webkit-box để hỗ trợ line-clamp */
+    -webkit-box-orient: vertical;
+    /* Định hướng theo chiều dọc */
+    -webkit-line-clamp: 3;
+    /* Giới hạn tối đa 3 dòng */
+    overflow: hidden;
+    /* Ẩn phần bị tràn */
+    text-overflow: ellipsis;
+    /* Hiện dấu "..." khi quá dài */
+    width: 100%;
+    /* Đảm bảo phần tử có giới hạn */
     }
 
     .btn-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20%;
+    cursor: pointer;
+    }
+    
+    .btn-head {
         background-color: rgba(0, 0, 0, 0.2);
         color: white;
         border: none;
@@ -152,118 +168,135 @@
         border-radius: 20%;
         cursor: pointer;
     }
-
     .btn-nav-left {
-        left: -50px;
+    left: -50px;
     }
 
     .btn-nav-right {
-        right: -50px;
+    right: -50px;
     }
 
     .carousel-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        position: relative;
-        margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    margin-top: 50px;
     }
 
     .textcontent {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        background-color: #eae9e9;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #eae9e9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     }
 
-        .textcontent p {
-            width: 650px;
-            text-align: center;
-            font-size: 20px;
-        }
+    .textcontent p {
+    width: 650px;
+    text-align: center;
+    font-size: 20px;
+    }
 
-        .textcontent button {
-            background-color: #f1f1f1;
-            border: #b7b5b5 solid 1px;
-            border-radius: 10px;
-            font-size: 14px;
-            padding: 10px;
-        }
+    .textcontent button {
+    background-color: #f1f1f1;
+    border: #b7b5b5 solid 1px;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 10px;
+    }
 
-            .textcontent button:hover {
-                background-color: #a5a4a4;
-            }
+    .textcontent button:hover {
+    background-color: #a5a4a4;
+    }
 
 
-    
-    
+
+
     /* CSS cho hiển thị bình luận */
     .comment{
-        border-radius: 15px;
-        border: 1px solid #ddd;
-        padding: 20px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-       
-        max-width: 1200px; /* Mở rộng card */
-        margin: 20px auto;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+
+    max-width: 1200px; /* Mở rộng card */
+    margin: 20px auto;
     }
-    
+
     .comment-container {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #fff;     
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;     
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .user-info {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     }
 
     .user-details {
-        font-size: 14px;
-        color: #6c757d;
+    font-size: 14px;
+    color: #6c757d;
     }
 
     .rating-display {
-        display: flex;
-        gap: 5px;
-        margin: 10px 0;
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
     }
 
     .bubble {
-        width: 20px;
-        height: 20px;
-        border: 2px solid #00C4B4;
-        border-radius: 50%;
-        display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00C4B4;
+    border-radius: 50%;
+    display: inline-block;
     }
 
-        .active {
-            background-color: #00C4B4;
-        }
+    .active {
+    background-color: #00C4B4;
+    }
+
+    .img-comment{
+    width:100px;
+    height:100px;
+    margin:5px;
+    object-fit:cover;
+    }
 
 </style>
 
 <div class="container">
     <div class="custom-card">
-        <img src="~/img/Tinh_Thanh/@Model.SimageTinhThanh" alt="@Model.SimageTinhThanh">
+        <button class="btn-head btn-nav-left" onclick="prevImageHead()">❮</button>
+
+        <img id="imageDisplay" src="~/img/Tinh_Thanh/@images[0]" alt="@Model.SimageTinhThanh">
+
+        <button class="btn-head btn-nav-right" onclick="nextImageHead()">❯</button>
+
         <div class="content">
             <h2>@Model.SnameTinhThanh</h2>
             <p>@Model.ScontentTinhThanh</p>
         </div>
     </div>
 </div>
+
+<div class="container">
+    
+        <p>Địa chỉ: Hà Nội</p>
+        <p>Liên hệ: htttps://HaNoi.nv</p>
+    
+</div>
 <a asp-controller="TinhThanh" asp-action="Comment" asp-route-id="@Model.PkIdTinhThanh">
     <button class="button-comment mt-2">Viết trải nghiệm</button>
 </a>
-
 <div class="comment">
     
     @if (pagedComment!=null&&pagedComment.Count>0)
@@ -290,6 +323,11 @@
             <div class="comment-content">
                     @pagedComment[i].CommentText
             </div>
+                @if (!string.IsNullOrEmpty(pagedComment[i].Imgae))
+                {
+                    <img class="img-comment" src="~/img/Comment/@pagedComment[i].Imgae
+                    " alt="Ảnh bình luận" class="img-fluid">
+                }
         </div>
 
         }
@@ -378,7 +416,31 @@
     </div>
 </div>
 
-<script>
+<script defer>
+    var images = @Html.Raw(Json.Serialize(images));
+    var Index = 0;
+    let baseUrl = "@Url.Content("~/")";
+
+    function loadImage() {
+        const imageElement = document.getElementById("imageDisplay");
+        imageElement.src = `${baseUrl}img/Tinh_Thanh/${images[Index]}`;
+    }
+
+    function nextImageHead() {
+        Index = (Index + 1) % images.length;
+        loadImage();
+    }
+
+    function prevImageHead() {
+        Index = (Index - 1 + images.length) % images.length;
+        loadImage();
+    }
+
+    // Khởi tạo hiển thị ban đầu
+    loadImage();
+
+
+
     const categories = [
         { id: "MonAn", data: @Html.Raw(Json.Serialize(MonAn)), folder: "Mon_An", contentKey: "scontentMonAn", imageKey: "simageMonAn", nameKey: "snameMonAn", idKey: "pkIdMonAn", controller: "MonAn" },
         { id: "Tinh", data: @Html.Raw(Json.Serialize(TinhThanh)), folder: "Tinh_Thanh", contentKey: "scontentTinhThanh", imageKey: "simageTinhThanh", nameKey: "snameTinhThanh", idKey: "pkIdTinhThanh", controller: "TinhThanh" },
@@ -390,8 +452,6 @@
     var ite = @Html.Raw(Json.Serialize(GiaiTri));
     console.log(categories);
     const visibleCards = 3;
-    let baseUrl = "@Url.Content("~/")";
-
     // Duyệt qua tất cả danh mục để khởi tạo slider
     categories.forEach(category => {
         let currentIndex = 0;
@@ -458,6 +518,29 @@
             return;
         }
     }
-   
+    
 
+</script>
+<script defer>
+    var images = @Html.Raw(Json.Serialize(images));
+    var Index = 0;
+    let baseUrl = "@Url.Content("~/")";
+
+    function loadImage() {
+        const imageElement = document.getElementById("imageDisplay");
+        imageElement.src = `${baseUrl}img/Tinh_Thanh/${images[Index]}`;
+    }
+
+    function nextImageHead() {
+        Index = (Index + 1) % images.length;
+        loadImage();
+    }
+
+    function prevImageHead() {
+        Index = (Index - 1 + images.length) % images.length;
+        loadImage();
+    }
+
+    // Khởi tạo hiển thị ban đầu
+    loadImage();
 </script>

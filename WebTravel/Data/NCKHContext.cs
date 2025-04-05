@@ -64,6 +64,7 @@ public partial class NCKHContext : DbContext
 
             entity.Property(e => e.IstarComment).HasColumnName("IStarComment");
             entity.Property(e => e.ScontentComment).HasColumnName("SContentComment");
+            entity.Property(e => e.SimageComment).HasColumnName("SImageComment");
 
             entity.HasOne(d => d.FkIdTaiKhoanNavigation).WithMany(p => p.TblComments)
                 .HasForeignKey(d => d.FkIdTaiKhoan)
@@ -86,9 +87,7 @@ public partial class NCKHContext : DbContext
             entity.Property(e => e.SphoneDiaChi)
                 .HasMaxLength(100)
                 .HasColumnName("SPhoneDiaChi");
-            entity.Property(e => e.Sprice)
-                .HasMaxLength(100)
-                .HasColumnName("SPrice");
+            entity.Property(e => e.Sprice).HasColumnName("SPrice");
             entity.Property(e => e.StimeDiaChi)
                 .HasMaxLength(100)
                 .HasColumnName("STimeDiaChi");
@@ -108,9 +107,7 @@ public partial class NCKHContext : DbContext
             entity.ToTable("tblGiaiTri");
 
             entity.Property(e => e.ScontentGiaiTri).HasColumnName("SContentGiaiTri");
-            entity.Property(e => e.SimageGiaiTri)
-                .HasMaxLength(100)
-                .HasColumnName("SImageGiaiTri");
+            entity.Property(e => e.SimageGiaiTri).HasColumnName("SImageGiaiTri");
             entity.Property(e => e.SnameGiaiTri)
                 .HasMaxLength(100)
                 .HasColumnName("SNameGiaiTri");
@@ -127,9 +124,7 @@ public partial class NCKHContext : DbContext
             entity.ToTable("tblKhachSan");
 
             entity.Property(e => e.ScontentKhachSan).HasColumnName("SContentKhachSan");
-            entity.Property(e => e.SimageKhachSan)
-                .HasMaxLength(100)
-                .HasColumnName("SImageKhachSan");
+            entity.Property(e => e.SimageKhachSan).HasColumnName("SImageKhachSan");
             entity.Property(e => e.SnameKhachSan)
                 .HasMaxLength(100)
                 .HasColumnName("SNameKhachSan");
@@ -168,9 +163,7 @@ public partial class NCKHContext : DbContext
             entity.ToTable("tblMonAn");
 
             entity.Property(e => e.ScontentMonAn).HasColumnName("SContentMonAn");
-            entity.Property(e => e.SimageMonAn)
-                .HasMaxLength(100)
-                .HasColumnName("SImageMonAn");
+            entity.Property(e => e.SimageMonAn).HasColumnName("SImageMonAn");
             entity.Property(e => e.SnameMonAn)
                 .HasMaxLength(100)
                 .HasColumnName("SNameMonAn");
@@ -187,9 +180,7 @@ public partial class NCKHContext : DbContext
             entity.ToTable("tblNhaHang");
 
             entity.Property(e => e.ScontentNhaHang).HasColumnName("SContentNhaHang");
-            entity.Property(e => e.SimageNhaHang)
-                .HasMaxLength(100)
-                .HasColumnName("SImageNhaHang");
+            entity.Property(e => e.SimageNhaHang).HasColumnName("SImageNhaHang");
             entity.Property(e => e.SnameNhaHang)
                 .HasMaxLength(100)
                 .HasColumnName("SNameNhaHang");
@@ -238,9 +229,7 @@ public partial class NCKHContext : DbContext
             entity.ToTable("tblTinhThanh");
 
             entity.Property(e => e.ScontentTinhThanh).HasColumnName("SContentTinhThanh");
-            entity.Property(e => e.SimageTinhThanh)
-                .HasMaxLength(100)
-                .HasColumnName("SImageTinhThanh");
+            entity.Property(e => e.SimageTinhThanh).HasColumnName("SImageTinhThanh");
             entity.Property(e => e.SnameTinhThanh)
                 .HasMaxLength(100)
                 .HasColumnName("SNameTinhThanh");

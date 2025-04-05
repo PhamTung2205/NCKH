@@ -45,9 +45,12 @@
             c.FkIdComment,
             StarComment = c.FkIdCommentNavigation.IstarComment,
             CommentText = c.FkIdCommentNavigation.ScontentComment,
-            UserName = c.FkIdCommentNavigation.FkIdTaiKhoanNavigation.SnameTaiKhoan // Chỉ lấy dữ liệu cần thiết
+            UserName = c.FkIdCommentNavigation.FkIdTaiKhoanNavigation.SnameTaiKhoan, // Chỉ lấy dữ liệu cần thiết
+            Imgae = c.FkIdCommentNavigation.SimageComment,
         })
         .ToList();
+    var images = Model.SimageKhachSan.Contains(",") ? Model.SimageKhachSan.Split(",") : new[] { Model.SimageKhachSan };
+
 }
 <style>
     .custom-card {
@@ -253,17 +256,138 @@
         background-color: #00C4B4;
     }
 
+    .btn-head {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 20%;
+        cursor: pointer;
+    }
+
+    .diachi {
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        padding: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 1200px; /* Mở rộng card */
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+        .diachitext p {
+            font-size: 14px;
+            color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 5px 0;
+        }
+
+    .containerContent {
+        display: flex;
+        width: 100%;
+       height:0px;
+    }
+
+    .half {
+        position: relative;
+        width: 50%;
+        height: 80%;
+        overflow: hidden;
+        margin:10px;
+    }
+
+    .imageContent {
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .btnContent {
+        position: absolute;
+        top: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .left-btn {
+        left: 0;
+    }
+
+    .right-btn {
+        right: 0;
+    }
+
+    .img-comment {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        object-fit: cover;
+    }
 </style>
 
 <div class="container">
     <div class="custom-card">
-        <img src="~/img/Khach_San/@Model.SimageKhachSan" alt="@Model.SimageKhachSan">
+        <button class="btn-head btn-nav-left" onclick="prevImageHead()">❮</button>
+
+        <img id="imageDisplay" src="~/img/Khach_San/@images[0]" alt="@Model.SimageKhachSan">
+
+        <button class="btn-head btn-nav-right" onclick="nextImageHead()">❯</button>
+
         <div class="content">
             <h2>@Model.SnameKhachSan</h2>
             <p>@Model.ScontentKhachSan</p>
         </div>
     </div>
 </div>
+
+@if (Model.PkIdKhachSan == 1)
+{
+    <div class="containerContent">
+        <div class="half" id="left-half">
+            <h2 >Phòng</h2>
+            <button class="btnContent left-btn " onclick="prevImage('left')">❮</button>
+            <img class="imageContent" id="left-image" src="~/img/Test/phong.jpg" alt="Left Image">
+            <button class="btnContent right-btn" onclick="prevImage('left')">❯</button>
+        </div>
+        <div class="half" id="right-half">
+            <h2>Món ăn</h2>
+            <button class="btnContent left-btn" onclick="prevImage('right')">❮</button>
+            <img class="imageContent" id="right-image" src="~/img/Test/monan.jpg" alt="Right Image">
+            <button class="btnContent right-btn" onclick="prevImage('right')">❯</button>
+        </div>
+    </div>
+    <div class="diachi">
+        <div class="diachitext">
+            <h4>Thông tin khách sạn</h4>
+            <p>Địa chỉ : 05 P. Từ Hoa, Quảng An, Tây Hồ, Hà Nội</p>
+            <p>Thời gian :7:00 - 19:00.,Giờ check-in 15:00. Giờ check-out 12:00.</p>
+            <p>Giá : 3.145.000 VNĐ - 5.575.000 VNĐ</p>
+            <p>email :hanoi.intercontinental.com</p>
+            <p>Liên hệ : 024 6270 8888</p>
+        </div>
+        <div class="diachitext">
+            <h4>Những tiện ích khách sạn</h4>
+            <p>Bãi đỗ xe miễn phí</p>
+            <p>Bể bơi</p>
+            <p>Bữa sáng miễn phí</p>
+            <p>Các hoạt động gia đình</p>
+        </div>
+        <div class="diachitext">
+            <h4>Tiện nghi trong phòng</h4>
+            <p>Áo choàng tắm</p>
+            <p>Bàn tiệc</p>
+            <p>Tv màn hình phẳng</p>
+            <p>Bồn tắm/Vòi sen</p>
+        </div>
+    </div>
+}
 <a asp-controller="KhachSan" asp-action="Comment" asp-route-id="@Model.PkIdKhachSan">
     <button class="button-comment mt-2">Viết trải nghiệm</button>
 </a>
@@ -295,6 +419,10 @@
                 <div class="comment-content">
                     @pagedComment[i].CommentText
                 </div>
+                @if (!string.IsNullOrEmpty(pagedComment[i].Imgae))
+                {
+                    <img class="img-comment" src="~/img/Comment/@pagedComment[i].Imgae" alt="Ảnh bình luận" class="img-fluid">
+                }
             </div>
 
         }
@@ -351,7 +479,7 @@
 </div>
 <div class="container my-5">
     <!-- Tiêu đề chính -->
-    <h2 class="section-title">Món ăn lên thử</h2>
+    <h2 class="section-title">Nơi nên trải nghiệm</h2>
     <div class="carousel-container">
         <button class="btn-nav btn-nav-left" onclick="prevImagesGiaiTri()">❮</button>
 
@@ -384,6 +512,56 @@
 </div>
 
 <script>
+
+    var images = @Html.Raw(Json.Serialize(images));
+    var Index = 0;
+    let baseUrl = "@Url.Content("~/")";
+
+    function loadImage() {
+        const imageElement = document.getElementById("imageDisplay");
+        imageElement.src = `${baseUrl}img/Khach_San/${images[Index]}`;
+    }
+
+    function nextImageHead() {
+        Index = (Index + 1) % images.length;
+        loadImage();
+    }
+
+    function prevImageHead() {
+        Index = (Index - 1 + images.length) % images.length;
+        loadImage();
+    }
+
+    // Khởi tạo hiển thị ban đầu
+    loadImage();
+
+
+
+    const leftImages = ['phong.jpg', 'phong1.jpg', 'phong2.jpg', 'phong3.jpg'];
+    const rightImages = ['monan.jpg', 'monan1.jpg', 'monan2.jpg','monan3.jpg'];
+    let leftIndex = 0;
+    let rightIndex = 0;
+
+    function nextImage(side) {
+        if (side === 'left') {
+            leftIndex = (leftIndex + 1) % leftImages.length;
+            document.getElementById('left-image').src = `${baseUrl}img/Test/${leftImages[leftIndex]}`;
+        } else {
+            rightIndex = (rightIndex + 1) % rightImages.length;
+            document.getElementById('right-image').src = `${baseUrl}img/Test/${rightImages[rightIndex]}`;
+        }
+    }
+
+    function prevImage(side) {
+        if (side === 'left') {
+            leftIndex = (leftIndex - 1 + leftImages.length) % leftImages.length;
+            document.getElementById('left-image').src = `${baseUrl}img/Test/${leftImages[leftIndex]}`;
+        } else {
+            rightIndex = (rightIndex - 1 + rightImages.length) % rightImages.length;
+            document.getElementById('right-image').src = `${baseUrl}img/Test/${rightImages[rightIndex]}`;
+        }
+    }
+
     const categories = [
         { id: "GiaiTri", data: @Html.Raw(Json.Serialize(GiaiTri)), folder: "Giai_Tri", contentKey: "scontentGiaiTri", imageKey: "simageGiaiTri", nameKey: "snameGiaiTri", idKey: "pkIdGiaiTri", controller: "GiaiTri" },
         { id: "Tinh", data: @Html.Raw(Json.Serialize(TinhThanh)), folder: "Tinh_Thanh", contentKey: "scontentTinhThanh", imageKey: "simageTinhThanh", nameKey: "snameTinhThanh", idKey: "pkIdTinhThanh", controller: "TinhThanh" },
@@ -395,7 +573,6 @@
     var ite = @Html.Raw(Json.Serialize(GiaiTri));
     console.log(categories);
     const visibleCards = 3;
-    let baseUrl = "@Url.Content("~/")";
 
     // Duyệt qua tất cả danh mục để khởi tạo slider
     categories.forEach(category => {
@@ -408,6 +585,10 @@
                 let imgIndex = (currentIndex + i) % category.data.length;
                 let imageUrl = `${baseUrl}img/${category.folder}/${category.data[imgIndex][category.imageKey]}`;
                 let itemUrl = `/${category.controller}/Details/${category.data[imgIndex][category.idKey]}`;
+                if (category.data[imgIndex][category.imageKey].includes(",")) {
+                    var image = category.data[imgIndex][category.imageKey].split(",")
+                    imageUrl = `${baseUrl}img/${category.folder}/${image[0]}`;
+                }
                 let card = `
                                         <div class="col-md-4">
                                         <a href="${itemUrl}" style="text-decoration: none">

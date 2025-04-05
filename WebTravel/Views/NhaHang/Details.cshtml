@@ -45,9 +45,14 @@
             c.FkIdComment,
             StarComment = c.FkIdCommentNavigation.IstarComment,
             CommentText = c.FkIdCommentNavigation.ScontentComment,
-            UserName = c.FkIdCommentNavigation.FkIdTaiKhoanNavigation.SnameTaiKhoan // Chỉ lấy dữ liệu cần thiết
+            UserName = c.FkIdCommentNavigation.FkIdTaiKhoanNavigation.SnameTaiKhoan, // Chỉ lấy dữ liệu cần thiết
+            Imgae = c.FkIdCommentNavigation.SimageComment,
+
+
         })
         .ToList();
+
+    var images = Model.SimageNhaHang.Contains(",") ? Model.SimageNhaHang.Split(",") : new[] { Model.SimageNhaHang };
 }
 <style>
     .custom-card {
@@ -253,17 +258,62 @@
         background-color: #00C4B4;
     }
 
+    .btn-head {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 20%;
+        cursor: pointer;
+    }
+
+    .diachi {
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        padding: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 1200px; /* Mở rộng card */
+        margin: 20px auto;
+    }
+
+        .diachi p {
+            font-size: 14px;
+            color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 5px 0;
+        }
+
+    .img-comment {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        object-fit: cover;
+    }
 </style>
 
 <div class="container">
     <div class="custom-card">
-        <img src="~/img/Nha_Hang/@Model.SimageNhaHang" alt="@Model.SimageNhaHang">
+        <button class="btn-head btn-nav-left" onclick="prevImageHead()">❮</button>
+
+        <img id="imageDisplay" src="~/img/Nha_Hang/@images[0]" alt="@Model.SimageNhaHang">
+
+        <button class="btn-head btn-nav-right" onclick="nextImageHead()">❯</button>
+
         <div class="content">
             <h2>@Model.SnameNhaHang</h2>
             <p>@Model.ScontentNhaHang</p>
         </div>
     </div>
 </div>
+@if (Model.PkIdNhaHang == 1)
+{
+    <div class="diachi">
+        <p>Địa chỉ : 9 P. Đinh Tiên Hoàng, Hàng Trống, Hoàn Kiếm, Hà Nội</p>
+        <p>Thời gian mở cửa : 10h00 - 22h00</p>
+        <p>Giá : 100.000 VNĐ – 750.000 VNĐ</p>
+        <p>Liên hệ : 024 3926 0808</p>
+    </div>
+}
 <a asp-controller="NhaHang" asp-action="Comment" asp-route-id="@Model.PkIdNhaHang">
     <button class="button-comment mt-2">Viết trải nghiệm</button>
 </a>
@@ -295,6 +345,11 @@
                 <div class="comment-content">
                     @pagedComment[i].CommentText
                 </div>
+                @if (!string.IsNullOrEmpty(pagedComment[i].Imgae))
+                {
+                    <img class="img-comment" src="~/img/Comment/@pagedComment[i].Imgae
+                                " alt="Ảnh bình luận" class="img-fluid">
+                }
             </div>
 
         }
@@ -383,6 +438,30 @@
 </div>
 
 <script>
+
+    var images = @Html.Raw(Json.Serialize(images));
+    var Index = 0;
+    let baseUrl = "@Url.Content("~/")";
+
+    function loadImage() {
+        const imageElement = document.getElementById("imageDisplay");
+        imageElement.src = `${baseUrl}img/Nha_Hang/${images[Index]}`;
+    }
+
+    function nextImageHead() {
+        Index = (Index + 1) % images.length;
+        loadImage();
+    }
+
+    function prevImageHead() {
+        Index = (Index - 1 + images.length) % images.length;
+        loadImage();
+    }
+
+    // Khởi tạo hiển thị ban đầu
+    loadImage();
+
+
     const categories = [
         { id: "MonAn", data: @Html.Raw(Json.Serialize(MonAn)), folder: "Mon_An", contentKey: "scontentMonAn", imageKey: "simageMonAn", nameKey: "snameMonAn", idKey: "pkIdMonAn", controller: "MonAn" },
         { id: "Tinh", data: @Html.Raw(Json.Serialize(TinhThanh)), folder: "Tinh_Thanh", contentKey: "scontentTinhThanh", imageKey: "simageTinhThanh", nameKey: "snameTinhThanh", idKey: "pkIdTinhThanh", controller: "TinhThanh" },
@@ -394,7 +473,6 @@
     var ite = @Html.Raw(Json.Serialize(GiaiTri));
     console.log(categories);
     const visibleCards = 3;
-    let baseUrl = "@Url.Content("~/")";
 
     // Duyệt qua tất cả danh mục để khởi tạo slider
     categories.forEach(category => {

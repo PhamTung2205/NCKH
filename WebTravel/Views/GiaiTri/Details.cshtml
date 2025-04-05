@@ -45,9 +45,13 @@
             c.FkIdComment,
             StarComment = c.FkIdCommentNavigation.IstarComment,
             CommentText = c.FkIdCommentNavigation.ScontentComment,
-            UserName = c.FkIdCommentNavigation.FkIdTaiKhoanNavigation.SnameTaiKhoan // Chỉ lấy dữ liệu cần thiết
+            UserName = c.FkIdCommentNavigation.FkIdTaiKhoanNavigation.SnameTaiKhoan, // Chỉ lấy dữ liệu cần thiết
+            Imgae = c.FkIdCommentNavigation.SimageComment,
+
         })
         .ToList();
+    var images = Model.SimageGiaiTri.Contains(",") ? Model.SimageGiaiTri.Split(",") : new[] { Model.SimageGiaiTri };
+
 }
 <style>
     .custom-card {
@@ -158,6 +162,15 @@
         cursor: pointer;
     }
 
+    .btn-head {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 20%;
+        cursor: pointer;
+    }
+
     .btn-nav-left {
         left: -50px;
     }
@@ -253,11 +266,23 @@
         background-color: #00C4B4;
     }
 
+    .img-comment {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        object-fit: cover;
+    }
+
 </style>
 
 <div class="container">
     <div class="custom-card">
-        <img src="~/img/Giai_Tri/@Model.SimageGiaiTri" alt="@Model.SimageGiaiTri">
+        <button class="btn-head btn-nav-left" onclick="prevImageHead()">❮</button>
+
+        <img id="imageDisplay" src="~/img/Giai_Tri/@images[0]" alt="@Model.SimageGiaiTri">
+
+        <button class="btn-head btn-nav-right" onclick="nextImageHead()">❯</button>
+
         <div class="content">
             <h2>@Model.SnameGiaiTri</h2>
             <p>@Model.ScontentGiaiTri</p>
@@ -295,6 +320,11 @@
                 <div class="comment-content">
                     @pagedComment[i].CommentText
                 </div>
+                @if (!string.IsNullOrEmpty(pagedComment[i].Imgae))
+                {
+                    <img class="img-comment" src="~/img/Comment/@pagedComment[i].Imgae
+                                " alt="Ảnh bình luận" class="img-fluid">
+                }
             </div>
 
         }
@@ -365,7 +395,15 @@
                     <a asp-controller="TinhThanh" style="text-decoration: none" asp-action="Details" asp-route-id="@TinhThanh[i].PkIdTinhThanh">
 
                         <div class="post-card">
-                            <img src="~/img/Tinh_Thanh/@TinhThanh[i].SimageTinhThanh" alt="Đà Nẵng" class="post-image">
+                            @if (TinhThanh[i].SimageTinhThanh.Contains(","))
+                            {
+                                var image = TinhThanh[i].SimageTinhThanh.Split(",");
+                                <img src="~/img/Tinh_Thanh/@image[0]" alt="Đà Nẵng" class="post-image">
+                            }
+                            else
+                            {
+                                <img src="~/img/Tinh_Thanh/@TinhThanh[i].SimageTinhThanh" alt="Đà Nẵng" class="post-image">
+                            }                           
                             <div class="p-3">
                                 <h3 class="post-title">@TinhThanh[i].SnameTinhThanh</h3>
                                 <p class="post-meta">
@@ -381,7 +419,29 @@
         <button class="btn-nav btn-nav-right" onclick="nextImagesTinh()">❯</button>
     </div>
 </div>
-<script>
+<script defer>
+
+    var images = @Html.Raw(Json.Serialize(images));
+    var Index = 0;
+    let baseUrl = "@Url.Content("~/")";
+
+    function loadImage() {
+        const imageElement = document.getElementById("imageDisplay");
+        imageElement.src = `${baseUrl}img/Giai_Tri/${images[Index]}`;
+    }
+
+    function nextImageHead() {
+        Index = (Index + 1) % images.length;
+        loadImage();
+    }
+
+    function prevImageHead() {
+        Index = (Index - 1 + images.length) % images.length;
+        loadImage();
+    }
+
+    // Khởi tạo hiển thị ban đầu
+    loadImage();
     const categories = [
         { id: "Tinh", data: @Html.Raw(Json.Serialize(TinhThanh)), folder: "Tinh_Thanh", contentKey: "scontentTinhThanh", imageKey: "simageTinhThanh", nameKey: "snameTinhThanh", idKey: "pkIdTinhThanh", controller: "TinhThanh" },
         { id: "MonAn", data: @Html.Raw(Json.Serialize(MonAn)), folder: "Mon_An", contentKey: "scontentMonAn", imageKey: "simageMonAn", nameKey: "snameMonAn", idKey: "pkIdMonAn", controller: "MonAn" },
@@ -393,7 +453,6 @@
     var ite = @Html.Raw(Json.Serialize(GiaiTri));
     console.log(categories);
     const visibleCards = 3;
-    let baseUrl = "@Url.Content("~/")";
 
     // Duyệt qua tất cả danh mục để khởi tạo slider
     categories.forEach(category => {
@@ -406,6 +465,10 @@
                 let imgIndex = (currentIndex + i) % category.data.length;
                 let imageUrl = `${baseUrl}img/${category.folder}/${category.data[imgIndex][category.imageKey]}`;
                 let itemUrl = `/${category.controller}/Details/${category.data[imgIndex][category.idKey]}`;
+                if (category.data[imgIndex][category.imageKey].includes(",")) {
+                    var image = category.data[imgIndex][category.imageKey].split(",")
+                    imageUrl = `${baseUrl}img/${category.folder}/${image[0]}`;
+                }
                 let card = `
                             <div class="col-md-4">
                             <a href="${itemUrl}" style="text-decoration: none">

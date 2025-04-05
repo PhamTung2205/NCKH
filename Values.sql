@@ -1,4 +1,4 @@
-﻿﻿Use NCKH
+﻿Use NCKH
 go
 --Mới
 --Thêm Quyền
@@ -8,7 +8,7 @@ values
 (N'Staff'),
 (N'User')
 go
-select * from tblQuyen
+
 --Thêm Tài khoản
 Insert into tblTaiKhoan
 Values
@@ -255,10 +255,11 @@ go
 
 Insert into tblComment 
 Values
-(N'Tôi đã có muột chuyến đi rất thú vị bạn lên đi và trải nghiệm nơi này , nó đã để lại cho tôi một ký ức khó quên',5,1),
-(N'Nơi đây quả thật là tuyệt đẹp , bạn phải đến tận nơi nhìn thấy nó và thưởng thức ngay lúc này . Nó đang thời gian tôi bỏ ra để đến đây . Tôi sẽ giới thiệu thêm người đến đây để trải nghiệm nó',4,1)
+(N'Tôi đã có muột chuyến đi rất thú vị bạn lên đi và trải nghiệm nơi này , nó đã để lại cho tôi một ký ức khó quên',null,5,1),
+(N'Nơi đây quả thật là tuyệt đẹp , bạn phải đến tận nơi nhìn thấy nó và thưởng thức ngay lúc này . Nó đang thời gian tôi bỏ ra để đến đây . Tôi sẽ giới thiệu thêm người đến đây để trải nghiệm nó',null,4,1)
 go
-
+Select * From tblDiaChi
+Select * from tblTinhThanh_Comment
 Insert into tblTinhThanh_GiaiTri
 values
 (1,1,2,1,null)
